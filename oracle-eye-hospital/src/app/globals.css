@@ -2,31 +2,362 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html { scroll-behavior: smooth; }
-  body { @apply bg-cornea text-ink antialiased; font-family: "Plus Jakarta Sans Variable", system-ui, sans-serif; }
-  h1, h2, h3 { font-family: "Fraunces Variable", Georgia, serif; letter-spacing: -0.01em; }
-  :focus-visible { outline: 2px solid #137C8B; outline-offset: 3px; border-radius: 4px; }
-  details > summary { list-style: none; }
-  details > summary::-webkit-details-marker { display: none; }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@layer components {
-  .container-x { @apply mx-auto w-full max-w-6xl px-5 md:px-8; }
-  .btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors; }
-  .btn-primary { @apply bg-sun text-ink hover:bg-sun-dark hover:text-white; }
-  .btn-dark { @apply bg-ink text-white hover:bg-iris-dark; }
-  .btn-outline { @apply border border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-white; }
-  .field { @apply w-full rounded-lg border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-iris focus:ring-2 focus:ring-iris/30; }
-  .prose-oeh p { @apply mb-4 leading-7 text-ink/85; }
-  .prose-oeh h2 { @apply mb-3 mt-8 text-2xl; }
+/* Custom Animation Keyframes */
+@keyframes rotateCircleText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* The one non-user-triggered motion on the site: the hero eye blinks now and then. */
-@keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.06); } }
-.blink { animation: blink 7s infinite; transform-box: fill-box; transform-origin: center; }
+.rotating-text-svg {
+  width: 100%;
+  height: 100%;
+  animation: rotateCircleText 12s linear infinite;
+}
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .blink { animation: none; }
+.center-arrow-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  z-index: 2;
+}
+
+/* Float animations for hero decorative items */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(4deg);
+  }
+}
+
+.item1 {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.item4 {
+  animation: floatSlow 5s ease-in-out infinite 1s;
+}
+
+.item5 {
+  animation: floatReverse 7s ease-in-out infinite;
+}
+
+/* Blinking phone number animation */
+@keyframes blinkGlow {
+  0%, 100% {
+    opacity: 1;
+    color: #00a297;
+  }
+  50% {
+    opacity: 0.4;
+    color: #ff5722;
+  }
+}
+
+.blink {
+  animation: blinkGlow 1.8s infinite;
+  font-weight: 700;
+}
+
+/* Video play button pulse */
+@keyframes pulsePlay {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 162, 151, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(0, 162, 151, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 162, 151, 0);
+  }
+}
+
+.video-btn.sm {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #00a297;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulsePlay 2s infinite;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.video-btn.sm:hover {
+  background: #00a297;
+  color: #ffffff;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Infinite Marquee for Gallery */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 25s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  padding: 0 10px;
+}
+
+/* Side "Get Appointment" floating tab */
+.SideOption {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: right bottom;
+  z-index: 9999;
+}
+
+.ApplicationWidget_btn {
+  background: #00a297;
+  color: #fff !important;
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px 6px 0 0;
+  text-decoration: none;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  letter-spacing: 0.5px;
+  transition: background 0.3s;
+}
+
+.ApplicationWidget_btn:hover {
+  background: #008178;
+}
+
+/* Scroll to top button */
+.scroltop {
+  position: fixed;
+  bottom: 25px;
+  right: 90px;
+  z-index: 9999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #00a297;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 162, 151, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.scroltop:hover {
+  background: #008178;
+  transform: translateY(-4px);
+}
+
+/* Floating WhatsApp Chat */
+.whatsapp-chat-box {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 10002;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.typing-indicator .dot {
+  width: 7px;
+  height: 7px;
+  background-color: #9ca3af;
+  border-radius: 50%;
+  margin: 0 2px;
+  animation: typingBounce 1.2s infinite ease-in-out;
+}
+
+.typing-indicator .dot-1 {
+  animation-delay: 0s;
+}
+.typing-indicator .dot-2 {
+  animation-delay: 0.2s;
+}
+.typing-indicator .dot-3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Floating avatar positions around testimonial */
+.avatar1, .avatar2, .avatar3, .avatar4, .avatar5, .avatar6, .avatar7, .avatar8 {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  animation: floatSlow 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.avatar1 { top: 15%; left: 6%; width: 55px; height: 55px; animation-delay: 0s; }
+.avatar2 { top: 40%; left: 4%; width: 70px; height: 70px; animation-delay: 1.5s; }
+.avatar3 { bottom: 20%; left: 8%; width: 50px; height: 50px; animation-delay: 3s; }
+.avatar4 { top: 10%; right: 7%; width: 65px; height: 65px; animation-delay: 0.8s; }
+.avatar5 { top: 38%; right: 4%; width: 50px; height: 50px; animation-delay: 2.2s; }
+.avatar6 { bottom: 15%; right: 8%; width: 60px; height: 60px; animation-delay: 4s; }
+
+/* Service cards hover tooltip / active state */
+.service-preview-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-preview-card:hover,
+.service-preview-card.active {
+  background-color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 162, 151, 0.12);
+  border-left: 4px solid #00a297;
+  transform: translateX(8px);
+}
+
+.service-preview-card.active .btn-link {
+  color: #00a297;
+  transform: translateX(4px);
+}
+
+/* Appointment section floating inputs */
+.floating-underline {
+  position: relative;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-left: 36px;
+  transition: border-color 0.3s;
+}
+
+.floating-underline:focus-within {
+  border-bottom-color: #ffffff;
+}
+
+.floating-underline .form-control {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.floating-underline .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.floating-underline .form-control option {
+  color: #333333;
+  background: #ffffff;
+}
+
+.floating-underline .input-group-text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Specialist doctor card */
+.dz-team.style-1 {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.dz-team.style-1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(0, 162, 151, 0.15);
+}
+
+.dz-team.style-1 .plus-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00a297;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.dz-team.style-1:hover .plus-btn {
+  transform: rotate(90deg);
+  background: #008178;
+}
+
+/* TPA List image hover */
+.tpa_div img {
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.tpa_div:hover img {
+  transform: scale(1.02);
 }

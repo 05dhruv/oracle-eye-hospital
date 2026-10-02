@@ -1,71 +1,57 @@
-import "@fontsource-variable/fraunces";
-import "@fontsource-variable/plus-jakarta-sans";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { SITE } from "@/lib/content";
+import FloatingWidgets from "@/components/FloatingWidgets";
 
 export const metadata = {
-  metadataBase: new URL(SITE.url),
-  title: {
-    default: "Oracle Eye Hospital, Moradabad | Cataract, LASIK, Retina & Glaucoma Care",
-    template: "%s | Oracle Eye Hospital, Moradabad",
-  },
+  metadataBase: new URL("https://oracleeyehospital.com"),
+  title: "Oracle Eye Hospital - Best Eye Hospital in Moradabad | Cataract, LASIK & Retina Care",
   description:
-    "Oracle Eye Hospital in Moradabad offers cataract surgery, LASIK and refractive care, retina, glaucoma, pediatric eye and dry eye treatment. Book an appointment today.",
-  openGraph: { type: "website", siteName: SITE.name, locale: "en_IN" },
+    "Oracle Eye Hospital in Moradabad offers advanced cataract surgery, LASIK laser vision correction, retinal surgery, pediatric eye care, and glaucoma treatment. Book your appointment today.",
+  icons: {
+    icon: "/uploads/logos/c4550579-1574-4a3b-8255-8c0bd6c690ee.png",
+  },
+  openGraph: {
+    title: "Oracle Eye Hospital - Best Eye Hospital in Moradabad",
+    description: "Clear vision awaits at Oracle Eye Hospital. Advanced technology & compassionate eye care.",
+    url: "https://oracleeyehospital.com",
+    siteName: "Oracle Eye Hospital",
+    images: [{ url: "/uploads/logos/232296ca-9c85-445b-b965-033a97fe7008.png" }],
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
-export const viewport = { themeColor: "#0A2A33" };
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Hospital",
-  name: SITE.name,
-  url: SITE.url,
-  telephone: SITE.helpline,
-  email: SITE.email,
-  medicalSpecialty: "Ophthalmology",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "491, Hi-Street, Near TDI City, Parampara, MDA",
-    addressLocality: "Moradabad",
-    addressRegion: "Uttar Pradesh",
-    postalCode: "244001",
-    addressCountry: "IN",
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    opens: "10:00",
-    closes: "20:00",
-  },
-  sameAs: [SITE.instagram, SITE.facebook],
+export const viewport = {
+  themeColor: "#00a297",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-[60] focus:rounded focus:bg-white focus:px-3 focus:py-2">
-          Skip to content
-        </a>
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
-        <a
-          href={`https://wa.me/${SITE.whatsapp}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Chat on WhatsApp"
-          className="fixed bottom-5 right-5 z-40 flex h-12 items-center gap-2 rounded-full bg-[#1FA855] px-4 text-sm font-semibold text-white shadow-lg hover:bg-[#178f47]"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z" />
-          </svg>
-          WhatsApp
-        </a>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    <html lang="en" data-theme-color="skin-8">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="/Assets/vendor/animate/animate.css" />
+        <link rel="stylesheet" type="text/css" href="/Assets/icons/feather/css/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="/Assets/icons/fontawesome/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="/Assets/icons/flaticon/flaticon.css" />
+        <link rel="stylesheet" type="text/css" href="/Assets/vendor/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" type="text/css" href="/Assets/css/style.css" />
+      </head>
+      <body id="bg" data-typography="typography_1">
+        <div className="page-wraper">
+          <Header />
+          <main className="page-content">{children}</main>
+          <Footer />
+          <FloatingWidgets />
+        </div>
       </body>
     </html>
   );

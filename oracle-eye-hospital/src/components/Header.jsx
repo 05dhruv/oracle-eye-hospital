@@ -1,136 +1,301 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { NAV, SERVICES, SITE } from "@/lib/content";
-
-function childrenOf(item) {
-  if (item.childrenFrom === "services")
-    return SERVICES.map((s) => ({ label: s.title, href: `/services/${s.slug}` }));
-  return item.children;
-}
+import { useState, useEffect } from "react";
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleDropdown = (name) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
 
   return (
-    <header className="sticky top-0 z-50 bg-cornea/95 backdrop-blur">
-      {/* top info strip */}
-      <div className="hidden bg-ink text-xs text-white/85 md:block">
-        <div className="container-x flex items-center justify-between py-2">
-          <span>{SITE.address}</span>
-          <span className="flex gap-5">
-            <span>{SITE.hours}</span>
-            <a href={`tel:${SITE.helpline.replace(/\s/g, "")}`} className="font-semibold text-white">
-              24x7 Helpline {SITE.helpline}
-            </a>
-          </span>
-        </div>
-      </div>
+    <header className="site-header header style-3">
+      {/* Top Header Bar */}
+      <div className="bg-header">
+        <div className="container header-middle">
+          <div className="row align-items-center">
+            {/* Logo */}
+            <div className="col-xs-12 col-sm-5 d-flex align-items-center">
+              <Link href="/">
+                <img
+                  src="/uploads/logos/232296ca-9c85-445b-b965-033a97fe7008.png"
+                  className="img-responsive main-logo"
+                  alt="Oracle Eye Hospital"
+                  style={{ maxHeight: "80px", width: "auto" }}
+                />
+              </Link>
+            </div>
 
-      <div className="border-b border-ink/10">
-        <div className="container-x flex items-center justify-between py-3">
-          <Link href="/" className="flex items-center gap-3" aria-label="Oracle Eye Hospital home">
-            <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true">
-              <path d="M2 20C9 8 31 8 38 20 31 32 9 32 2 20Z" fill="#0A2A33" />
-              <circle cx="20" cy="20" r="8" fill="#137C8B" />
-              <circle cx="20" cy="20" r="3.5" fill="#0A2A33" />
-              <circle cx="22.5" cy="17.5" r="1.4" fill="#fff" />
-            </svg>
-            <span className="font-display text-xl font-semibold leading-none">
-              Oracle <span className="block text-sm font-normal text-ink/70">Eye Hospital</span>
-            </span>
-          </Link>
-
-          {/* desktop nav */}
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
-            {NAV.map((item) => {
-              const kids = childrenOf(item);
-              if (!kids)
-                return (
-                  <Link key={item.label} href={item.href} className="rounded px-3 py-2 text-sm font-medium hover:text-iris">
-                    {item.label}
-                  </Link>
-                );
-              return (
-                <div key={item.label} className="group relative">
-                  <button className="flex items-center gap-1 rounded px-3 py-2 text-sm font-medium hover:text-iris" aria-haspopup="true">
-                    {item.label}
-                    <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" /></svg>
-                  </button>
-                  <div className="invisible absolute left-0 top-full min-w-[15rem] rounded-xl border border-ink/10 bg-white p-2 opacity-0 shadow-xl transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
-                    {kids.map((c) => (
-                      <Link key={c.href} href={c.href} className="block rounded-lg px-3 py-2 text-sm hover:bg-mist">
-                        {c.label}
-                      </Link>
-                    ))}
+            {/* Location & Appointment Phone */}
+            <div className="col-xs-12 col-sm-5 mobile_div">
+              <div className="row">
+                <div className="col-md-7 col-12">
+                  <div className="header_one location_div">
+                    <h4>Location:</h4>
+                    <p>
+                      <a
+                        href="https://www.google.com/maps/search/?api=1&query=Oracle+Eye+Hospital+491+Hi+Street+Near+TDI+City+Parampara+MDA+Moradabad+Uttar+Pradesh+244001"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        491, Hi-Street, Near TDI City, Parampara, MDA, Moradabad, Uttar Pradesh-244001, India
+                      </a>
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </nav>
 
-          <div className="flex items-center gap-3">
-            <Link href="/contact-us#appointment" className="btn btn-primary hidden sm:inline-flex">
-              Book appointment
-            </Link>
-            <button
-              className="rounded-lg border border-ink/20 p-2 lg:hidden"
-              aria-label={open ? "Close menu" : "Open menu"}
-              aria-expanded={open}
-              onClick={() => setOpen(!open)}
-            >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                {open ? <path d="M5 5l14 14M19 5L5 19" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
-              </svg>
-            </button>
+                <div className="col-md-5 col-12">
+                  <div className="header_one">
+                    <h4>Call Us For Appointment:</h4>
+                    <p className="appointment_number">
+                      <a href="tel:+91 8006803111" className="blink">
+                        +91 8006803111
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Certifications Logos */}
+            <div className="col-xs-12 col-sm-2 d-flex align-items-center justify-content-end logos_prtt">
+              <Link href="/" className="me-2">
+                <img src="/Assets/img/logo2.png" className="img-responsive logo_div logo2" alt="Cert 1" />
+              </Link>
+              <Link href="/">
+                <img src="/Assets/img/logo3.png" className="img-responsive logo_div logo2" alt="Cert 2" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* mobile menu */}
-      <AnimatePresence>
-        {open && (
-          <motion.nav
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="max-h-[75vh] overflow-y-auto border-b border-ink/10 bg-white lg:hidden"
-            aria-label="Mobile"
-          >
-            <div className="container-x py-3">
-              {NAV.map((item) => {
-                const kids = childrenOf(item);
-                if (!kids)
-                  return (
-                    <Link key={item.label} href={item.href} onClick={() => setOpen(false)} className="block border-b border-ink/10 py-3 font-medium">
-                      {item.label}
-                    </Link>
-                  );
-                return (
-                  <details key={item.label} className="border-b border-ink/10">
-                    <summary className="flex cursor-pointer items-center justify-between py-3 font-medium">
-                      {item.label}
-                      <span aria-hidden="true">+</span>
-                    </summary>
-                    <div className="pb-2 pl-3">
-                      {kids.map((c) => (
-                        <Link key={c.href} href={c.href} onClick={() => setOpen(false)} className="block py-2 text-sm text-ink/80">
-                          {c.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </details>
-                );
-              })}
-              <Link href="/contact-us#appointment" onClick={() => setOpen(false)} className="btn btn-primary mt-4 w-full">
-                Book appointment
+      {/* Main Nav / Sticky Header */}
+      <div className={`sticky-header main-bar-wraper ${isSticky ? "is-fixed" : ""}`}>
+        <div className="main-bar clearfix">
+          <div className="container-fluid clearfix inner-bar d-flex align-items-center justify-content-between">
+            {/* Mobile Nav Toggle */}
+            <button
+              className={`w3menu-toggler navicon d-lg-none ${mobileMenuOpen ? "open" : ""}`}
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle navigation"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            {/* Mobile Logo fallback */}
+            <div className="logo-header logo-dark d-lg-none">
+              <Link href="/">
+                <img src="/uploads/logos/232296ca-9c85-445b-b965-033a97fe7008.png" alt="Oracle Eye Hospital" style={{ maxHeight: "45px" }} />
               </Link>
             </div>
-          </motion.nav>
-        )}
-      </AnimatePresence>
+
+            {/* Main Nav Items */}
+            <div className={`header-nav w3menu w3menu-start mo-left ${mobileMenuOpen ? "show" : ""}`} id="W3Menu">
+              <div className="logo-header logo-dark d-lg-none p-3 border-bottom d-flex justify-content-between align-items-center">
+                <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                  <img src="/uploads/logos/232296ca-9c85-445b-b965-033a97fe7008.png" alt="Logo" style={{ maxHeight: "40px" }} />
+                </Link>
+                <button className="btn-close" onClick={() => setMobileMenuOpen(false)}></button>
+              </div>
+
+              <ul className="nav navbar-nav">
+                <li>
+                  <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                    <span>Home</span>
+                  </Link>
+                </li>
+
+                {/* About Us */}
+                <li className={`sub-menu-down ${activeDropdown === "about" ? "open" : ""}`}>
+                  <a
+                    href="javascript:void(0);"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleDropdown("about");
+                    }}
+                  >
+                    <span>About Us</span> <i className="fas fa-chevron-down tabindex"></i>
+                  </a>
+                  <ul className="sub-menu">
+                    <li><Link href="/overview" onClick={() => setMobileMenuOpen(false)}>Overview</Link></li>
+                    <li><Link href="/chairman-message" onClick={() => setMobileMenuOpen(false)}>Chairman's Message</Link></li>
+                    <li><Link href="/board-of-directors" onClick={() => setMobileMenuOpen(false)}>Board of Directors</Link></li>
+                    <li><Link href="/testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials &amp; Stories</Link></li>
+                  </ul>
+                </li>
+
+                {/* Clinic Team */}
+                <li className={`sub-menu-down ${activeDropdown === "team" ? "open" : ""}`}>
+                  <a
+                    href="javascript:void(0);"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleDropdown("team");
+                    }}
+                  >
+                    <span>Clinic Team</span> <i className="fas fa-chevron-down tabindex"></i>
+                  </a>
+                  <ul className="sub-menu">
+                    <li><Link href="/doctor-team" onClick={() => setMobileMenuOpen(false)}>Doctor’s Team</Link></li>
+                    <li><Link href="/optometrist-team" onClick={() => setMobileMenuOpen(false)}>Optometrist Team</Link></li>
+                  </ul>
+                </li>
+
+                {/* Services */}
+                <li className={`sub-menu-down ${activeDropdown === "services" ? "open" : ""}`}>
+                  <a
+                    href="javascript:void(0);"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleDropdown("services");
+                    }}
+                  >
+                    <span>Services</span> <i className="fas fa-chevron-down tabindex"></i>
+                  </a>
+                  <ul className="sub-menu">
+                    <li><Link href="/services/cataract-service" onClick={() => setMobileMenuOpen(false)}>Cataract Service</Link></li>
+                    <li><Link href="/services/cornea-refractive-service" onClick={() => setMobileMenuOpen(false)}>Cornea And Refractive Services</Link></li>
+                    <li><Link href="/services/computer-vision-syndrome" onClick={() => setMobileMenuOpen(false)}>Computer Vision Syndrome</Link></li>
+                    <li><Link href="/services/dry-eyes-clinic" onClick={() => setMobileMenuOpen(false)}>Dry Eyes Clinic</Link></li>
+                    <li><Link href="/services/contact-lens-service" onClick={() => setMobileMenuOpen(false)}>Contact Lens Service</Link></li>
+                    <li><Link href="/services/myopia-clinic" onClick={() => setMobileMenuOpen(false)}>Myopia Clinic</Link></li>
+                    <li><Link href="/services/pediatric-eye-service" onClick={() => setMobileMenuOpen(false)}>Pediatric Eye Service</Link></li>
+                    <li><Link href="/services/orthoptics-service" onClick={() => setMobileMenuOpen(false)}>Orthoptics Service</Link></li>
+                    <li><Link href="/services/vitreoretinal-service" onClick={() => setMobileMenuOpen(false)}>Vitreoretinal Service</Link></li>
+                    <li><Link href="/services/glaucoma-service" onClick={() => setMobileMenuOpen(false)}>Glaucoma Service</Link></li>
+                  </ul>
+                </li>
+
+                {/* Latest Updates */}
+                <li className={`sub-menu-down ${activeDropdown === "updates" ? "open" : ""}`}>
+                  <a
+                    href="javascript:void(0);"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleDropdown("updates");
+                    }}
+                  >
+                    <span>Latest Updates</span> <i className="fas fa-chevron-down tabindex"></i>
+                  </a>
+                  <ul className="sub-menu">
+                    <li className="sub-menu-down">
+                      <a href="javascript:void(0);">Media Gallery</a>
+                      <ul className="sub-menu">
+                        <li><Link href="/photo-gallery" onClick={() => setMobileMenuOpen(false)}>Photo Gallery</Link></li>
+                        <li><Link href="/video-gallery" onClick={() => setMobileMenuOpen(false)}>Video Gallery</Link></li>
+                        <li><Link href="/blog" onClick={() => setMobileMenuOpen(false)}>Blogs</Link></li>
+                      </ul>
+                    </li>
+                    <li><Link href="/news" onClick={() => setMobileMenuOpen(false)}>News and Events</Link></li>
+                  </ul>
+                </li>
+
+                {/* Academic */}
+                <li className={`sub-menu-down ${activeDropdown === "academic" ? "open" : ""}`}>
+                  <a
+                    href="javascript:void(0);"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleDropdown("academic");
+                    }}
+                  >
+                    <span>Academic</span> <i className="fas fa-chevron-down tabindex"></i>
+                  </a>
+                  <ul className="sub-menu">
+                    <li className="sub-menu-down">
+                      <a href="javascript:void(0);">Optometry Training Program</a>
+                      <ul className="sub-menu">
+                        <li><Link href="/comprehensive-internship-in-optometry" onClick={() => setMobileMenuOpen(false)}>Comprehensive Clinical Optometry Internship</Link></li>
+                      </ul>
+                    </li>
+                    <li><Link href="/awards" onClick={() => setMobileMenuOpen(false)}>Awards</Link></li>
+                    <li><Link href="/publications" onClick={() => setMobileMenuOpen(false)}>Publications</Link></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <Link href="/cashless-facility" onClick={() => setMobileMenuOpen(false)}>
+                    <span>Cashless Facility</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/charitable-wings" onClick={() => setMobileMenuOpen(false)}>
+                    <span>Charitable Wings</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/contact-us" onClick={() => setMobileMenuOpen(false)}>
+                    <span>Contact Us</span>
+                  </Link>
+                </li>
+              </ul>
+
+              {/* Social icons */}
+              <div className="dz-social-icon d-lg-flex d-none">
+                <ul>
+                  <li>
+                    <a href="https://www.instagram.com/oracleeyehospital/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                      <i className="fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/oracleeyehospital/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                      <i className="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Extra Nav with phone and Appointment button */}
+            <div className="extra-nav active d-flex align-items-center">
+              <div className="extra-cell">
+                <ul className="header-right d-flex align-items-center m-0 list-unstyled">
+                  <li className="nav-item item-call d-none d-xl-flex align-items-center me-3">
+                    <div className="info-widget style-3 d-flex align-items-center">
+                      <div className="widget-media me-2">
+                        <i className="feather icon-phone-call dz-ring-effect text-primary" style={{ fontSize: "24px" }}></i>
+                      </div>
+                      <div className="widget-content">
+                        <h3 className="title text-primary m-0" style={{ fontSize: "14px", fontWeight: "600" }}>Contact us</h3>
+                        <a href="tel:+91 7500503111" className="text-secondary" style={{ fontSize: "13px" }}>
+                          91 7500503111
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="nav-item item-btn">
+                    <Link className="btn btn-primary btn-hover2" href="/contact-us">
+                      Appointment <i className="feather icon-arrow-right ms-1"></i>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
