@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-cornea text-ink antialiased; font-family: "Plus Jakarta Sans Variable", system-ui, sans-serif; }
+  h1, h2, h3 { font-family: "Fraunces Variable", Georgia, serif; letter-spacing: -0.01em; }
+  :focus-visible { outline: 2px solid #137C8B; outline-offset: 3px; border-radius: 4px; }
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-6xl px-5 md:px-8; }
+  .btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors; }
+  .btn-primary { @apply bg-sun text-ink hover:bg-sun-dark hover:text-white; }
+  .btn-dark { @apply bg-ink text-white hover:bg-iris-dark; }
+  .btn-outline { @apply border border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-white; }
+  .field { @apply w-full rounded-lg border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-iris focus:ring-2 focus:ring-iris/30; }
+  .prose-oeh p { @apply mb-4 leading-7 text-ink/85; }
+  .prose-oeh h2 { @apply mb-3 mt-8 text-2xl; }
+}
+
+/* The one non-user-triggered motion on the site: the hero eye blinks now and then. */
+@keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.06); } }
+.blink { animation: blink 7s infinite; transform-box: fill-box; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .blink { animation: none; }
+}
