@@ -1,27 +1,103 @@
-import { PageHeader, Prose } from "@/components/ui";
-import { STATS } from "@/lib/content";
+"use client";
+import Link from "next/link";
 
-export const metadata = { title: "About Oracle Eye Hospital", description: "Trusted ophthalmic care in Moradabad with advanced technology and compassionate treatment." };
-
-export default function Overview() {
+export default function Page() {
   return (
     <>
-      <PageHeader title="About Oracle Eye Hospital" intro="Trusted ophthalmic care with experienced surgeons, advanced technology and compassionate treatment for patients of all ages." crumbs={[{ label: "About Us" }, { label: "Overview" }]} />
-      <div className="container-x grid gap-8 py-12 sm:grid-cols-3">
-        {STATS.map((s) => (
-          <div key={s.label} className="border-l-2 border-sun pl-4">
-            <p className="font-display text-4xl font-semibold">{s.value}</p>
-            <p className="text-sm text-ink/70">{s.label}</p>
-          </div>
-        ))}
-      </div>
-      <Prose>
-        {/* TODO: replace with the hospital's own story */}
-        <p>Oracle Eye Hospital provides comprehensive eye care in Moradabad, from routine check-ups and glasses to cataract surgery, laser vision correction, retina and glaucoma care.</p>
-        <p>Our approach is simple: examine carefully, explain clearly, and treat only what needs treating. Every patient gets time with the doctor and a plan they understand.</p>
-        <h2>What we offer</h2>
-        <p>Ten specialised services under one roof, including a dry eye clinic, a myopia clinic for children, and an orthoptics service for eye alignment and binocular vision.</p>
-      </Prose>
+      
+
+	
+<div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
+		<div className="container">
+			<div className="dz-bnr-inr-entry d-table-cell">
+				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Overview</h1>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	
+<section className="content-inner overlay-opacity-10 overflow-hidden  " style={{"backgroundImage":"url(https://clinicmaster.dexignzone.com/ophthalmology/xhtml/images/background/bg7.webp)"}}>
+		<div className="container">
+			<div className="row content-wrapper style-1 m-b30 justify-content-center">
+				<div className="col-xxl-6 col-xl-6 col-lg-6">
+					<div className="content-media m-b30">
+						<div className="dz-media">
+							<img src="/Assets/img/about/2.png" className="side-media" />
+							<img src="/Assets/img/about/1.png" />
+						</div>
+
+
+						<div className="item1" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
+							<a href="javascript:void(0)" className="svg-rotate-wrapper">
+
+								<svg viewBox="0 0 100 100" className="rotating-text-svg">
+									<defs>
+										<path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"></path>
+									</defs>
+									<text fill="#ffffff" fontSize="13" wordSpacing="-4" letterSpacing="3">
+										<textpath href="#circlePath">ORACLE     EYE     HOSPITAL    </textpath>
+									</text>
+								</svg>
+
+								<i className="icon feather icon-arrow-up-right center-arrow-icon"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div className="col-xxl-6 col-xl-6 col-lg-6">
+					<div className="section-head style-14 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+						<span className="sub-title">Welcome to Ophthalmology</span>
+						<h2 className="title">We Preserve, Enhance And Protect Your Vision</h2>
+						<p>Trusted ophthalmic care with world-class expertise, advanced technology, and compassionate treatment for patients of all ages.</p>
+						<p>
+							<b>We believe in high quality</b> patient care. Currently, we have highly skilled professionals to take care of our large patient base.
+							We take pride in letting you know that we match our growing volume of work with improving quality.
+						</p>
+					</div>
+					<div className="row  m-b10">
+						<div className="col-xxl-4 col-sm-4 col-6 wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.8s">
+							<div className="content-bx style-1 m-b30">
+								<span className="content-text"><span className="counter">25,000</span>+</span>
+								<h3 className="title m-b0">Surgeries Done</h3>
+							</div>
+						</div>
+						<div className="col-xxl-4 col-sm-4 col-6 wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="0.8s">
+							<div className="content-bx style-1 m-b30">
+								<span className="content-text"><span className="counter">50,000</span>+</span>
+								<h3 className="title m-b0 ">Happy Patients</h3>
+							</div>
+						</div>
+						<div className="col-xxl-4 col-sm-4 col-6 wow fadeInRight" data-wow-delay="1.0s" data-wow-duration="0.8s">
+							<div className="content-bx style-1 m-b30">
+								<span className="content-text"><span className="counter">15</span>+</span>
+								<h3 className="title m-b0">Years of Excellence	</h3>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </>
   );
 }

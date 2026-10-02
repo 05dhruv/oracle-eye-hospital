@@ -1,25 +1,61 @@
-import { PageHeader } from "@/components/ui";
-import { GALLERY } from "@/lib/content";
+"use client";
+import Link from "next/link";
 
-export const metadata = { title: "Photo Gallery" };
-
-export default function PhotoGallery() {
+export default function Page() {
   return (
     <>
-      <PageHeader title="Photo gallery" crumbs={[{ label: "Latest Updates" }, { label: "Photo Gallery" }]} />
-      <div className="container-x grid grid-cols-2 gap-4 py-12 md:grid-cols-3">
-        {GALLERY.map((g, i) => (
-          <figure key={i} className="overflow-hidden rounded-xl">
-            {g.src ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={g.src} alt={g.title} loading="lazy" className="aspect-[4/3] w-full object-cover" />
-            ) : (
-              <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-iris-light to-mist text-sm text-iris-dark">Photo coming soon</div>
-            )}
-            <figcaption className="mt-2 text-sm text-ink/70">{g.title}</figcaption>
-          </figure>
-        ))}
-      </div>
+      
+    
+<div className="dz-bnr-inr style-1 dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
+        <div className="container">
+            <div className="dz-bnr-inr-entry d-table-cell">
+                <h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Photo Gallery</h1>
+            </div>
+        </div>
+    </div>
+
+
+    
+<section className="content-inner-1 bg-light overflow-hidden content-wrapper style-3 ">
+        <div className="container">
+            <div className="row ">
+                    <div className="col-xxl-4 col-lg-4 m-b30">
+                        <div className="dz-card style-3">
+                            <div className="dz-media">
+                                <img src="/uploads/photogallery/16567d17-c657-460d-9dae-98d91660fb1a.jpg" alt="Oracle Eye Hospital" style={{"height":"250px","objectFit":"cover"}} />
+                            </div>
+                            <div className="dz-info">
+                                <h3 className="dz-title">
+                                    <a href="/gallery-details/oracle-eye-hospital">Oracle Eye Hospital</a>
+                                </h3>
+
+                                <a className="btn-link icon-link-hover-end" href="/gallery-details/oracle-eye-hospital">
+                                    View Gallery <i className="feather icon-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xxl-4 col-lg-4 m-b30">
+                        <div className="dz-card style-3">
+                            <div className="dz-media">
+                                <img src="/uploads/photogallery/543ba95a-8e05-4a52-85bb-18a72382f33d.jpg" alt="Hospital Interior" style={{"height":"250px","objectFit":"cover"}} />
+                            </div>
+                            <div className="dz-info">
+                                <h3 className="dz-title">
+                                    <a href="/gallery-details/hospital-interior">Hospital Interior</a>
+                                </h3>
+
+                                <a className="btn-link icon-link-hover-end" href="/gallery-details/hospital-interior">
+                                    View Gallery <i className="feather icon-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
     </>
   );
 }
