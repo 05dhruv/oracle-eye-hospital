@@ -34,7 +34,7 @@ export default function Page() {
 						<div className="form-wrapper style-1   doctor_form" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
 							<div className="form-body">
 								<div className="title-head">
-									<h2 className="form-title m-b20">Book Your Appointment</h2>
+									<h2 className="form-title m-b20" data-aos="fade-up">Book Your Appointment</h2>
 								</div>
 								<DoctorBookingForm doctorName="Dr. Sujata Tomar" />
 							</div>
@@ -43,18 +43,18 @@ export default function Page() {
 					</aside>
 				</div>
 				<div className="col-xl-7 m-b10 ps-xl-5">
-					<h2 className="title">Dr. Sujata Tomar </h2>
+					<h2 className="title" data-aos="fade-up">Dr. Sujata Tomar </h2>
 					<div className="section-head style-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 						<div className="sub-title  mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 							MBBS, MS, FRCS
 						</div>
 
-						<p className="fw-normal">
+						<p className="fw-normal" data-aos="fade-up">
 							Dr. Sujata Tomar is a highly skilled Consultant Ophthalmologist with expertise in cataract surgery, retinal examination, glaucoma management, uveitis treatment, dry eye management, and diabetic retinopathy care. She has extensive surgical experience, having successfully performed over 5,000 phacoemulsification cataract surgeries, including premium intraocular lens implantation (multifocal and toric IOLs), more than 2,000 Small Incision Cataract Surgeries (SICS), 200 pterygium excisions, and numerous intravitreal injections.
 						</p>
 
 
-						<p>
+						<p data-aos="fade-up">
 							Dr.  Sujata completed her MBBS from Government Medical College, Mysore, followed by an MS in Ophthalmology from Dr. Ram Manohar Lohia Hospital, New Delhi. She further earned the prestigious FRCS (Ophthalmology) from the Royal College of Physicians and Surgeons of Glasgow. With her commitment to clinical excellence, surgical precision, and patient-centered care, she strives to deliver the highest standards of eye care and vision restoration.
 						</p>
 
@@ -63,7 +63,7 @@ export default function Page() {
 
 					<div className="info-widget style-1 widget-sm  bg-light shadow-none m-b50 m-md-b20  doctor_form" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
 						<div className="widget-content">
-							<h2 className="title">My Time Schedule</h2>
+							<h2 className="title" data-aos="fade-up">My Time Schedule</h2>
 							<ul>
 								<li>Monday <span>10:00AM - 8:00PM</span></li>
 								<li>Tuesday <span>10:00AM - 8:00PM</span></li>
@@ -84,8 +84,8 @@ export default function Page() {
 										</span>
 									</div>
 									<div className="icon-content">
-										<h3 className="dz-title fw-semibold">Send us a Mail</h3>
-										<p><a href="mailto:oracleeyehospital@gmail.com" className="text-body"><span className="__cf_email__">oracleeyehospital@gmail.com</span></a></p>
+										<h3 className="dz-title fw-semibold" data-aos="fade-up">Send us a Mail</h3>
+										<p data-aos="fade-up"><a href="mailto:oracleeyehospital@gmail.com" className="text-body"><span className="__cf_email__">oracleeyehospital@gmail.com</span></a></p>
 									</div>
 								</div>
 							</div>
@@ -97,8 +97,8 @@ export default function Page() {
 										</span>
 									</div>
 									<div className="icon-content">
-										<h3 className="dz-title fw-semibold">Call Us:</h3>
-										<p><a href="tel:+91 8006803111" className="text-body">+91 8006803111</a></p>
+										<h3 className="dz-title fw-semibold" data-aos="fade-up">Call Us:</h3>
+										<p data-aos="fade-up"><a href="tel:+91 8006803111" className="text-body">+91 8006803111</a></p>
 									</div>
 								</div>
 							</div>

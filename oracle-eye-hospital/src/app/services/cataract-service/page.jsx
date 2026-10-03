@@ -32,19 +32,19 @@ export default function Page() {
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
-						<p>
+						<p data-aos="fade-up">
 							Cataract is the clouding of the natural crystalline lens and typically occurs because of ageing, although other reasons may be childhood eye infections,
 							exposure to ultra violet and associated health problems like diabetes and eye injuries.
 						</p>
 
-						<p>
+						<p data-aos="fade-up">
 							Surgery is the only known effective treatment for cataract removal. All cataract surgeries are aimed at removal of the cloudy natural lens and replacing it with an Intra Ocular Lens (IOL). At Oracle Eye care phacoemulsification is performed (No Injection & No Stitch Surgery) and a foldable IOL is inserted. These are suitable for the surgery which are
 							explained below. These lenses can be inserted through a small 1.8 to 2.8 mm opening.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Centurion vision system utilizes the advanced technology for cataract surgery available throughout the world. It has significantly automated the complicated steps of cataract surgery.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Best cataract treatment requires the combination of expertise of experienced doctors and latest technology working together. Oracle Eye care is considered as one of the leading hospitals in western UP for cataract surgery.
 							The hospitals are fully equipped with trained eye specialists for treatment of the patients.
 						</p>
@@ -54,7 +54,7 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Surgical Advantage</h3>
+						<h3 data-aos="fade-up">Surgical Advantage</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
 								<li>
@@ -78,11 +78,11 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>
+						<h3 data-aos="fade-up">
 							Micro Incision Cataract Surgery
 
 						</h3>
-						<p>
+						<p data-aos="fade-up">
 							Over the years the size of corneal incision made during cataract surgery has considerably reduced
 							leading to improved visual outcome and quicker post procedure recovery for the patient.
 						</p>
@@ -116,7 +116,7 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Phacoemulsification</h3>
+						<h3 data-aos="fade-up">Phacoemulsification</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
 								<li>	Requires a small incision of 3.2 mm</li>
@@ -132,16 +132,16 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Oracle Advantage</h3>
-						<p>
+						<h3 data-aos="fade-up">Oracle Advantage</h3>
+						<p data-aos="fade-up">
 							Centre for Sight has always been adopting the latest technology in eye care that has resulted in improved visual outcome and comfort for the patient. From Ocujet technology Stellaris
 							in its different versions we have introduced the latest generation phaco machines.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Oracle houses the most advanced phacoemulsification systems-the Centurion vision system from Alcon
 							offers a wide range of premium biological lens options to its patients.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							With Centurion vision system the cataract surgery can now be more Safe & accurate. Automating the most crucial steps in cataract surgery allows minimum pain & maximum accuracy and also ensures a quick surgery & quicker recovery. At Oracle Eye care we offer latest
 							and most advanced Cataract surgery treatment and are confident to deliver premium intraocular lens.
 						</p>
@@ -149,8 +149,8 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Aberration free/ Aspheric IOL5</h3>
-						<p>
+						<h3 data-aos="fade-up">Aberration free/ Aspheric IOL5</h3>
+						<p data-aos="fade-up">
 							These IOLs give good quality of vision post-operative due to the lens design. It also improves the contrast sensitivity of the patient and good night vision. These lenses also
 							filter the harmful UV light and blue light which are said to be harmful to the retina.
 						</p>
@@ -158,8 +158,8 @@ export default function Page() {
 					</div>
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Toric IOL5</h3>
-						<p>
+						<h3 data-aos="fade-up">Toric IOL5</h3>
+						<p data-aos="fade-up">
 							These IOLs correct the preexisting corneal astigmatism there
 							by reducing the possibility of spectacle wear for distant vision post operatively.
 						</p>
@@ -168,8 +168,8 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Multifocal IOLs</h3>
-						<p>
+						<h3 data-aos="fade-up">Multifocal IOLs</h3>
+						<p data-aos="fade-up">
 							These IOLs give good vision for all distances hence almost 90% of the day to day activities can be performed without the need for additional glasses. Rarely the patient may experience
 							glare during nights post operatively but usually gets adapted within a few months.
 						</p>
@@ -178,8 +178,8 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Accommodating IOLs</h3>
-						<p>
+						<h3 data-aos="fade-up">Accommodating IOLs</h3>
+						<p data-aos="fade-up">
 							These IOLs have flexible hinges that enables them to change focus for different distances hence providing clear distance, intermediate and near vision without glasses.
 						</p>
 
@@ -192,7 +192,7 @@ export default function Page() {
 					<aside className="side-bar sticky-top left">
 						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
-								<h3 className="title">All Services</h3>
+								<h3 className="title" data-aos="fade-up">All Services</h3>
 							</div>
 							<ul>
 								<li className="active"><a href="/cataract-service">Cataract Service</a></li>

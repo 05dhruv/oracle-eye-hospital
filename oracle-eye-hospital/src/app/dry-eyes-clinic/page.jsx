@@ -42,11 +42,11 @@ export default function Page() {
 
 					
 
-						<p>
+						<p data-aos="fade-up">
 							Dry eye disease is a common condition that can significantly affect vision, comfort, and quality of life. Our dedicated dry eye clinic focuses on identifying the underlying cause
 							of symptoms and providing targeted treatment solutions.
 						</p>
-						<p>Our dry eye evaluations includes:</p>
+						<p data-aos="fade-up">Our dry eye evaluations includes:</p>
 
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
@@ -64,7 +64,7 @@ export default function Page() {
 
 							</ul>
 						</div>
-						<p>Treatment options include:</p>
+						<p data-aos="fade-up">Treatment options include:</p>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
 								<li>
@@ -98,7 +98,7 @@ export default function Page() {
 					<aside className="side-bar sticky-top left">
 						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
-								<h3 className="title">All Services</h3>
+								<h3 className="title" data-aos="fade-up">All Services</h3>
 							</div>
 							<ul>
 								<li><a href="/cataract-service">Cataract Service</a></li>

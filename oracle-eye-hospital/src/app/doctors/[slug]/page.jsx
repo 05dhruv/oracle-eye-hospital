@@ -21,7 +21,7 @@ export default function DoctorPage({ params }) {
       <div className="container-x grid gap-10 py-12 md:grid-cols-3">
         <Avatar name={d.name} photo={d.photo} className="aspect-[4/5] w-full max-w-xs rounded-2xl" />
         <div className="md:col-span-2">
-          <p className="max-w-2xl text-lg leading-8 text-ink/85">{d.bio}</p>
+          <p className="max-w-2xl text-lg leading-8 text-ink/85" data-aos="fade-up">{d.bio}</p>
           <Link href="/contact-us#appointment" className="btn btn-primary mt-8">Book with {d.name}</Link>
         </div>
       </div>

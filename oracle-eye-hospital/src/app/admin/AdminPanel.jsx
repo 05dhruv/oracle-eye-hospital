@@ -47,7 +47,7 @@ export default function AdminPanel({ appointments, enquiries, posts }) {
   return (
     <div className="container-x py-10">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-3xl">Admin</h1>
+        <h1 className="text-3xl" data-aos="fade-up">Admin</h1>
         <button onClick={logout} className="btn btn-outline">Log out</button>
       </div>
 
@@ -59,7 +59,7 @@ export default function AdminPanel({ appointments, enquiries, posts }) {
         ))}
       </div>
 
-      {msg && <p className="mt-4 text-sm text-red-700" role="alert">{msg}</p>}
+      {msg && <p className="mt-4 text-sm text-red-700" role="alert" data-aos="fade-up">{msg}</p>}
 
       {tab === "appointments" && (
         <section className="mt-6">
@@ -79,10 +79,10 @@ export default function AdminPanel({ appointments, enquiries, posts }) {
                   <tr key={a.id} className="border-t border-ink/10 align-top">
                     <td className="px-4 py-3 whitespace-nowrap">{fmt(a.createdAt)}</td>
                     <td className="px-4 py-3">
-                      <p className="font-medium">{a.name}</p>
+                      <p className="font-medium" data-aos="fade-up">{a.name}</p>
                       <a className="text-iris-dark" href={`tel:${a.phone}`}>{a.phone}</a>
-                      {a.email && <p className="text-ink/60">{a.email}</p>}
-                      {a.message && <p className="mt-1 max-w-xs text-ink/70">{a.message}</p>}
+                      {a.email && <p className="text-ink/60" data-aos="fade-up">{a.email}</p>}
+                      {a.message && <p className="mt-1 max-w-xs text-ink/70" data-aos="fade-up">{a.message}</p>}
                     </td>
                     <td className="px-4 py-3">{a.doctor || "Any doctor"}<br /><span className="text-ink/60">{a.service || "General check-up"}</span></td>
                     <td className="px-4 py-3 whitespace-nowrap">{a.preferredDate ? fmtDay(a.preferredDate) : "—"}</td>
@@ -104,21 +104,21 @@ export default function AdminPanel({ appointments, enquiries, posts }) {
 
       {tab === "enquiries" && (
         <section className="mt-6 space-y-3">
-          {enquiries.length === 0 && <p className="text-ink/60">No messages.</p>}
+          {enquiries.length === 0 && <p className="text-ink/60" data-aos="fade-up">No messages.</p>}
           {enquiries.map((e) => (
             <article key={e.id} className={`rounded-xl border p-4 ${e.isRead ? "border-ink/10" : "border-iris bg-mist"}`}>
               <div className="flex flex-wrap items-start justify-between gap-2">
                 <div>
-                  <p className="font-semibold">{e.name} <span className="font-normal text-ink/60">· {fmt(e.createdAt)}</span></p>
-                  <p className="text-sm text-ink/70">{[e.phone, e.email].filter(Boolean).join(" · ")}</p>
+                  <p className="font-semibold" data-aos="fade-up">{e.name} <span className="font-normal text-ink/60">· {fmt(e.createdAt)}</span></p>
+                  <p className="text-sm text-ink/70" data-aos="fade-up">{[e.phone, e.email].filter(Boolean).join(" · ")}</p>
                 </div>
                 <div className="flex gap-4 text-sm">
                   <button className="text-iris-dark hover:underline" onClick={() => call(`/api/admin/enquiries/${e.id}`, "PATCH", { isRead: !e.isRead })}>{e.isRead ? "Mark unread" : "Mark read"}</button>
                   <button className="text-red-700 hover:underline" onClick={() => confirm("Delete this message?") && call(`/api/admin/enquiries/${e.id}`, "DELETE")}>Delete</button>
                 </div>
               </div>
-              {e.subject && <p className="mt-2 font-medium">{e.subject}</p>}
-              <p className="mt-1 whitespace-pre-wrap text-ink/85">{e.message}</p>
+              {e.subject && <p className="mt-2 font-medium" data-aos="fade-up">{e.subject}</p>}
+              <p className="mt-1 whitespace-pre-wrap text-ink/85" data-aos="fade-up">{e.message}</p>
             </article>
           ))}
         </section>
@@ -127,7 +127,7 @@ export default function AdminPanel({ appointments, enquiries, posts }) {
       {tab === "posts" && (
         <section className="mt-6 grid gap-10 md:grid-cols-2">
           <form onSubmit={createPost} className="space-y-3">
-            <h2 className="text-xl">New post</h2>
+            <h2 className="text-xl" data-aos="fade-up">New post</h2>
             <select className="field" value={post.type} onChange={(e) => setPost({ ...post, type: e.target.value })}>
               <option value="BLOG">Blog</option>
               <option value="NEWS">News / event</option>
@@ -138,7 +138,7 @@ export default function AdminPanel({ appointments, enquiries, posts }) {
             <button className="btn btn-dark">Publish</button>
           </form>
           <div>
-            <h2 className="text-xl">Published</h2>
+            <h2 className="text-xl" data-aos="fade-up">Published</h2>
             <ul className="mt-3 divide-y divide-ink/10 border-y border-ink/10">
               {posts.length === 0 && <li className="py-4 text-ink/60">Nothing yet.</li>}
               {posts.map((p) => (

@@ -17,9 +17,9 @@ export default async function Blog() {
           <div className="grid gap-x-12 md:grid-cols-2">
             {posts.map((p) => (
               <Link key={p.id} href={`/blog/${p.slug}`} className="group border-t border-ink/15 py-6">
-                <p className="text-sm text-ink/60">{formatDate(p.createdAt)}</p>
-                <h2 className="mt-1 text-2xl group-hover:text-iris">{p.title}</h2>
-                <p className="mt-2 text-ink/75">{p.excerpt}</p>
+                <p className="text-sm text-ink/60" data-aos="fade-up">{formatDate(p.createdAt)}</p>
+                <h2 className="mt-1 text-2xl group-hover:text-iris" data-aos="fade-up">{p.title}</h2>
+                <p className="mt-2 text-ink/75" data-aos="fade-up">{p.excerpt}</p>
               </Link>
             ))}
           </div>

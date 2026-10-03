@@ -51,9 +51,9 @@ export default function Page() {
 				<div className="col-xxl-6 col-xl-6 col-lg-6">
 					<div className="section-head style-14 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 						<span className="sub-title">Welcome to Ophthalmology</span>
-						<h2 className="title">We Preserve, Enhance And Protect Your Vision</h2>
-						<p>Trusted ophthalmic care with world-class expertise, advanced technology, and compassionate treatment for patients of all ages.</p>
-						<p>
+						<h2 className="title" data-aos="fade-up">We Preserve, Enhance And Protect Your Vision</h2>
+						<p data-aos="fade-up">Trusted ophthalmic care with world-class expertise, advanced technology, and compassionate treatment for patients of all ages.</p>
+						<p data-aos="fade-up">
 							<b>We believe in high quality</b> patient care. Currently, we have highly skilled professionals to take care of our large patient base.
 							We take pride in letting you know that we match our growing volume of work with improving quality.
 						</p>

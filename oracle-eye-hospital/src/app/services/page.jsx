@@ -14,8 +14,8 @@ export default function Services() {
       <div className="container-x grid gap-x-12 py-12 md:grid-cols-2">
         {SERVICES.map((s) => (
           <Link key={s.slug} href={`/services/${s.slug}`} className="group border-t border-ink/15 py-6">
-            <h2 className="text-2xl group-hover:text-iris">{s.title}</h2>
-            <p className="mt-2 text-ink/70">{s.short}</p>
+            <h2 className="text-2xl group-hover:text-iris" data-aos="fade-up">{s.title}</h2>
+            <p className="mt-2 text-ink/70" data-aos="fade-up">{s.short}</p>
           </Link>
         ))}
       </div>

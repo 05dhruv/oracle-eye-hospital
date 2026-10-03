@@ -36,12 +36,12 @@ export default function Page() {
 							<div className="testimonial-detail">
 								<div className="testimonial-contant">
 									<div className="testimonial-text">
-										<p>“I underwent cataract surgery at Oracle Eye Hospital and the experience was excellent. The doctors were very professional and the staff was extremely supportive throughout the process.” </p>
+										<p data-aos="fade-up">“I underwent cataract surgery at Oracle Eye Hospital and the experience was excellent. The doctors were very professional and the staff was extremely supportive throughout the process.” </p>
 									</div>
 								</div>
 								<div className="testimonial-info">
 									<div className="clearfix">
-										<h3 className="testimonial-name">Rohit Sharma,</h3>
+										<h3 className="testimonial-name" data-aos="fade-up">Rohit Sharma,</h3>
 										<span className="testimonial-position">Patient</span>
 									</div>
 								</div>
@@ -55,12 +55,12 @@ export default function Page() {
 							<div className="testimonial-detail">
 								<div className="testimonial-contant">
 									<div className="testimonial-text">
-										<p>“The consultation process was smooth and well-organized. The doctors explained everything clearly and made me feel comfortable before my LASIK procedure.” </p>
+										<p data-aos="fade-up">“The consultation process was smooth and well-organized. The doctors explained everything clearly and made me feel comfortable before my LASIK procedure.” </p>
 									</div>
 								</div>
 								<div className="testimonial-info">
 									<div className="clearfix">
-										<h3 className="testimonial-name">Neha Verma,</h3>
+										<h3 className="testimonial-name" data-aos="fade-up">Neha Verma,</h3>
 										<span className="testimonial-position">Patient</span>
 									</div>
 								</div>
@@ -76,12 +76,12 @@ export default function Page() {
 							<div className="testimonial-detail">
 								<div className="testimonial-contant">
 									<div className="testimonial-text">
-										<p>“Highly recommended hospital for eye care. The facilities are modern and the team is very experienced. My vision has improved significantly after treatment.”</p>
+										<p data-aos="fade-up">“Highly recommended hospital for eye care. The facilities are modern and the team is very experienced. My vision has improved significantly after treatment.”</p>
 									</div>
 								</div>
 								<div className="testimonial-info">
 									<div className="clearfix">
-										<h3 className="testimonial-name">Amit Gupta,</h3>
+										<h3 className="testimonial-name" data-aos="fade-up">Amit Gupta,</h3>
 										<span className="testimonial-position">Patient</span>
 									</div>
 								</div>
@@ -99,12 +99,12 @@ export default function Page() {
 							<div className="testimonial-detail">
 								<div className="testimonial-contant">
 									<div className="testimonial-text">
-										<p>“Very clean and well-maintained hospital. The staff is polite and attentive. I had a great experience during my visit and follow-ups.”</p>
+										<p data-aos="fade-up">“Very clean and well-maintained hospital. The staff is polite and attentive. I had a great experience during my visit and follow-ups.”</p>
 									</div>
 								</div>
 								<div className="testimonial-info">
 									<div className="clearfix">
-										<h3 className="testimonial-name">Pooja Singh,</h3>
+										<h3 className="testimonial-name" data-aos="fade-up">Pooja Singh,</h3>
 										<span className="testimonial-position">Patient</span>
 									</div>
 								</div>
