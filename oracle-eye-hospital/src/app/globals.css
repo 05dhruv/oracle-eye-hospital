@@ -472,9 +472,3 @@ html {
   opacity: 0.8;
 }
 
-/* Form Doctor Image Float Animation */
-.content-wrapper .content-media img,
-.form-wrapper .content-media img {
-  animation: floatReverse 7s ease-in-out infinite;
-}
-
