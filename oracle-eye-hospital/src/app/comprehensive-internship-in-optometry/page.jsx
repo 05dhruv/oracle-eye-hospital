@@ -25,7 +25,7 @@ export default function Page() {
 				<div className="col-xl-7 m-b10 ps-xl-5">
 					<div className="section-head style-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 
-						<p className="fw-normal">
+						<p className="fw-normal" data-aos="fade-up">
 							The <b> Oracle Eye Hospital </b> offers a limited number of internship seats to students who have completed the first three years of their under graduate Optometry course from other colleges.
 						</p>
 					</div>
@@ -47,7 +47,7 @@ export default function Page() {
 
 
 					<div className="clearfix m-b50 m-md-b20 " data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
-						<h3 className="text-primary title-dashed-separator">The important dates for optometry Internship training program are as follows: </h3>
+						<h3 className="text-primary title-dashed-separator" data-aos="fade-up">The important dates for optometry Internship training program are as follows: </h3>
 						<ul className="list-check text-secondary fw-medium m-b35">
 							<li>
 								<b>Application deadline :</b>  1st June 2026
@@ -63,7 +63,7 @@ export default function Page() {
 					</div>
 
 
-					<h3 className="text-primary title-dashed-separator">
+					<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 						Short Term Fellowship In Optometry
 					</h3>
 

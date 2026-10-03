@@ -30,11 +30,11 @@ export default function Page() {
 						</div>
 					</div>
 
-					<h2 className="tpa_heading">List Of Documents Required for the cashless Facility</h2>
+					<h2 className="tpa_heading" data-aos="fade-up">List Of Documents Required for the cashless Facility</h2>
 
 					<div className="content-item  " data-aos="fade-up" id="Ayushman-Bharat" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 					
-						<h3>
+						<h3 data-aos="fade-up">
 							Ayushman Bharat/Pandit Deen Dayal Card
 						</h3>
 						
@@ -64,7 +64,7 @@ export default function Page() {
 
 						<div className="content-item  facility_divv" data-aos="fade-up" id="TPA" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
-						<h3>
+						<h3 data-aos="fade-up">
 							TPA
 						</h3>
 
@@ -91,7 +91,7 @@ export default function Page() {
 					</div>
 						<div className="content-item  facility_divv" data-aos="fade-up" id="CGHS" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
-						<h3>
+						<h3 data-aos="fade-up">
 							CGHS
 						</h3>
 
@@ -128,7 +128,7 @@ export default function Page() {
 
 						<div className="content-item  facility_divv" data-aos="fade-up" id="EGHS" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
-						<h3>
+						<h3 data-aos="fade-up">
 							EGHS
 						</h3>
 
@@ -159,7 +159,7 @@ export default function Page() {
 
 						<div className="content-item  facility_divv" data-aos="fade-up" id="ESI" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
-						<h3>
+						<h3 data-aos="fade-up">
 							ESI
 						</h3>
 
@@ -195,7 +195,7 @@ export default function Page() {
 
 						<div className="content-item  facility_divv" data-aos="fade-up" id="CRPF-Card" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
-						<h3>
+						<h3 data-aos="fade-up">
 							CRPF Card/ Railway card
 						</h3>
 
@@ -222,7 +222,7 @@ export default function Page() {
 					</div>
 						<div className="content-item  facility_divv" data-aos="fade-up" id="UP-Police" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
-						<h3>
+						<h3 data-aos="fade-up">
 							UP Police
 						</h3>
 
@@ -251,7 +251,7 @@ export default function Page() {
 					
 					<div className="content-item " data-aos="fade-up" id="BSNL" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
-						<h3>
+						<h3 data-aos="fade-up">
 							BSNL
 						</h3>
 
@@ -280,7 +280,7 @@ export default function Page() {
 					<aside className="side-bar sticky-top left">
 						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
-								<h3 className="title">Cashless Services</h3>
+								<h3 className="title" data-aos="fade-up">Cashless Services</h3>
 							</div>
 							<ul id="cashless-nav">
 								<li className="active"><a href="#Ayushman-Bharat">Ayushman Bharat/Pandit Deen Dayal Card</a></li>

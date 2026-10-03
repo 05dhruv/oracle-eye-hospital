@@ -321,7 +321,7 @@ export default function Home() {
                   <h1 className="title " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                     Clear Vision Awaits
                   </h1>
-                  <p>
+                  <p data-aos="fade-up">
                     LASER Eye Correction Treatment, Retinal Surgery Services, Microincision Cataract Surgery
                   </p>
                   <div className="contant-box style-1 " data-aos="fade-up" data-aos-delay="800">
@@ -423,8 +423,8 @@ export default function Home() {
             <div className="col-xxl-6 col-xl-6 col-lg-6">
               <div className="section-head style-14 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                 <span className="sub-title">Welcome to Ophthalmology</span>
-                <h2 className="title">We Preserve, Enhance And Protect Your Vision</h2>
-                <p>Trusted ophthalmic care with world-class expertise, advanced technology, and compassionate treatment for patients of all ages.</p>
+                <h2 className="title" data-aos="fade-up">We Preserve, Enhance And Protect Your Vision</h2>
+                <p data-aos="fade-up">Trusted ophthalmic care with world-class expertise, advanced technology, and compassionate treatment for patients of all ages.</p>
               </div>
 
               <StatsCounters />
@@ -461,10 +461,10 @@ export default function Home() {
                     >
                       <div className="dz-info">
                         <span className="small-title">{srv.num}</span>
-                        <h3 className="dz-title">
+                        <h3 className="dz-title" data-aos="fade-up">
                           <Link href={srv.slug}>{srv.title}</Link>
                         </h3>
-                        <p>{srv.short}</p>
+                        <p data-aos="fade-up">{srv.short}</p>
                         <Link className="btn-link" href={srv.slug} aria-label={`View ${srv.title}`}>
                           <i className="feather icon-arrow-right"></i>
                         </Link>
@@ -656,7 +656,7 @@ export default function Home() {
           <div className="section-head style-14 m-b30 text-center">
             <span className="sub-title m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">Meet Our Specialists</span>
             <h2 className="title m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">Our Team of Eye Doctors</h2>
-            <p>Our specialists have more than a decade of experience. Patient comfort and well-being is our topmost priority.</p>
+            <p data-aos="fade-up">Our specialists have more than a decade of experience. Patient comfort and well-being is our topmost priority.</p>
           </div>
 
           <div className="row">
@@ -698,7 +698,7 @@ export default function Home() {
             <div className="col-xxl-6 col-xl-6 m-b30 align-self-center order-1">
               <div className="content-info right">
                 <div className="section-head style-14 m-0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-                  <h2 className="title">Frequently Asked Questions</h2>
+                  <h2 className="title" data-aos="fade-up">Frequently Asked Questions</h2>
                 </div>
 
                 <div className="accordion dz-accordion style-1 " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" id="accordionExample">
@@ -706,7 +706,7 @@ export default function Home() {
                     const isOpen = activeFaq === faq.id;
                     return (
                       <div className="accordion-item" key={faq.id}>
-                        <h2 className="accordion-header">
+                        <h2 className="accordion-header" data-aos="fade-up">
                           <button
                             className={`accordion-button ${isOpen ? "" : "collapsed"}`}
                             type="button"
@@ -721,7 +721,7 @@ export default function Home() {
                           style={{ display: isOpen ? "block" : "none" }}
                         >
                           <div className="accordion-body">
-                            <p>{faq.a}</p>
+                            <p data-aos="fade-up">{faq.a}</p>
                           </div>
                         </div>
                       </div>
@@ -753,7 +753,7 @@ export default function Home() {
                 <h2 className="title m-b15 text-white " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
                   Don't Hesitate To Contact Us Any Time
                 </h2>
-                <p className="text-white m-b10">If you have any questions, we are here to help.</p>
+                <p className="text-white m-b10" data-aos="fade-up">If you have any questions, we are here to help.</p>
               </div>
 
               <div className="row">
@@ -777,7 +777,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className="widget-content">
-                      <h3 className="title">24 x 7 Helpline </h3>
+                      <h3 className="title" data-aos="fade-up">24 x 7 Helpline </h3>
                     </div>
                   </div>
                 </div>
@@ -799,7 +799,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className="widget-content">
-                      <h3 className="title">
+                      <h3 className="title" data-aos="fade-up">
                         <a href="tel:+91 8006803111" className="text-white">+91 8006803111</a>
                       </h3>
                     </div>
@@ -861,12 +861,12 @@ export default function Home() {
                   <div className="testimonial-detail">
                     <div className="testimonial-contant">
                       <div className="testimonial-text">
-                        <p>{TESTIMONIALS_DATA[activeTestimonial].text}</p>
+                        <p data-aos="fade-up">{TESTIMONIALS_DATA[activeTestimonial].text}</p>
                       </div>
                     </div>
                     <div className="testimonial-info">
                       <div className="clearfix">
-                        <h3 className="testimonial-name">{TESTIMONIALS_DATA[activeTestimonial].name}</h3>
+                        <h3 className="testimonial-name" data-aos="fade-up">{TESTIMONIALS_DATA[activeTestimonial].name}</h3>
                         <span className="testimonial-position">{TESTIMONIALS_DATA[activeTestimonial].role}</span>
                       </div>
                     </div>
@@ -984,8 +984,8 @@ export default function Home() {
             >
               <i className="feather icon-check" style={{ fontSize: "36px" }}></i>
             </div>
-            <h3 className="h4 fw-bold text-dark mb-2">Appointment Booked!</h3>
-            <p className="text-muted small mb-4">{bookingMessage}</p>
+            <h3 className="h4 fw-bold text-dark mb-2" data-aos="fade-up">Appointment Booked!</h3>
+            <p className="text-muted small mb-4" data-aos="fade-up">{bookingMessage}</p>
             <button
               type="button"
               className="btn btn-primary btn-hover2 w-100"

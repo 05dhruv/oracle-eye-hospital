@@ -34,15 +34,15 @@ export default function Page() {
 						</div>
 
 
-						<p>
+						<p data-aos="fade-up">
 							At Oracle Eye Hospital, we provide comprehensive care for a wide range of corneal,
 							refractive, and ocular surface disorders using advanced diagnostic technology and evidence-based treatment approaches. Our dedicated team is committed to preserving vision, enhancing visual quality, and improving patient comfort through personalized care.
 						</p>
-						<h3>
+						<h3 data-aos="fade-up">
 							Cornea Services
 						</h3>
 
-						<p>
+						<p data-aos="fade-up">
 							The cornea plays a crucial role in focusing light and maintaining clear vision.
 							We offer specialized diagnosis and treatment for various corneal conditions, including:
 						</p>
@@ -73,19 +73,19 @@ export default function Page() {
 							</div>
 						</div>
 
-						<p>
+						<p data-aos="fade-up">
 							Our services include advanced corneal imaging, topography, tomography, anterior segment evaluation, and specialty contact lens fitting such as RGP, hybrid, scleral, and
 							PROSE-inspired lenses. Please go through contact lens services section.
 						</p>
 
-						<h3>Refractive Services</h3>
+						<h3 data-aos="fade-up">Refractive Services</h3>
 
 
-						<p>
+						<p data-aos="fade-up">
 							We offer comprehensive refractive assessments for individuals seeking freedom from spectacles and contact lenses. Our specialists evaluate each patient
 							thoroughly to determine the most suitable vision correction option.
 						</p>
-						<p>Our refractive services include:</p>
+						<p data-aos="fade-up">Our refractive services include:</p>
 
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
@@ -100,7 +100,7 @@ export default function Page() {
 
 							</ul>
 						</div>
-						<p>Using state-of-the-art diagnostic equipment, we ensure precise assessment and individualized treatment planning to achieve optimal visual outcomes.</p>
+						<p data-aos="fade-up">Using state-of-the-art diagnostic equipment, we ensure precise assessment and individualized treatment planning to achieve optimal visual outcomes.</p>
 
 						
 						
@@ -117,7 +117,7 @@ export default function Page() {
 					<aside className="side-bar sticky-top left">
 						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
-								<h3 className="title">All Services</h3>
+								<h3 className="title" data-aos="fade-up">All Services</h3>
 							</div>
 							<ul>
 								<li><a href="/cataract-service">Cataract Service</a></li>

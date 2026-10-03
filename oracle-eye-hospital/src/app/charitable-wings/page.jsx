@@ -116,13 +116,13 @@ export default function Page() {
 
 						<div className="dz-info pt-4">
 							<div className="dz-post-text">
-								<h3>Pritha Healthcare Charitable Trust (PHCT)</h3>
-								<p>Pritha Healthcare Charitable Trust (PHCT) is the charitable wing of Oracle Eye Hospital, established on 1st January 2016 under the visionary leadership of Dr Girjesh Kain The Trust is committed to delivering accessible, affordable, and high-quality eye care services to underprivileged communities across Moradabad and surrounding regions.</p>
-								<p>Our goal is to eliminate avoidable blindness by reaching those who lack access 
+								<h3 data-aos="fade-up">Pritha Healthcare Charitable Trust (PHCT)</h3>
+								<p data-aos="fade-up">Pritha Healthcare Charitable Trust (PHCT) is the charitable wing of Oracle Eye Hospital, established on 1st January 2016 under the visionary leadership of Dr Girjesh Kain The Trust is committed to delivering accessible, affordable, and high-quality eye care services to underprivileged communities across Moradabad and surrounding regions.</p>
+								<p data-aos="fade-up">Our goal is to eliminate avoidable blindness by reaching those who lack access 
 									to quality eye care through community outreach, free eye camps, vision screening, and charitable surgical services.</p>
 
-								<h3>What We Do</h3>
-								<p>PHCT conducts comprehensive community-based eye care programs that include:</p>
+								<h3 data-aos="fade-up">What We Do</h3>
+								<p data-aos="fade-up">PHCT conducts comprehensive community-based eye care programs that include:</p>
 
 								<ul className="list-check text-secondary fw-medium m-b35">
 									
@@ -155,22 +155,22 @@ export default function Page() {
 								</ul>
 
 
-								<h3 className="text-primary title-dashed-separator">
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Our Mission
 								</h3>
 
-								<p> Our mission is to reach 10,000 villages across Moradabad and neighbouring districts, providing comprehensive eye care services to underserved communities and ensuring that every individual has the opportunity to retain or regain sight.</p>
+								<p data-aos="fade-up"> Our mission is to reach 10,000 villages across Moradabad and neighbouring districts, providing comprehensive eye care services to underserved communities and ensuring that every individual has the opportunity to retain or regain sight.</p>
 								
 
-								<h3 className="text-primary title-dashed-separator">
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Our Vision
 								</h3>
 
-								<p>A Blindness-Free India, where no individual loses vision due to preventable or treatable eye diseases because of financial or geographical barriers.</p>
+								<p data-aos="fade-up">A Blindness-Free India, where no individual loses vision due to preventable or treatable eye diseases because of financial or geographical barriers.</p>
 								
 
 
-								<h3 className="text-primary title-dashed-separator">
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Objectives
 								</h3>
 
@@ -188,10 +188,10 @@ export default function Page() {
 								</ul>
 
 
-								<h3 className="text-primary title-dashed-separator">
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Our Team
 								</h3>
-								<p>Our charitable programs are supported by a dedicated multidisciplinary team comprising:</p>
+								<p data-aos="fade-up">Our charitable programs are supported by a dedicated multidisciplinary team comprising:</p>
 								<ul className="list-check text-secondary fw-medium m-b15">
 									<li>
 										Experienced Ophthalmologists (MS)
@@ -206,21 +206,21 @@ export default function Page() {
 									<li>Volunteers</li>
 								</ul>
 
-								<p>
+								<p data-aos="fade-up">
 									Together, they work tirelessly to ensure quality eye care reaches the most vulnerable sections of society.
 								</p>
 
 
-								<h3 className="text-primary title-dashed-separator">
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Community Eye Care Programme
 								</h3>
 
-								<p>
+								<p data-aos="fade-up">
 									Oracle Eye Hospital is a service-oriented institution dedicated to providing quality eye care to the economically weaker sections of society. Through PHCT, a significant number of patients receive consultations, 
 									investigations, surgeries, medicines, and follow-up care either free of cost or at highly subsidized rates.
 								</p>
 
-								<p>Patients identified during outreach screening camps who require advanced
+								<p data-aos="fade-up">Patients identified during outreach screening camps who require advanced
 									treatment are transported to Oracle Eye Hospital, where they receive comprehensive care, including surgery, medications, and postoperative follow-up.</p>
 								
 									
@@ -233,10 +233,10 @@ export default function Page() {
 									
 									
 									
-									<h3 className="text-primary title-dashed-separator">
+									<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Major Areas of Support
 								</h3>
-								<p>Donations and charitable contributions help us meet essential operational expenses, including:</p>
+								<p data-aos="fade-up">Donations and charitable contributions help us meet essential operational expenses, including:</p>
 								<ul className="list-check text-secondary fw-medium m-b35">
 									<li>
 										Community awareness and outreach programmes
@@ -269,23 +269,23 @@ export default function Page() {
 
 
 
-								<h3 className="text-primary title-dashed-separator">
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Blind-Free India – A Reality Project
 								</h3>
 
 
-								<p>The Blind-Free India initiative is one of Oracle Eye Hospital's flagship charitable programmes aimed at eliminating avoidable blindness through free screening, timely diagnosis, and sight-restoring surgeries.</p>
+								<p data-aos="fade-up">The Blind-Free India initiative is one of Oracle Eye Hospital's flagship charitable programmes aimed at eliminating avoidable blindness through free screening, timely diagnosis, and sight-restoring surgeries.</p>
 
-								<p>With continued support from generous donors and well-wishers, thousands of underprivileged patients can receive life-changing eye surgeries every year at absolutely no cost.</p>
-								<p>Together, we can restore vision and transform lives.</p>
+								<p data-aos="fade-up">With continued support from generous donors and well-wishers, thousands of underprivileged patients can receive life-changing eye surgeries every year at absolutely no cost.</p>
+								<p data-aos="fade-up">Together, we can restore vision and transform lives.</p>
 
-								<h3 className="text-primary title-dashed-separator">
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Support Our Mission
 								</h3>
-								<p>Your contribution can help someone regain the precious gift of sight.</p>
+								<p data-aos="fade-up">Your contribution can help someone regain the precious gift of sight.</p>
 
-								<p>Every donation, regardless of its size, directly supports free eye examinations, surgeries, medicines, spectacles, and community outreach programmes for economically disadvantaged patients.</p>
-								<h3 className="text-primary title-dashed-separator">
+								<p data-aos="fade-up">Every donation, regardless of its size, directly supports free eye examinations, surgeries, medicines, spectacles, and community outreach programmes for economically disadvantaged patients.</p>
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Donation Opportunities
 								</h3>
 
@@ -324,7 +324,7 @@ export default function Page() {
 
 
 
-								<h3 className="text-primary title-dashed-separator">
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Bank Details for Donations
 								</h3>
 								
@@ -348,14 +348,14 @@ export default function Page() {
 								</ul>
 
 
-								<h3 className="text-primary title-dashed-separator">
+								<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Together We Can Restore Sight
 								</h3>
 
 
-								<p>By supporting Pritha Healthcare Charitable Trust, you become a partner in our mission to eliminate avoidable blindness and provide quality eye care to those who need it the most.</p>
+								<p data-aos="fade-up">By supporting Pritha Healthcare Charitable Trust, you become a partner in our mission to eliminate avoidable blindness and provide quality eye care to those who need it the most.</p>
 
-								<p>Give the Gift of Vision. Make a Difference Today.</p>
+								<p data-aos="fade-up">Give the Gift of Vision. Make a Difference Today.</p>
 							</div>
 						</div>
 
@@ -370,7 +370,7 @@ export default function Page() {
 
 							<div className="info-widget style-1 widget-sm  shadow-none m-md-b20 " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 								<div className="widget-content">
-									<h2 className="title">Office Hours</h2>
+									<h2 className="title" data-aos="fade-up">Office Hours</h2>
 									<ul>
 										<li>Monday <span>10:00AM - 8:00PM</span></li>
 										<li>Tuesday <span>10:00AM - 8:00PM</span></li>

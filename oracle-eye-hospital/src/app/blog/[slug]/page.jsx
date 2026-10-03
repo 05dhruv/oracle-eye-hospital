@@ -18,7 +18,7 @@ export default async function BlogPost({ params }) {
       <PageHeader title={p.title} intro={formatDate(p.createdAt)} crumbs={[{ label: p.type === "NEWS" ? "News" : "Blog", href: listHref }, { label: p.title }]} />
       <article className="container-x prose-oeh max-w-3xl py-12">
         {/* body is plain text; blank line = new paragraph. React escapes it, so no HTML injection. */}
-        {p.body.split(/\n{2,}/).map((para, i) => <p key={i}>{para}</p>)}
+        {p.body.split(/\n{2,}/).map((para, i) => <p key={i} data-aos="fade-up">{para}</p>)}
       </article>
     </>
   );

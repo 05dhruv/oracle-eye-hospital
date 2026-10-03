@@ -31,17 +31,17 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
-						<h3>
+						<h3 data-aos="fade-up">
 							Protecting Children's Vision for a Brighter Future
 						</h3>
-						<p>
+						<p data-aos="fade-up">
 							Myopia (nearsightedness) is becoming increasingly common among children worldwide. Beyond the need for stronger glasses, progressive myopia can increase the risk of serious eye conditions later in life, including retinal detachment, glaucoma, myopic maculopathy, and cataracts. At Oracle Eye Hospital, our dedicated Myopia Clinic focuses on early detection, monitoring, and evidence-based myopia control
 							strategies to help slow the progression of myopia and protect long-term eye health.
 						</p>
-						<h3>
+						<h3 data-aos="fade-up">
 							Comprehensive Myopia Assessment
 						</h3>
-						<p>
+						<p data-aos="fade-up">
 							Our clinic provides a detailed evaluation to understand each child's
 							visual needs and risk factors for myopia progression. The assessment includes:
 						</p>
@@ -73,11 +73,11 @@ export default function Page() {
 						</div>
 
 
-						<h3>
+						<h3 data-aos="fade-up">
 							Myopia Control Treatments
 						</h3>
 
-						<p>
+						<p data-aos="fade-up">
 							Based on individual needs, our specialists develop personalized
 							treatment plans using proven myopia management strategies, including:
 						</p>
@@ -114,8 +114,8 @@ export default function Page() {
 												</span>
 											</div>
 											<div className="icon-content">
-												<h3 className="dz-title">Orthokeratology (Ortho-K)</h3>
-												<p>
+												<h3 className="dz-title" data-aos="fade-up">Orthokeratology (Ortho-K)</h3>
+												<p data-aos="fade-up">
 													Specially designed overnight contact lenses that gently reshape the cornea while sleeping, providing clear daytime vision and helping slow myopia progression.
 												</p>
 											</div>
@@ -139,8 +139,8 @@ export default function Page() {
 												</span>
 											</div>
 											<div className="icon-content">
-												<h3 className="dz-title">Soft Myopia Control Contact Lenses</h3>
-												<p>
+												<h3 className="dz-title" data-aos="fade-up">Soft Myopia Control Contact Lenses</h3>
+												<p data-aos="fade-up">
 													Advanced contact lenses specifically designed to reduce the
 													progression of myopia in children and adolescents.
 												</p>
@@ -165,10 +165,10 @@ export default function Page() {
 												</span>
 											</div>
 											<div className="icon-content">
-												<h3 className="dz-title">
+												<h3 className="dz-title" data-aos="fade-up">
 													Atropine Therapy
 												</h3>
-												<p>
+												<p data-aos="fade-up">
 													Low-dose atropine eye drops prescribed under specialist supervision to help slow the progression of myopia.
 												</p>
 											</div>
@@ -196,10 +196,10 @@ export default function Page() {
 												</span>
 											</div>
 											<div className="icon-content">
-												<h3 className="dz-title">
+												<h3 className="dz-title" data-aos="fade-up">
 													Spectacle-Based Myopia Control
 												</h3>
-												<p>
+												<p data-aos="fade-up">
 													Specialized spectacle lenses designed to manage myopia progression while providing clear vision.
 												</p>
 											</div>
@@ -225,10 +225,10 @@ export default function Page() {
 												</span>
 											</div>
 											<div className="icon-content">
-												<h3 className="dz-title">
+												<h3 className="dz-title" data-aos="fade-up">
 													Lifestyle Modification and Visual Hygiene
 												</h3>
-												<p>
+												<p data-aos="fade-up">
 													Guidance on increasing outdoor activities, managing screen time,
 													maintaining proper reading habits, and adopting healthy visual behaviors.
 
@@ -245,11 +245,11 @@ export default function Page() {
 						</div>
 
 
-						<h3>
+						<h3 data-aos="fade-up">
 							Ongoing Monitoring and Follow-Up
 						</h3>
 
-						<p>
+						<p data-aos="fade-up">
 							Myopia management is a long-term process that requires regular monitoring.
 							Our clinic schedules periodic follow-up visits to assess:
 						</p>
@@ -276,10 +276,10 @@ export default function Page() {
 							</div>
 						</div>
 
-						<p>Treatment plans are adjusted as needed to ensure the best possible outcomes for each child.</p>
+						<p data-aos="fade-up">Treatment plans are adjusted as needed to ensure the best possible outcomes for each child.</p>
 
 
-						<h3>Why Choose Oracle Eye Hospital's Myopia Clinic?</h3>
+						<h3 data-aos="fade-up">Why Choose Oracle Eye Hospital's Myopia Clinic?</h3>
 
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
@@ -303,7 +303,7 @@ export default function Page() {
 							</ul>
 						</div>
 
-						<p>
+						<p data-aos="fade-up">
 							Our goal is not only to improve vision today but also to reduce the risk of vision-threatening complications associated with high myopia in the future. Through early intervention and continuous care,
 							we help children maintain healthier eyes and better vision for life.
 						</p>
@@ -318,7 +318,7 @@ export default function Page() {
 					<aside className="side-bar sticky-top left">
 						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
-								<h3 className="title">All Services</h3>
+								<h3 className="title" data-aos="fade-up">All Services</h3>
 							</div>
 							<ul>
 								<li><a href="/cataract-service">Cataract Service</a></li>

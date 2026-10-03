@@ -25,12 +25,12 @@ export default function AdminLogin() {
   return (
     <div className="container-x flex min-h-[60vh] items-center justify-center py-16">
       <form onSubmit={submit} className="w-full max-w-sm space-y-4 rounded-2xl border border-ink/10 bg-white p-8 shadow-sm">
-        <h1 className="text-3xl">Admin login</h1>
+        <h1 className="text-3xl" data-aos="fade-up">Admin login</h1>
         <label className="block text-sm font-medium">
           Password
           <input type="password" className="field mt-1" value={password} onChange={(e) => setPassword(e.target.value)} autoFocus />
         </label>
-        {error && <p className="text-sm text-red-700" role="alert">{error}</p>}
+        {error && <p className="text-sm text-red-700" role="alert" data-aos="fade-up">{error}</p>}
         <button className="btn btn-dark w-full" disabled={busy}>{busy ? "Checking…" : "Log in"}</button>
       </form>
     </div>

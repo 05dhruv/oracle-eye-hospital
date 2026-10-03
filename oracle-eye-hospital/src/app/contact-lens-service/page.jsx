@@ -36,16 +36,16 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
-						<h3>
+						<h3 data-aos="fade-up">
 							Oracle Eye Hospital Contact Lens Centre
 						</h3>
-						<p>
+						<p data-aos="fade-up">
 							Discover one of northern India’s premier destinations for advanced contact lens care. With cutting-edge technology and nationally recognized specialists, we provide personalized solutions for every patient.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							From routine daily wear lenses to <b> super-specialty options</b> like BostonSight Scleral and BostonSight PROSE devices, we offer life-changing care for those with severe dry eye or irregular corneal conditions.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Your vision, our expertise.
 						</p>
 					</div>
@@ -56,7 +56,7 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Services Available</h3>
+						<h3 data-aos="fade-up">Services Available</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
 								<li>Soft spherical: for Myopia, Hypermetropia</li>
@@ -68,14 +68,14 @@ export default function Page() {
 					</div>
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Speciality Contact Lens Services</h3>
+						<h3 data-aos="fade-up">Speciality Contact Lens Services</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
 								<li>RGP</li>
 								<li>
 									Scleral lens
-									<p className="mb-0">1. Mini-scleral</p>
-									<p className="mb-0">2. Boston Sight Scleral lens</p>
+									<p className="mb-0" data-aos="fade-up">1. Mini-scleral</p>
+									<p className="mb-0" data-aos="fade-up">2. Boston Sight Scleral lens</p>
 								</li>
 								<li>Pediatric Aphakic Lens</li>
 								<li>Orthokeratology Lens</li>
@@ -86,7 +86,7 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Common conditions which need specialty lenses are:</h3>
+						<h3 data-aos="fade-up">Common conditions which need specialty lenses are:</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
 								<li>
@@ -107,7 +107,7 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Scleral lenses also greatly helps in corneal and ocular conditions such as</h3>
+						<h3 data-aos="fade-up">Scleral lenses also greatly helps in corneal and ocular conditions such as</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
 								<li>
@@ -139,7 +139,7 @@ export default function Page() {
 					<aside className="side-bar sticky-top left">
 						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
-								<h3 className="title">All Services</h3>
+								<h3 className="title" data-aos="fade-up">All Services</h3>
 							</div>
 							<ul>
 								<li><a href="/cataract-service">Cataract Service</a></li>

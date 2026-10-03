@@ -22,7 +22,7 @@ export default function ContactForm() {
     }
   }
 
-  if (state === "done") return <p className="rounded-xl bg-mist p-6" role="status">Message sent. We will get back to you soon.</p>;
+  if (state === "done") return <p className="rounded-xl bg-mist p-6" role="status" data-aos="fade-up">Message sent. We will get back to you soon.</p>;
 
   return (
     <form onSubmit={submit} className="space-y-4" noValidate>
@@ -34,7 +34,7 @@ export default function ContactForm() {
       </div>
       <label className="block text-sm font-medium">Message<textarea className="field mt-1" rows={4} required value={form.message} onChange={set("message")} /></label>
       <input tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" name="website" value={form.website} onChange={set("website")} />
-      {state === "error" && <p className="text-sm text-red-700" role="alert">{error}</p>}
+      {state === "error" && <p className="text-sm text-red-700" role="alert" data-aos="fade-up">{error}</p>}
       <button className="btn btn-dark" disabled={state === "sending"}>{state === "sending" ? "Sending…" : "Send message"}</button>
     </form>
   );

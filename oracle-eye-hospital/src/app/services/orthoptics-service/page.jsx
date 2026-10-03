@@ -31,23 +31,23 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
-						<h3>
+						<h3 data-aos="fade-up">
 							Orthoptics Services
 						</h3>
-						<p>
+						<p data-aos="fade-up">
 							Orthoptics is a specialized area of eye care focused on diagnosing, managing, and treating disorders related to eye movements, binocular vision, and visual
 							development. Orthoptists work closely with ophthalmologists and other eye care professionals to help patients achieve comfortable, coordinated, and
 							efficient vision.
 						</p>
-						<h3>
+						<h3 data-aos="fade-up">
 							What Is Orthoptics?
 						</h3>
-						<p>
+						<p data-aos="fade-up">
 							Orthoptics involves the assessment and non-surgical treatment of conditions that affect how the eyes work together. These conditions can impact both
 							children and adults, leading to symptoms such as double vision, eye strain, headaches, poor depth perception, or difficulties with reading and
 							concentration.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Orthoptists use a range of clinical techniques, exercises, and therapies to improve eye coordination and visual function.
 						</p>
 					</div>
@@ -57,7 +57,7 @@ export default function Page() {
 					<div className="content-item row g-4  mb-2" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.6s","animationName":"fadeInUp"}}>
 
 						<div className="col-xl-12">
-							<h3>Our Orthoptics Services</h3>
+							<h3 data-aos="fade-up">Our Orthoptics Services</h3>
 
 							<div className="row ortho_img">
 								<div className="col-md-6">
@@ -87,8 +87,8 @@ export default function Page() {
 											</span>
 										</div>
 										<div className="icon-content">
-											<h3 className="dz-title">Comprehensive Eye Movement Assessment</h3>
-											<p>
+											<h3 className="dz-title" data-aos="fade-up">Comprehensive Eye Movement Assessment</h3>
+											<p data-aos="fade-up">
 												We provide detailed evaluations of eye alignment, focusing ability, and binocular vision to identify underlying visual disorders accurately.
 											</p>
 										</div>
@@ -112,8 +112,8 @@ export default function Page() {
 											</span>
 										</div>
 										<div className="icon-content">
-											<h3 className="dz-title">Strabismus (Squint) Management</h3>
-											<p>
+											<h3 className="dz-title" data-aos="fade-up">Strabismus (Squint) Management</h3>
+											<p data-aos="fade-up">
 												Our orthoptists assess and manage eye misalignment conditions in both children and adults. Treatment plans may include eye exercises, prism therapy,
 												patching, or referral for surgical consultation when required.
 											</p>
@@ -138,10 +138,10 @@ export default function Page() {
 											</span>
 										</div>
 										<div className="icon-content">
-											<h3 className="dz-title">
+											<h3 className="dz-title" data-aos="fade-up">
 												Amblyopia (Lazy Eye) Treatment
 											</h3>
-											<p>
+											<p data-aos="fade-up">
 												Early diagnosis and treatment of amblyopia are essential for improving vision development in children. We offer personalized therapy programs designed to
 												strengthen weaker vision effectively.
 											</p>
@@ -170,10 +170,10 @@ export default function Page() {
 											</span>
 										</div>
 										<div className="icon-content">
-											<h3 className="dz-title">
+											<h3 className="dz-title" data-aos="fade-up">
 												Double Vision (Diplopia) Assessment
 											</h3>
-											<p>
+											<p data-aos="fade-up">
 												We evaluate and manage double vision caused by neurological, muscular, or age-related conditions. Treatment may include prisms, exercises, or
 												coordinated care with specialists.
 											</p>
@@ -200,11 +200,11 @@ export default function Page() {
 											</span>
 										</div>
 										<div className="icon-content">
-											<h3 className="dz-title">
+											<h3 className="dz-title" data-aos="fade-up">
 												Pediatric Vision Screening
 
 											</h3>
-											<p>
+											<p data-aos="fade-up">
 												Children’s visual development is carefully monitored through age-appropriate assessments to detect issues that may affect learning, reading, and daily
 												activities.
 
@@ -232,11 +232,11 @@ export default function Page() {
 											</span>
 										</div>
 										<div className="icon-content">
-											<h3 className="dz-title">
+											<h3 className="dz-title" data-aos="fade-up">
 												Neuro-Orthoptic Rehabilitation
 
 											</h3>
-											<p>
+											<p data-aos="fade-up">
 												Patients recovering from neurological conditions such as stroke, head injury, or cranial nerve palsies can benefit from specialized visual rehabilitation
 												programs aimed at improving eye coordination and visual comfort.
 											</p>
@@ -263,10 +263,10 @@ export default function Page() {
 											</span>
 										</div>
 										<div className="icon-content">
-											<h3 className="dz-title">
+											<h3 className="dz-title" data-aos="fade-up">
 												Visual Therapy and Eye Exercises
 											</h3>
-											<p>
+											<p data-aos="fade-up">
 												Customized vision therapy programs help improve tracking, focusing, convergence, and coordination skills for patients experiencing visual fatigue or reading
 												difficulties.
 
@@ -279,7 +279,7 @@ export default function Page() {
 						</div>
 					</div>
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>Conditions We Treat</h3>
+						<h3 data-aos="fade-up">Conditions We Treat</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
 								<li>
@@ -309,7 +309,7 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>
+						<h3 data-aos="fade-up">
 							Why Choose Our Orthoptics Clinic?
 
 						</h3>
@@ -343,16 +343,16 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
-						<h3>
+						<h3 data-aos="fade-up">
 							Book an Appointment
 
 						</h3>
-						<p>
+						<p data-aos="fade-up">
 							If you or your child are experiencing vision problems, early assessment can make a significant
 							difference. Contact our clinic today to schedule a comprehensive orthoptic evaluation and receive
 							expert care tailored to your visual needs
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Brock String exercises help strengthen eye coordination and improve convergence insufficiency symptoms such as double vision and eye strain.
 						</p>
 					</div>
@@ -363,7 +363,7 @@ export default function Page() {
 					<aside className="side-bar sticky-top left">
 						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
-								<h3 className="title">All Services</h3>
+								<h3 className="title" data-aos="fade-up">All Services</h3>
 							</div>
 							<ul>
 								<li><a href="/cataract-service">Cataract Service</a></li>

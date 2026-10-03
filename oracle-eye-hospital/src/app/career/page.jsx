@@ -26,7 +26,7 @@ export default function Page() {
 				<div className="col-xl-12 m-b10 ps-xl-5">
 					<div className="section-head style-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 
-						<p className="fw-normal">
+						<p className="fw-normal" data-aos="fade-up">
 							At <b> Oracle Eye Hospital,</b> we are more than a healthcare institution -we are a team united by a mission to restore vision and transform lives. We believe that every role, whether clinical or non-clinical,
 							contributes to our shared goal of eliminating avoidable blindness and delivering world-class eye care.
 						</p>
@@ -34,7 +34,7 @@ export default function Page() {
 
 
 					<div className="clearfix m-b50 m-md-b20 " data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
-						<h3 className="text-primary title-dashed-separator">Why Join Us?</h3>
+						<h3 className="text-primary title-dashed-separator" data-aos="fade-up">Why Join Us?</h3>
 						<ul className="list-check text-secondary fw-medium m-b35">
 							<li>
 								<b>Impactful Work :</b> Be part of life-changing treatments that give patients the gift of sight.
@@ -52,10 +52,10 @@ export default function Page() {
 					</div>
 
 
-					<h3 className="text-primary title-dashed-separator">
+					<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 						Opportunities
 					</h3>
-					<p>We welcome professionals across diverse fields:</p>
+					<p data-aos="fade-up">We welcome professionals across diverse fields:</p>
 					<ul className="list-check text-secondary fw-medium m-b35">
 						<li>
 							Ophthalmologists & Surgeons
@@ -74,7 +74,7 @@ export default function Page() {
 
 
 
-					<h3 className="text-primary title-dashed-separator">
+					<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 						Current Openings__________
 					</h3>
 					
@@ -83,10 +83,10 @@ export default function Page() {
 					
 
 
-					<h3 className="text-primary title-dashed-separator">
+					<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 						Connect With Us
 					</h3>
-					<p>For details on upcoming outreach programs or to collaborate, reach us at:</p>
+					<p data-aos="fade-up">For details on upcoming outreach programs or to collaborate, reach us at:</p>
 					<ul className="list-check text-secondary fw-medium m-b35">
 						<li><b>Phone : </b><a href="tel:+91-7500603111">+91-7500603111</a></li>
 						<li><b>Email : </b> <a href="mailto:admin@oracleeyehospital.com">admin@oracleeyehospital.com</a></li>

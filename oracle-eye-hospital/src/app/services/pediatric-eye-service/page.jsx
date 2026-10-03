@@ -31,37 +31,37 @@ export default function Page() {
 
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
-						<h3>
+						<h3 data-aos="fade-up">
 							Specialists in Squint and Lazy Eye Syndrome
 						</h3>
 
 
-						<p>
+						<p data-aos="fade-up">
 							A Squint or 'Strabismus' develops when the two muscles (that do not work in a balanced way and the eyes do not move together correctly. This loss of coordination between the muscles of the two eyes leads to misalignment, blindly eyes move in parallel directions. But, in case of squint, also, known as crossed eyes, one eye points in the direction and the person is looking and the other eye turns inwards, outwards, upwards or downwards. This condition is more common in children than in adults.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							The squinting eye is used less often and the brain tends to neglect the image from that eye. In children, this may lead to Amblyopia (Lazy Eye). Moreover, constant squint reduces the development of binocularity and depth perception which are required for various activities like driving, sports etc.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Squint does not correct on its own. Treatment of squint should begin as early as possible. The eye specialist is the best judge and will advise you the correct treatment. The earlier the treatment begins, greater are the chances of improvement.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Squint treatment for children include muscle exercises, use of prisms in spectacles and surgery to correct squint. Amblyopia therapy may also be required in cases with lazy eye.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							In order to improve vision, the weakened muscles in the affected eye or eyes must be put to work. Several Squint treatment techniques may be used alone or in combination depending on the type, severity and cause of strabismus including – Eyeglasses or contact lenses may help people who have crossed eyes due to an uncorrected farsightedness.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Such issues needs utmost attention and treatment at the earliest and our world class facility offers the best technology available for your child's eye care needs like paediatric eye care services which include evaluation to assess and diagnose vision problems, visual evaluation in children with multiple congenital anomalies, evaluation and treatment of adult eye-sight and surgical and nonsurgical treatment of strabismus.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							At Oracle Eyecare, we understand that your little one sees differently. That's why we have eye specialists who are trained in Paediatric eye care so that your child gets nothing less than the most specialized care.
 
 						</p>
 
 
 						<div className="pricingtable-list">
-							<h3>Our Pediatric Eye Care Services</h3>
+							<h3 data-aos="fade-up">Our Pediatric Eye Care Services</h3>
 							<ul className="list-check text-secondary fw-medium  m-b35">
 								<li>
 									Comprehensive eye examination for children
@@ -87,17 +87,17 @@ export default function Page() {
 								<li>	Specialized pediatric eye care consultation	</li>
 							</ul>
 						</div>
-						<h3>Why Choose Our Pediatric Eye Services?</h3>
+						<h3 data-aos="fade-up">Why Choose Our Pediatric Eye Services?</h3>
 
 
 
-						<p>
+						<p data-aos="fade-up">
 							Our specialized pediatric eye care team understands that children require a different approach to eye care. We create a comfortable, child-friendly environment where your little ones feel safe and at ease during their examination.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Early detection and treatment of eye problems in children is crucial for their visual development and overall quality of life. Our experienced pediatric ophthalmologists use the latest diagnostic equipment and treatment techniques specifically designed for children.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							We believe every child deserves the best possible vision care, and we're committed to providing comprehensive, compassionate, and expert pediatric eye care services to help your child see the world clearly.
 						</p>
 					</div>
@@ -111,7 +111,7 @@ export default function Page() {
 					<aside className="side-bar sticky-top left">
 						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
-								<h3 className="title">All Services</h3>
+								<h3 className="title" data-aos="fade-up">All Services</h3>
 							</div>
 							<ul>
 								<li><a href="/cataract-service">Cataract Service</a></li>

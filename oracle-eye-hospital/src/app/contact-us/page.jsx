@@ -57,8 +57,8 @@ export default function Page() {
                   <img src="/Assets/img/contact3.jpg" alt="Address" />
                 </div>
                 <div className="icon-content">
-                  <h3 className="dz-title fw-semibold">Address</h3>
-                  <p>
+                  <h3 className="dz-title fw-semibold" data-aos="fade-up">Address</h3>
+                  <p data-aos="fade-up">
                     <a href="https://www.google.com/maps/search/?api=1&query=Oracle+Eye+Hospital+491+Hi+Street+Near+TDI+City+Parampara+MDA+Moradabad+Uttar+Pradesh+244001" target="_blank" rel="noopener noreferrer">
                       491, Hi-Street, Near TDI City, Parampara, MDA, Moradabad, Uttar Pradesh-244001, India
                     </a>
@@ -72,8 +72,8 @@ export default function Page() {
                   <img src="/Assets/img/contact1.jpg" alt="Call Us" />
                 </div>
                 <div className="icon-content">
-                  <h3 className="dz-title fw-semibold">Call Us</h3>
-                  <p>
+                  <h3 className="dz-title fw-semibold" data-aos="fade-up">Call Us</h3>
+                  <p data-aos="fade-up">
                     <a href="tel:+918006803111" className="text-body">+91 8006803111</a><br />
                     <a href="tel:+917500503111" className="text-body">+91 7500503111</a>
                   </p>
@@ -86,8 +86,8 @@ export default function Page() {
                   <img src="/Assets/img/contact2.jpg" alt="Email Us" />
                 </div>
                 <div className="icon-content">
-                  <h3 className="dz-title fw-semibold">Send us a Mail</h3>
-                  <p>
+                  <h3 className="dz-title fw-semibold" data-aos="fade-up">Send us a Mail</h3>
+                  <p data-aos="fade-up">
                     <a href="mailto:oracleeyehospital@gmail.com" className="text-body">oracleeyehospital@gmail.com</a><br />
                   </p>
                 </div>
@@ -112,7 +112,7 @@ export default function Page() {
                 <div className="form-wrapper style-1 bg-light">
                   <div className="form-body">
                     <div className="section-head style-1 mb-3">
-                      <h2 className="title fw-semibold m-b0">Get in Touch</h2>
+                      <h2 className="title fw-semibold m-b0" data-aos="fade-up">Get in Touch</h2>
                       <p className="m-b0">You Can Reach Us Anytime</p>
                     </div>
                     <form id="contactForm" onSubmit={handleSubmit}>
@@ -194,8 +194,8 @@ export default function Page() {
         <div className="booking-popup-overlay" onClick={() => setShowSuccess(false)}>
           <div className="booking-popup-box" onClick={(e) => e.stopPropagation()}>
             <div className="mb-3 text-success" style={{ fontSize: "50px" }}>✓</div>
-            <h3 className="mb-2">Message Sent!</h3>
-            <p className="text-muted">Thank you! Your message has been sent successfully. Our team will contact you shortly.</p>
+            <h3 className="mb-2" data-aos="fade-up">Message Sent!</h3>
+            <p className="text-muted" data-aos="fade-up">Thank you! Your message has been sent successfully. Our team will contact you shortly.</p>
             <button className="btn btn-primary mt-3" onClick={() => setShowSuccess(false)}>OK</button>
           </div>
         </div>

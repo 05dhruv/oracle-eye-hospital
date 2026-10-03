@@ -25,7 +25,7 @@ export default function Page() {
                                 <img src="/uploads/photogallery/16567d17-c657-460d-9dae-98d91660fb1a.jpg" alt="Oracle Eye Hospital" style={{"height":"250px","objectFit":"cover"}} />
                             </div>
                             <div className="dz-info">
-                                <h3 className="dz-title">
+                                <h3 className="dz-title" data-aos="fade-up">
                                     <a href="/gallery-details/oracle-eye-hospital">Oracle Eye Hospital</a>
                                 </h3>
 
@@ -41,7 +41,7 @@ export default function Page() {
                                 <img src="/uploads/photogallery/543ba95a-8e05-4a52-85bb-18a72382f33d.jpg" alt="Hospital Interior" style={{"height":"250px","objectFit":"cover"}} />
                             </div>
                             <div className="dz-info">
-                                <h3 className="dz-title">
+                                <h3 className="dz-title" data-aos="fade-up">
                                     <a href="/gallery-details/hospital-interior">Hospital Interior</a>
                                 </h3>
 

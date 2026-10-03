@@ -32,10 +32,10 @@ export default function Page() {
 
 					<div className="content-item " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
-						<p>
+						<p data-aos="fade-up">
 							Computer vision syndrome (CVS) is a temporary eye strain problem resulting from focusing the eyes on a computer display for protracted, uninterrupted periods of time.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Different problems encountered after prolonged use of computers. You can have some of these problems:
 						</p>
 
@@ -82,17 +82,17 @@ export default function Page() {
 						</div>
 
 
-						<h3>Reasons for CVS</h3>
+						<h3 data-aos="fade-up">Reasons for CVS</h3>
 
 
 
-						<p>
+						<p data-aos="fade-up">
 							Blinking is reduced during computer use, which rate decreases for a decade. TV compared. Generally speaking requires front distance of
 							at blinking an average of 13 blinks per minute, this eye is more blinking 3 blinks per minutes.
 						</p>
 
 						<div className="pricingtable-list">
-							<h3>Prevention is better than cure for CVS</h3>
+							<h3 data-aos="fade-up">Prevention is better than cure for CVS</h3>
 							<ul className="list-check text-secondary fw-medium m-b35">
 								<li>
 									Take a break every 20 minutes for 20 seconds and focus to somewhere until your eyes
@@ -146,26 +146,26 @@ export default function Page() {
 							</ul>
 						</div>
 
-						<h3>Reducing your eyes</h3>
+						<h3 data-aos="fade-up">Reducing your eyes</h3>
 
-						<p><b>Redefining the way the world looks at you</b></p>
-						<p>
+						<p data-aos="fade-up"><b>Redefining the way the world looks at you</b></p>
+						<p data-aos="fade-up">
 							We're seeing an increase in the number of people with young adults. Hypermetropic power treatments called Multifocal used mostly for correction of defective entire of the eyes. They offer a more arthritis spectacles free life. greater cosmetic visual quality. Easiest. Unlike children, who are unlikely of the way they want contact lens to the computer systems.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							In children, young people, the children have an immediate consideration range of the blood. Contact lenses, contact lens, cold, thinking and decreasing the costly people from before of eyerope areas. In complex optical surface and in poor eyecare.
 						</p>
 
-						<h3>Oculoplasty & facial aesthetics</h3>
-						<p><b>Centre for Sight Harvest Post Age</b></p>
+						<h3 data-aos="fade-up">Oculoplasty & facial aesthetics</h3>
+						<p data-aos="fade-up"><b>Centre for Sight Harvest Post Age</b></p>
 
-						<p>
+						<p data-aos="fade-up">
 							Centre the point surgery of oculoplasty is the branch of ophthalmology that involves not only with the diseases of the eye, ear vision functions, structures around the eyes free eyelids, eyebrows and well with the mid to late, which is what it is.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							As an result, it's a surgical cosmetic, reconstructive, and functional surgery for the eyelids and face cavity areas.
 						</p>
-						<p>
+						<p data-aos="fade-up">
 							Oracle features offers comprehensive state-of-the-art services for cosmetic procedures for the eyes and face. Our experienced Oculoplasty and Facial cosmetic surgeons combine their in-depth knowledge of ophthalmology with the expertise in cosmetic and surgery to help reconstruct and enhance your facial features and achieving use of advanced techniques and cutting.
 
 						</p>
@@ -181,7 +181,7 @@ export default function Page() {
 					<aside className="side-bar sticky-top left">
 						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
-								<h3 className="title">All Services</h3>
+								<h3 className="title" data-aos="fade-up">All Services</h3>
 							</div>
 							<ul>
 								<li><a href="/cataract-service">Cataract Service</a></li>
