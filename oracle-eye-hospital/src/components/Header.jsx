@@ -124,7 +124,7 @@ export default function Header() {
                 {/* About Us Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "about" ? "open" : ""}`}>
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleDropdown("about");
@@ -143,7 +143,7 @@ export default function Header() {
                 {/* Clinic Team Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "team" ? "open" : ""}`}>
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleDropdown("team");
@@ -160,7 +160,7 @@ export default function Header() {
                 {/* Services Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "services" ? "open" : ""}`}>
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleDropdown("services");
@@ -185,7 +185,7 @@ export default function Header() {
                 {/* Latest Updates Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "updates" ? "open" : ""}`}>
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleDropdown("updates");
@@ -195,7 +195,7 @@ export default function Header() {
                   </a>
                   <ul className="sub-menu">
                     <li className="sub-menu-down">
-                      <a href="javascript:void(0);">Media Gallery</a>
+                      <a href="#" onClick={(e) => e.preventDefault()}>Media Gallery</a>
                       <ul className="sub-menu">
                         <li><Link href="/photo-gallery" onClick={() => setMobileMenuOpen(false)}>Photo Gallery</Link></li>
                         <li><Link href="/video-gallery" onClick={() => setMobileMenuOpen(false)}>Video Gallery</Link></li>
@@ -209,7 +209,7 @@ export default function Header() {
                 {/* Academic Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "academic" ? "open" : ""}`}>
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleDropdown("academic");
@@ -219,7 +219,7 @@ export default function Header() {
                   </a>
                   <ul className="sub-menu">
                     <li className="sub-menu-down">
-                      <a href="javascript:void(0);">Optometry Training Program</a>
+                      <a href="#" onClick={(e) => e.preventDefault()}>Optometry Training Program</a>
                       <ul className="sub-menu">
                         <li><Link href="/comprehensive-internship-in-optometry" onClick={() => setMobileMenuOpen(false)}>Comprehensive Clinical Optometry Internship</Link></li>
                       </ul>

@@ -345,7 +345,7 @@ export default function Home() {
                           <div className="dz-media video-bx4 h-auto">
                             <img src="/Assets/img/banner2.png" alt="Video Thumbnail" className="thumbnail" />
                             <a
-                              href="javascript:void(0);"
+                              href="#"
                               onClick={(e) => {
                                 e.preventDefault();
                                 setShowVideoModal(true);
@@ -405,7 +405,7 @@ export default function Home() {
                 </div>
 
                 <div className="item1" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
-                  <a href="javascript:void(0)" className="svg-rotate-wrapper">
+                  <div className="svg-rotate-wrapper">
                     <svg viewBox="0 0 100 100" className="rotating-text-svg">
                       <defs>
                         <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
@@ -415,7 +415,7 @@ export default function Home() {
                       </text>
                     </svg>
                     <i className="icon feather icon-arrow-up-right center-arrow-icon"></i>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>

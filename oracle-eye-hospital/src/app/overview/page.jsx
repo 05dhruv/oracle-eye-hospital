@@ -32,7 +32,7 @@ export default function Page() {
 
 
 						<div className="item1" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
-							<a href="javascript:void(0)" className="svg-rotate-wrapper">
+							<div className="svg-rotate-wrapper">
 
 								<svg viewBox="0 0 100 100" className="rotating-text-svg">
 									<defs>
@@ -44,7 +44,7 @@ export default function Page() {
 								</svg>
 
 								<i className="icon feather icon-arrow-up-right center-arrow-icon"></i>
-							</a>
+							</div>
 						</div>
 					</div>
 				</div>
