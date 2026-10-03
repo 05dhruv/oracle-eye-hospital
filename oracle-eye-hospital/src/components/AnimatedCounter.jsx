@@ -1,8 +1,11 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
-export default function AnimatedCounter({ end, duration = 3000, formatComma = true }) {
-  const [count, setCount] = useState(0);
+function formatNumberWithCommas(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+export default function AnimatedCounter({ end, duration = 2500, formatComma = true }) {
   const ref = useRef(null);
   const started = useRef(false);
 
@@ -15,26 +18,29 @@ export default function AnimatedCounter({ end, duration = 3000, formatComma = tr
         entries.forEach((entry) => {
           if (entry.isIntersecting && !started.current) {
             started.current = true;
-            const startTime = performance.now();
-            const target = end;
+            let startTime = null;
 
-            const updateCount = (currentTime) => {
-              const elapsed = currentTime - startTime;
+            const animate = (timestamp) => {
+              if (!startTime) startTime = timestamp;
+              const elapsed = timestamp - startTime;
               const progress = Math.min(elapsed / duration, 1);
-              // Smooth cubic deceleration matching jQuery counterUp
-              const easeOut = 1 - Math.pow(1 - progress, 3);
-              const current = Math.floor(easeOut * target);
 
-              setCount(current);
+              const current = Math.floor(progress * end);
+
+              if (ref.current) {
+                ref.current.innerText = formatComma ? formatNumberWithCommas(current) : current.toString();
+              }
 
               if (progress < 1) {
-                requestAnimationFrame(updateCount);
+                requestAnimationFrame(animate);
               } else {
-                setCount(target);
+                if (ref.current) {
+                  ref.current.innerText = formatComma ? formatNumberWithCommas(end) : end.toString();
+                }
               }
             };
 
-            requestAnimationFrame(updateCount);
+            requestAnimationFrame(animate);
           }
         });
       },
@@ -44,11 +50,11 @@ export default function AnimatedCounter({ end, duration = 3000, formatComma = tr
     observer.observe(el);
 
     return () => observer.disconnect();
-  }, [end, duration]);
+  }, [end, duration, formatComma]);
 
   return (
     <span ref={ref} className="counter">
-      {formatComma ? count.toLocaleString("en-US") : count}
+      0
     </span>
   );
 }
