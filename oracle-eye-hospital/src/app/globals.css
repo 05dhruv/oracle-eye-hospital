@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -21,6 +17,7 @@ html {
   width: 100%;
   height: 100%;
   animation: rotateCircleText 12s linear infinite;
+  transform-origin: center center;
 }
 
 .center-arrow-icon {
@@ -28,7 +25,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: #fff !important;
   font-size: 24px;
   z-index: 2;
 }
@@ -39,7 +36,7 @@ html {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-25px);
+    transform: translateY(-20px);
   }
 }
 
@@ -48,7 +45,7 @@ html {
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(20px) rotate(4deg);
+    transform: translateY(18px) rotate(4deg);
   }
 }
 
@@ -129,121 +126,42 @@ html {
   }
 }
 
-.marquee-container {
+.portfolio-slider-wrapper {
   overflow: hidden;
-  white-space: nowrap;
   position: relative;
   width: 100%;
 }
 
-.marquee-track {
+.portfolio-slider-track {
   display: flex;
   width: max-content;
   animation: marqueeScroll 25s linear infinite;
 }
 
-.marquee-track:hover {
+.portfolio-slider-track:hover {
   animation-play-state: paused;
 }
 
-.marquee-item {
+.portfolio-slide-item {
   flex-shrink: 0;
-  padding: 0 10px;
+  width: 260px;
+  padding: 0 5px;
 }
 
-/* Side "Get Appointment" floating tab */
-.SideOption {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-  transform-origin: right bottom;
-  z-index: 9999;
-}
-
-.ApplicationWidget_btn {
-  background: #00a297;
-  color: #fff !important;
-  padding: 10px 22px;
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 6px 6px 0 0;
-  text-decoration: none;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-  display: block;
-  letter-spacing: 0.5px;
-  transition: background 0.3s;
-}
-
-.ApplicationWidget_btn:hover {
-  background: #008178;
-}
-
-/* Scroll to top button */
-.scroltop {
-  position: fixed;
-  bottom: 25px;
-  right: 90px;
-  z-index: 9999;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #00a297;
-  color: #ffffff;
-  border: none;
-  box-shadow: 0 4px 15px rgba(0, 162, 151, 0.4);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  transition: all 0.3s;
-}
-
-.scroltop:hover {
-  background: #008178;
-  transform: translateY(-4px);
-}
-
-/* Floating WhatsApp Chat */
-.whatsapp-chat-box {
-  position: fixed;
-  bottom: 90px;
-  right: 25px;
-  width: 320px;
-  border-radius: 16px;
+.portfolio-slide-item .dz-media {
   overflow: hidden;
-  z-index: 10002;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  animation: fadeInUp 0.4s ease forwards;
+  border-radius: 12px;
 }
 
-.typing-indicator .dot {
-  width: 7px;
-  height: 7px;
-  background-color: #9ca3af;
-  border-radius: 50%;
-  margin: 0 2px;
-  animation: typingBounce 1.2s infinite ease-in-out;
+.portfolio-slide-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-.typing-indicator .dot-1 {
-  animation-delay: 0s;
-}
-.typing-indicator .dot-2 {
-  animation-delay: 0.2s;
-}
-.typing-indicator .dot-3 {
-  animation-delay: 0.4s;
-}
-
-@keyframes typingBounce {
-  0%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-6px);
-  }
+.portfolio-slide-item:hover img {
+  transform: scale(1.08);
 }
 
 /* Floating avatar positions around testimonial */
@@ -254,6 +172,7 @@ html {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   animation: floatSlow 8s ease-in-out infinite;
   pointer-events: none;
+  z-index: 1;
 }
 
 .avatar1 { top: 15%; left: 6%; width: 55px; height: 55px; animation-delay: 0s; }
@@ -262,72 +181,149 @@ html {
 .avatar4 { top: 10%; right: 7%; width: 65px; height: 65px; animation-delay: 0.8s; }
 .avatar5 { top: 38%; right: 4%; width: 50px; height: 50px; animation-delay: 2.2s; }
 .avatar6 { bottom: 15%; right: 8%; width: 60px; height: 60px; animation-delay: 4s; }
+.avatar7 { top: 60%; left: 12%; width: 45px; height: 45px; animation-delay: 2.8s; }
+.avatar8 { bottom: 35%; right: 10%; width: 55px; height: 55px; animation-delay: 1.2s; }
 
-/* Service cards hover tooltip / active state */
-.service-preview-card {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Image Tooltip exact effect matching oracleeyehospital.com */
+.image-tooltip-effect {
+  position: relative;
 }
 
-.service-preview-card:hover,
-.service-preview-card.active {
-  background-color: #ffffff;
-  box-shadow: 0 12px 30px rgba(0, 162, 151, 0.12);
-  border-left: 4px solid #00a297;
-  transform: translateX(8px);
+.image-tooltip {
+  position: absolute;
+  opacity: 1;
+  left: 20% !important;
+  overflow: visible !important;
+  z-index: 9999;
+  pointer-events: none;
 }
 
-.service-preview-card.active .btn-link {
-  color: #00a297;
-  transform: translateX(4px);
+@media only screen and (max-width: 1199px) {
+  .image-tooltip {
+    left: 2% !important;
+  }
 }
 
-/* Appointment section floating inputs */
+.image-tooltip img {
+  scale: 1.2;
+  opacity: 0;
+  object-fit: cover;
+  pointer-events: none;
+  transition: transform 0.3s ease-out, scale 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Active Service Card Highlight matching reference site */
+.dz-card.style-1.active .dz-info {
+  background-color: var(--bs-light) !important;
+}
+
+.dz-card.style-1.active .dz-info .small-title,
+.dz-card.style-1.active .dz-info .dz-title,
+.dz-card.style-1.active .dz-info .dz-title a {
+  color: #7b114a !important;
+}
+
+.dz-card.style-1.active .dz-info .btn-link {
+  background-color: #7b114a !important;
+  color: #ffffff !important;
+}
+
+/* Rotating SVG button wrapper */
+.svg-rotate-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #00a297;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 162, 151, 0.4);
+}
+
+/* Appointment underline inputs - Left-aligned text right next to icons */
 .floating-underline {
   position: relative;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  padding-left: 36px;
-  transition: border-color 0.3s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+  padding: 0 !important;
+  transition: border-color 0.3s ease;
+  width: 100%;
 }
 
 .floating-underline:focus-within {
-  border-bottom-color: #ffffff;
+  border-bottom-color: #ffffff !important;
 }
 
-.floating-underline .form-control {
+.floating-underline.input-icon-left .form-control {
   background: transparent !important;
   border: none !important;
+  border-radius: 0 !important;
   color: #ffffff !important;
   box-shadow: none !important;
-  padding: 10px 0;
-  font-size: 15px;
+  padding-left: 36px !important;
+  padding-right: 6px !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  font-size: 15px !important;
+  text-align: left !important;
+  width: 100% !important;
+  height: 52px !important;
+  outline: none !important;
+  box-sizing: border-box !important;
 }
 
-.floating-underline .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+.floating-underline.input-icon-left select.form-control {
+  padding-left: 36px !important;
+  padding-right: 22px !important;
+  color: #ffffff !important;
+  cursor: pointer;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 4px center !important;
 }
 
-.floating-underline .form-control option {
-  color: #333333;
+.floating-underline.input-icon-left .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-align: left !important;
+}
+
+.floating-underline.input-icon-left .form-control option {
+  color: #222222;
   background: #ffffff;
 }
 
-.floating-underline .input-group-text {
+.floating-underline.input-icon-left .input-group-text {
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  padding: 0;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 26px;
+  pointer-events: none;
+  z-index: 2;
 }
 
-/* Specialist doctor card */
+.floating-underline input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+/* Team specialist card hover effect */
 .dz-team.style-1 {
   background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .dz-team.style-1:hover {
@@ -336,15 +332,15 @@ html {
 }
 
 .dz-team.style-1 .plus-btn {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #00a297;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .dz-team.style-1:hover .plus-btn {
@@ -360,4 +356,29 @@ html {
 
 .tpa_div:hover img {
   transform: scale(1.02);
+}
+
+/* Sweet alert / modal overlay for appointment */
+.booking-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+
+.booking-popup-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  animation: floatSlow 0.3s ease-out;
 }

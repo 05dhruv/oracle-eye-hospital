@@ -29,17 +29,17 @@ export default function Header() {
       <div className="bg-header">
         <div className="container header-middle">
           <div className="row align-items-center">
-            {/* Logo */}
-            <div className="col-xs-12 col-sm-5 d-flex align-items-center">
+            {/* Main Hospital Logo */}
+            <span className="col-xs-12 col-sm-5">
               <Link href="/">
                 <img
                   src="/uploads/logos/232296ca-9c85-445b-b965-033a97fe7008.png"
                   className="img-responsive main-logo"
                   alt="Oracle Eye Hospital"
-                  style={{ maxHeight: "80px", width: "auto" }}
+                  style={{ maxHeight: "75px", width: "auto" }}
                 />
               </Link>
-            </div>
+            </span>
 
             {/* Location & Appointment Phone */}
             <div className="col-xs-12 col-sm-5 mobile_div">
@@ -72,26 +72,26 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Certifications Logos */}
+            {/* Certification / Accreditation Logos */}
             <div className="col-xs-12 col-sm-2 d-flex align-items-center justify-content-end logos_prtt">
               <Link href="/" className="me-2">
-                <img src="/Assets/img/logo2.png" className="img-responsive logo_div logo2" alt="Cert 1" />
+                <img src="/Assets/img/logo2.png" className="img-responsive logo_div logo2" alt="Accreditation 1" />
               </Link>
               <Link href="/">
-                <img src="/Assets/img/logo3.png" className="img-responsive logo_div logo2" alt="Cert 2" />
+                <img src="/Assets/img/logo3.png" className="img-responsive logo_div logo2" alt="Accreditation 2" />
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Main Nav / Sticky Header */}
+      {/* Main Header / Sticky Navigation Bar */}
       <div className={`sticky-header main-bar-wraper ${isSticky ? "is-fixed" : ""}`}>
         <div className="main-bar clearfix">
-          <div className="container-fluid clearfix inner-bar d-flex align-items-center justify-content-between">
+          <div className="container-fluid clearfix inner-bar">
             {/* Mobile Nav Toggle */}
             <button
-              className={`w3menu-toggler navicon d-lg-none ${mobileMenuOpen ? "open" : ""}`}
+              className={`w3menu-toggler navicon ${mobileMenuOpen ? "open" : ""}`}
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle navigation"
@@ -101,20 +101,17 @@ export default function Header() {
               <span></span>
             </button>
 
-            {/* Mobile Logo fallback */}
-            <div className="logo-header logo-dark d-lg-none">
-              <Link href="/">
-                <img src="/uploads/logos/232296ca-9c85-445b-b965-033a97fe7008.png" alt="Oracle Eye Hospital" style={{ maxHeight: "45px" }} />
-              </Link>
-            </div>
+            {/* Backdrop overlay for mobile menu */}
+            {mobileMenuOpen && (
+              <div className="menu-close fade-overlay show" onClick={() => setMobileMenuOpen(false)}></div>
+            )}
 
-            {/* Main Nav Items */}
+            {/* Main Navigation Items */}
             <div className={`header-nav w3menu w3menu-start mo-left ${mobileMenuOpen ? "show" : ""}`} id="W3Menu">
-              <div className="logo-header logo-dark d-lg-none p-3 border-bottom d-flex justify-content-between align-items-center">
+              <div className="logo-header logo-dark">
                 <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                  <img src="/uploads/logos/232296ca-9c85-445b-b965-033a97fe7008.png" alt="Logo" style={{ maxHeight: "40px" }} />
+                  <img src="/Assets/img/logo.png" alt="Oracle Eye Hospital" />
                 </Link>
-                <button className="btn-close" onClick={() => setMobileMenuOpen(false)}></button>
               </div>
 
               <ul className="nav navbar-nav">
@@ -124,7 +121,7 @@ export default function Header() {
                   </Link>
                 </li>
 
-                {/* About Us */}
+                {/* About Us Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "about" ? "open" : ""}`}>
                   <a
                     href="javascript:void(0);"
@@ -143,7 +140,7 @@ export default function Header() {
                   </ul>
                 </li>
 
-                {/* Clinic Team */}
+                {/* Clinic Team Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "team" ? "open" : ""}`}>
                   <a
                     href="javascript:void(0);"
@@ -160,7 +157,7 @@ export default function Header() {
                   </ul>
                 </li>
 
-                {/* Services */}
+                {/* Services Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "services" ? "open" : ""}`}>
                   <a
                     href="javascript:void(0);"
@@ -172,20 +169,20 @@ export default function Header() {
                     <span>Services</span> <i className="fas fa-chevron-down tabindex"></i>
                   </a>
                   <ul className="sub-menu">
-                    <li><Link href="/services/cataract-service" onClick={() => setMobileMenuOpen(false)}>Cataract Service</Link></li>
-                    <li><Link href="/services/cornea-refractive-service" onClick={() => setMobileMenuOpen(false)}>Cornea And Refractive Services</Link></li>
-                    <li><Link href="/services/computer-vision-syndrome" onClick={() => setMobileMenuOpen(false)}>Computer Vision Syndrome</Link></li>
-                    <li><Link href="/services/dry-eyes-clinic" onClick={() => setMobileMenuOpen(false)}>Dry Eyes Clinic</Link></li>
-                    <li><Link href="/services/contact-lens-service" onClick={() => setMobileMenuOpen(false)}>Contact Lens Service</Link></li>
-                    <li><Link href="/services/myopia-clinic" onClick={() => setMobileMenuOpen(false)}>Myopia Clinic</Link></li>
-                    <li><Link href="/services/pediatric-eye-service" onClick={() => setMobileMenuOpen(false)}>Pediatric Eye Service</Link></li>
-                    <li><Link href="/services/orthoptics-service" onClick={() => setMobileMenuOpen(false)}>Orthoptics Service</Link></li>
-                    <li><Link href="/services/vitreoretinal-service" onClick={() => setMobileMenuOpen(false)}>Vitreoretinal Service</Link></li>
-                    <li><Link href="/services/glaucoma-service" onClick={() => setMobileMenuOpen(false)}>Glaucoma Service</Link></li>
+                    <li><Link href="/cataract-service" onClick={() => setMobileMenuOpen(false)}>Cataract Service</Link></li>
+                    <li><Link href="/cornea-refractive-service" onClick={() => setMobileMenuOpen(false)}>Cornea And Refractive Services</Link></li>
+                    <li><Link href="/computer-vision-syndrome" onClick={() => setMobileMenuOpen(false)}>Computer Vision Syndrome</Link></li>
+                    <li><Link href="/dry-eyes-clinic" onClick={() => setMobileMenuOpen(false)}>Dry Eyes Clinic</Link></li>
+                    <li><Link href="/contact-lens-service" onClick={() => setMobileMenuOpen(false)}>Contact Lens Service</Link></li>
+                    <li><Link href="/myopia-clinic" onClick={() => setMobileMenuOpen(false)}>Myopia Clinic</Link></li>
+                    <li><Link href="/pediatric-eye-service" onClick={() => setMobileMenuOpen(false)}>Pediatric Eye Service</Link></li>
+                    <li><Link href="/orthoptics-service" onClick={() => setMobileMenuOpen(false)}>Orthoptics Service</Link></li>
+                    <li><Link href="/vitreoretinal-service" onClick={() => setMobileMenuOpen(false)}>Vitreoretinal Service</Link></li>
+                    <li><Link href="/glaucoma-service" onClick={() => setMobileMenuOpen(false)}>Glaucoma Service</Link></li>
                   </ul>
                 </li>
 
-                {/* Latest Updates */}
+                {/* Latest Updates Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "updates" ? "open" : ""}`}>
                   <a
                     href="javascript:void(0);"
@@ -209,7 +206,7 @@ export default function Header() {
                   </ul>
                 </li>
 
-                {/* Academic */}
+                {/* Academic Dropdown */}
                 <li className={`sub-menu-down ${activeDropdown === "academic" ? "open" : ""}`}>
                   <a
                     href="javascript:void(0);"
@@ -233,7 +230,7 @@ export default function Header() {
                 </li>
 
                 <li>
-                  <Link href="/cashless-facility" onClick={() => setMobileMenuOpen(false)}>
+                  <Link href="/CashlessFacility" onClick={() => setMobileMenuOpen(false)}>
                     <span>Cashless Facility</span>
                   </Link>
                 </li>
@@ -251,8 +248,8 @@ export default function Header() {
                 </li>
               </ul>
 
-              {/* Social icons */}
-              <div className="dz-social-icon d-lg-flex d-none">
+              {/* Social Icons inside mobile drawer */}
+              <div className="dz-social-icon">
                 <ul>
                   <li>
                     <a href="https://www.instagram.com/oracleeyehospital/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -268,26 +265,28 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Extra Nav with phone and Appointment button */}
-            <div className="extra-nav active d-flex align-items-center">
+            {/* Extra Nav Right: Phone call widget & Appointment CTA */}
+            <div className="extra-nav active">
               <div className="extra-cell">
-                <ul className="header-right d-flex align-items-center m-0 list-unstyled">
-                  <li className="nav-item item-call d-none d-xl-flex align-items-center me-3">
-                    <div className="info-widget style-3 d-flex align-items-center">
-                      <div className="widget-media me-2">
-                        <i className="feather icon-phone-call dz-ring-effect text-primary" style={{ fontSize: "24px" }}></i>
+                <ul className="header-right">
+                  <li className="nav-item item-call">
+                    <div className="info-widget style-3">
+                      <div className="widget-media">
+                        <i className="feather icon-phone-call dz-ring-effect text-primary"></i>
                       </div>
                       <div className="widget-content">
-                        <h3 className="title text-primary m-0" style={{ fontSize: "14px", fontWeight: "600" }}>Contact us</h3>
-                        <a href="tel:+91 7500503111" className="text-secondary" style={{ fontSize: "13px" }}>
-                          91 7500503111
-                        </a>
+                        <h3 className="title text-primary">Contact us</h3>
+                        <a href="tel:+91 7500503111" className="text-secondary">91 7500503111</a>
                       </div>
                     </div>
                   </li>
+                  <li className="nav-item">
+                    Don't Hesitate To Contact Us Any Time
+                  </li>
                   <li className="nav-item item-btn">
                     <Link className="btn btn-primary btn-hover2" href="/contact-us">
-                      Appointment <i className="feather icon-arrow-right ms-1"></i>
+                      Appointment
+                      <i className="feather icon-arrow-right"></i>
                     </Link>
                   </li>
                 </ul>

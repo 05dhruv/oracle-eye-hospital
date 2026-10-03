@@ -30,7 +30,7 @@ export default function Page() {
 
 					<div className="content-item wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 						<div className="single-media dz-media single-media height-sm radius-lg wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
-							<img src="/Assets/img/services/cornea-service.png" alt className="object-fit-cover" />
+							<img src="/Assets/img/services/cornea-service.png" alt="" className="object-fit-cover" />
 						</div>
 
 

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import StatsCounters from "@/components/StatsCounters";
 
 export default function Page() {
   return (
@@ -19,7 +20,7 @@ export default function Page() {
 
 
 	
-<section className="content-inner overlay-opacity-10 overflow-hidden  " style={{"backgroundImage":"url(https://clinicmaster.dexignzone.com/ophthalmology/xhtml/images/background/bg7.webp)"}}>
+<section className="content-inner overlay-opacity-10 overflow-hidden  " style={{"backgroundImage":"url(/Assets/images/background/bg7.webp)"}}>
 		<div className="container">
 			<div className="row content-wrapper style-1 m-b30 justify-content-center">
 				<div className="col-xxl-6 col-xl-6 col-lg-6">
@@ -38,7 +39,7 @@ export default function Page() {
 										<path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"></path>
 									</defs>
 									<text fill="#ffffff" fontSize="13" wordSpacing="-4" letterSpacing="3">
-										<textpath href="#circlePath">ORACLE     EYE     HOSPITAL    </textpath>
+										<textPath href="#circlePath">ORACLE &nbsp;&nbsp;&nbsp; EYE &nbsp;&nbsp;&nbsp; HOSPITAL &nbsp;&nbsp;&nbsp;</textPath>
 									</text>
 								</svg>
 
@@ -57,26 +58,7 @@ export default function Page() {
 							We take pride in letting you know that we match our growing volume of work with improving quality.
 						</p>
 					</div>
-					<div className="row  m-b10">
-						<div className="col-xxl-4 col-sm-4 col-6 wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.8s">
-							<div className="content-bx style-1 m-b30">
-								<span className="content-text"><span className="counter">25,000</span>+</span>
-								<h3 className="title m-b0">Surgeries Done</h3>
-							</div>
-						</div>
-						<div className="col-xxl-4 col-sm-4 col-6 wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="0.8s">
-							<div className="content-bx style-1 m-b30">
-								<span className="content-text"><span className="counter">50,000</span>+</span>
-								<h3 className="title m-b0 ">Happy Patients</h3>
-							</div>
-						</div>
-						<div className="col-xxl-4 col-sm-4 col-6 wow fadeInRight" data-wow-delay="1.0s" data-wow-duration="0.8s">
-							<div className="content-bx style-1 m-b30">
-								<span className="content-text"><span className="counter">15</span>+</span>
-								<h3 className="title m-b0">Years of Excellence	</h3>
-							</div>
-						</div>
-					</div>
+					<StatsCounters />
 
 				</div>
 			</div>

@@ -1,4 +1,5 @@
 "use client";
+import DoctorBookingForm from "@/components/DoctorBookingForm";
 import Link from "next/link";
 
 export default function Page() {
@@ -35,69 +36,7 @@ export default function Page() {
 								<div className="title-head">
 									<h2 className="form-title m-b20">Book Your Appointment</h2>
 								</div>
-								<form id="bookingForm" className="dzForm">
-									<div className="row">
-										<div className="col-sm-6 m-b20">
-											<div className="floating-underline underline-1 input-white input-icon-left">
-												<span className="input-group-text text-primary"><i className="feather icon-user"></i></span>
-												<input name="Name" type="text" className="form-control" placeholder="Your Name" required />
-											</div>
-										</div>
-										<div className="col-sm-6 m-b20">
-											<div className="floating-underline underline-1 input-white input-icon-left">
-												<span className="input-group-text text-primary"><i className="feather icon-mail"></i></span>
-												<input name="Email" type="email" className="form-control" placeholder="Your Email" required />
-											</div>
-										</div>
-										<div className="col-sm-6 m-b20">
-											<div className="floating-underline underline-1 input-white input-icon-left">
-												<span className="input-group-text text-primary"><i className="feather icon-phone"></i></span>
-												<input name="PhoneNumber" type="tel" className="form-control" placeholder="Phone Number" required pattern="[6-9]\d{9}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
-											</div>
-										</div>
-										<div className="col-sm-6 m-b20">
-											<div className="floating-underline underline-1 input-white input-icon-left">
-												<span className="input-group-text text-primary"><i className="feather icon-calendar"></i></span>
-												<input name="AppointmentDate" required type="text" className="form-control" id="datePickerOnly" placeholder="Date" />
-											</div>
-										</div>
-										<div className="col-sm-6 m-b20">
-											<div className="floating-underline underline-1 input-white input-icon-left">
-												<span className="input-group-text text-primary"><i className="feather icon-clock"></i></span>
-												<input name="AppointmentTime" required type="text" className="form-control" id="timePickerOnly" placeholder="Time" />
-											</div>
-										</div>
-										<div className="col-sm-6 m-b20">
-											<div className="floating-underline underline-1 input-white input-icon-left">
-												<span className="input-group-text text-primary"><i className="feather icon-server"></i></span>
-												<select name="Service" id="service" className="form-control" required>
-													<option value>--Select Service--</option>
-													<option value="Cataract Service">Cataract Service</option>
-													<option value="Cornea Refractive Service">Cornea, Refractive & Dry eyes Services</option>
-													<option value="Vitreoretinal Service">Vitreoretinal Service</option>
-													<option value="Pediatric Eye Service">Pediatric Eye Service</option>
-													<option value="Glaucoma Service">Glaucoma Service</option>
-													<option value="Contact Lens Service">Contact Lens Service</option>
-													<option value="Orthoptics Service">Orthoptics Service</option>
-													<option value="Myopia Clinic">Myopia Clinic</option>
-													<option value="Computer Vision Syndrome">Computer Vision Syndrome</option>
-												</select>
-											</div>
-										</div>
-
-										<div className="col-sm-12 m-b20">
-											<div className="floating-underline underline-1 input-white input-icon-left">
-												<span className="input-group-text text-primary"><i className="feather flaticon-message"></i></span>
-												<textarea name="Message" required rows="3" className="form-control" placeholder="Your Message"></textarea>
-											</div>
-										</div>
-										<div className="col-sm-12 m-t10">
-											<button type="submit" id="btnSubmit" className="btn btn-lg w-100 appointmemt_btnn">
-												<i className="feather icon-calendar m-r5"></i> Book An appointment
-											</button>
-										</div>
-									</div>
-								</form>
+								<DoctorBookingForm doctorName="Dr. Sujata Tomar" />
 							</div>
 						</div>
 

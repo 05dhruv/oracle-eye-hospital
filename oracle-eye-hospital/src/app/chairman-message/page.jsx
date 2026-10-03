@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import AnimatedCounter from "@/components/AnimatedCounter";
 
 export default function Page() {
   return (
@@ -19,7 +20,7 @@ export default function Page() {
 
 
 	
-<section className="content-inner-3  overflow-hidden" style={{"backgroundImage":"url(images/background/bg7.webp)"}}>
+<section className="content-inner-3  overflow-hidden" style={{"backgroundImage":"url(/Assets/images/background/bg7.webp)"}}>
 		<div className="container">
 			<div className="row content-wrapper style-6 align-items-end justify-content-center">
 				<div className="col-xl-6 col-lg-6 ">
@@ -55,7 +56,7 @@ export default function Page() {
 						</div>
 						<div className="item1 skrollable skrollable-before" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)" style={{"transform":"translateY(-30px)"}}>
 							<div className="info-widget style-5 move-3">
-								<span className="content-text text-primary"><span className="counter">15</span>+</span>
+								<span className="content-text text-primary"><AnimatedCounter end={15} duration={2500} formatComma={false} />+</span>
 								<h3 className="title m-b0">Years <br /> Experienced</h3>
 							</div>
 						</div>
