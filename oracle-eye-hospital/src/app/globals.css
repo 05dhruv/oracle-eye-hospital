@@ -382,3 +382,79 @@ html {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   animation: floatSlow 0.3s ease-out;
 }
+
+/* --------------------------------------------------------
+   Oracle Eye Hospital Live Site Exact Matching Styles
+   -------------------------------------------------------- */
+
+/* Form Wrapper Background Coloring */
+.content-wrapper.style-2,
+.form-wrapper.style-1 {
+  background-color: #610B38 !important;
+  background-image: none !important;
+}
+
+/* Ensure text inside form wrapper is white */
+.form-wrapper.style-1 .title,
+.form-wrapper.style-1 p {
+  color: #ffffff !important;
+}
+
+/* Input text coloring for secondary forms to match white text on dark background */
+.form-wrapper.style-1 .floating-underline .form-control {
+  color: #ffffff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.4) !important;
+}
+.form-wrapper.style-1 .floating-underline .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.form-wrapper.style-1 .floating-underline .input-group-text i {
+  color: #ffffff !important;
+}
+.form-wrapper.style-1 .floating-underline:focus-within .form-control {
+  border-bottom-color: #ffffff !important;
+}
+
+/* Submit Button Hover Inversion Animation (White <-> Maroon) */
+#btnSubmitAppointment,
+#btnSubmit {
+  background-color: #ffffff !important;
+  color: #610B38 !important;
+  border: 1px solid #ffffff !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#btnSubmitAppointment:hover,
+#btnSubmit:hover {
+  background-color: #610B38 !important;
+  color: #ffffff !important;
+  border-color: #610B38 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(97, 11, 56, 0.3) !important;
+}
+
+#btnSubmitAppointment i,
+#btnSubmit i {
+  color: inherit !important;
+  transition: transform 0.3s ease;
+}
+
+#btnSubmitAppointment:hover i,
+#btnSubmit:hover i {
+  transform: translateX(5px);
+}
+
+/* Form Wave Background Shape Animation */
+.content-wrapper .shap,
+.form-wrapper .shap {
+  animation: floatSlow 6s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+/* Form Doctor Image Float Animation */
+.content-wrapper .content-media img,
+.form-wrapper .content-media img {
+  animation: floatReverse 7s ease-in-out infinite;
+}
+
+
