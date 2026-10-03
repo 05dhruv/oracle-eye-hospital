@@ -387,7 +387,7 @@ html {
    WOW / AOS Scroll Animation Styles (Matching Reference)
    ======================================================== */
 .wow {
-  visibility: hidden;
+  visibility: visible;
 }
 
 .wow.animated {

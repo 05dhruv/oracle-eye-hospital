@@ -9,7 +9,6 @@ export default function AosAnimationProvider() {
     let observer = null;
 
     const initAnimations = () => {
-      // Find all wow elements as well as any elements with data-aos
       const animElements = document.querySelectorAll(".wow, [data-aos]");
       if (!animElements.length) return;
 
@@ -19,7 +18,6 @@ export default function AosAnimationProvider() {
             if (entry.isIntersecting) {
               const el = entry.target;
 
-              // Read delay and duration
               const delay =
                 el.getAttribute("data-wow-delay") ||
                 el.getAttribute("data-aos-delay") ||
@@ -34,7 +32,6 @@ export default function AosAnimationProvider() {
               el.style.visibility = "visible";
               el.classList.add("animated");
 
-              // If data-aos was used without wow class, add corresponding animation class
               const aosType = el.getAttribute("data-aos");
               if (aosType) {
                 if (aosType === "fade-up") el.classList.add("fadeInUp");
@@ -45,30 +42,26 @@ export default function AosAnimationProvider() {
                 else el.classList.add("fadeIn");
               }
 
-              // Stop observing once animated (one-shot trigger, exactly like WOW/AOS)
               observer.unobserve(el);
             }
           });
         },
         {
-          rootMargin: "0px 0px -40px 0px", // Trigger when element is 40px into view
+          rootMargin: "0px 0px -20px 0px",
           threshold: 0.05,
         }
       );
 
       animElements.forEach((el) => {
-        // If already animated on initial render, keep it visible
-        if (el.classList.contains("animated")) {
-          el.style.visibility = "visible";
-        } else {
-          el.style.visibility = "hidden";
+        // Always ensure element is visible so content never disappears
+        el.style.visibility = "visible";
+        if (!el.classList.contains("animated")) {
           observer.observe(el);
         }
       });
     };
 
-    // Small delay to ensure DOM is fully ready after React mount/navigation
-    const timer = setTimeout(initAnimations, 80);
+    const timer = setTimeout(initAnimations, 50);
 
     return () => {
       clearTimeout(timer);
