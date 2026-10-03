@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWidgets from "@/components/FloatingWidgets";
+import WowInit from "@/components/WowInit";
 
 export const metadata = {
   metadataBase: new URL("https://oracleeyehospital.com"),
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" type="text/css" href="/Assets/css/style.css" />
       </head>
       <body id="bg" data-typography="typography_1">
+        <WowInit />
         <div className="page-wraper">
           <Header />
           <main className="page-content">{children}</main>
@@ -56,3 +58,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
