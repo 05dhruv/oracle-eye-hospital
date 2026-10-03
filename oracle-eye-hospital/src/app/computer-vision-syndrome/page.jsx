@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Computer Vision Syndrome</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Computer Vision Syndrome</h1>
 
 			</div>
 		</div>
@@ -24,13 +24,13 @@ export default function Page() {
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-8 single-inner order-lg-1">
-					<div className="single-media dz-media single-media height-sm radius-lg wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+					<div className="single-media dz-media single-media height-sm radius-lg " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 						<img src="/Assets/img/services/Computer-Vision-Syndrome.png" alt="" className="object-fit-cover" />
 					</div>
 
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
 						<p>
 							Computer vision syndrome (CVS) is a temporary eye strain problem resulting from focusing the eyes on a computer display for protracted, uninterrupted periods of time.
@@ -179,7 +179,7 @@ export default function Page() {
 				</div>
 				<div className="col-lg-4 m-b30">
 					<aside className="side-bar sticky-top left">
-						<div className="widget service_menu_nav light wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
 								<h3 className="title">All Services</h3>
 							</div>

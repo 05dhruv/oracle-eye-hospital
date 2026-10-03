@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Comprehensive Internship In Optometry</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Comprehensive Internship In Optometry</h1>
 
 			</div>
 		</div>
@@ -23,7 +23,7 @@ export default function Page() {
 			<div className="row">
 
 				<div className="col-xl-7 m-b10 ps-xl-5">
-					<div className="section-head style-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+					<div className="section-head style-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 
 						<p className="fw-normal">
 							The <b> Oracle Eye Hospital </b> offers a limited number of internship seats to students who have completed the first three years of their under graduate Optometry course from other colleges.
@@ -46,7 +46,7 @@ export default function Page() {
 
 
 
-					<div className="clearfix m-b50 m-md-b20 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s">
+					<div className="clearfix m-b50 m-md-b20 " data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
 						<h3 className="text-primary title-dashed-separator">The important dates for optometry Internship training program are as follows: </h3>
 						<ul className="list-check text-secondary fw-medium m-b35">
 							<li>

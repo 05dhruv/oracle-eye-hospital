@@ -409,32 +409,53 @@ html {
    -------------------------------------------------------- */
 
 /* Form Wrapper Background Coloring */
-.content-wrapper.style-2,
-.form-wrapper.style-1 {
+.content-wrapper.style-2 {
   background-color: #610B38 !important;
   background-image: none !important;
 }
 
-/* Ensure text inside form wrapper is white */
-.form-wrapper.style-1 .title,
-.form-wrapper.style-1 p {
+/* Ensure text inside content-wrapper is white */
+.content-wrapper.style-2 .title,
+.content-wrapper.style-2 p {
   color: #ffffff !important;
 }
 
-/* Input text coloring for secondary forms to match white text on dark background */
-.form-wrapper.style-1 .floating-underline .form-control {
+/* Input text coloring for homepage form to match white text on dark background */
+.content-wrapper.style-2 .floating-underline .form-control {
   color: #ffffff !important;
   border-bottom-color: rgba(255, 255, 255, 0.4) !important;
 }
-.form-wrapper.style-1 .floating-underline .form-control::placeholder {
+.content-wrapper.style-2 .floating-underline .form-control::placeholder {
   color: rgba(255, 255, 255, 0.8) !important;
 }
-.form-wrapper.style-1 .floating-underline .input-group-text i {
+.content-wrapper.style-2 .floating-underline .input-group-text i {
   color: #ffffff !important;
 }
-.form-wrapper.style-1 .floating-underline:focus-within .form-control {
+.content-wrapper.style-2 .floating-underline:focus-within .form-control {
   border-bottom-color: #ffffff !important;
 }
+
+/* Specific styling for the light "Get In Touch" contact form inputs (like screenshot) */
+.form-wrapper.style-1.bg-light .floating-underline .form-control {
+  border: 1px solid transparent !important;
+  border-bottom: 1px solid #707070 !important;
+  border-radius: 12px !important;
+  background-color: transparent !important;
+  color: #2b2b2b !important;
+  transition: all 0.3s ease;
+}
+.form-wrapper.style-1.bg-light .floating-underline .form-control::placeholder {
+  color: #6c757d !important;
+}
+.form-wrapper.style-1.bg-light .floating-underline .input-group-text i {
+  color: #5c6c7b !important;
+}
+.form-wrapper.style-1.bg-light .floating-underline:focus-within .form-control {
+  border-bottom-color: #610B38 !important;
+  border-color: rgba(97, 11, 56, 0.1) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+}
+
 
 /* Submit Button Hover Inversion Animation (White <-> Maroon) */
 #btnSubmitAppointment,

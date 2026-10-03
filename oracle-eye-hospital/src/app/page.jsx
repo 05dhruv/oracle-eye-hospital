@@ -318,13 +318,13 @@ export default function Home() {
             <div className="row align-items-center h-100">
               <div className="col-lg-5 m-b30">
                 <div className="hero-content">
-                  <h1 className="title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+                  <h1 className="title " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                     Clear Vision Awaits
                   </h1>
                   <p>
                     LASER Eye Correction Treatment, Retinal Surgery Services, Microincision Cataract Surgery
                   </p>
-                  <div className="contant-box style-1 wow fadeInUp" data-wow-delay="0.8s">
+                  <div className="contant-box style-1 " data-aos="fade-up" data-aos-delay="800">
                     <Link className="btn btn-primary btn-hover2 btn-shadow mb-3" href="/contact-us">
                       Appointment
                       <i className="feather icon-arrow-right"></i>
@@ -336,7 +336,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-lg-7 align-self-end wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="0.8s">
+              <div className="col-lg-7 align-self-end " data-aos="fade-right" data-aos-delay="800" data-aos-duration="800">
                 <div className="hero-thumbnail" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
                   <div className="row g-4">
                     <div className="col-5">
@@ -421,7 +421,7 @@ export default function Home() {
             </div>
 
             <div className="col-xxl-6 col-xl-6 col-lg-6">
-              <div className="section-head style-14 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+              <div className="section-head style-14 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                 <span className="sub-title">Welcome to Ophthalmology</span>
                 <h2 className="title">We Preserve, Enhance And Protect Your Vision</h2>
                 <p>Trusted ophthalmic care with world-class expertise, advanced technology, and compassionate treatment for patients of all ages.</p>
@@ -444,14 +444,14 @@ export default function Home() {
         <div className="container">
           <div className="row d-flex justify-content-center">
             <div className="col-md-8 section-head style-14 m-b30 text-center">
-              <span className="sub-title m-b0 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.7s">Our Services</span>
-              <h2 className="title m-b0 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.7s">We Serve In Different Areas For Our Patients</h2>
+              <span className="sub-title m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">Our Services</span>
+              <h2 className="title m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">We Serve In Different Areas For Our Patients</h2>
             </div>
           </div>
 
           <div className="row justify-content-end">
             <div className="col-xl-8">
-              <div className="row dz-tooltip-blog wow fadeInUp" data-wow-delay="0.8s">
+              <div className="row dz-tooltip-blog " data-aos="fade-up" data-aos-delay="800">
                 <div className="col-12">
                   {SERVICES_DATA.map((srv, idx) => (
                     <div
@@ -487,7 +487,7 @@ export default function Home() {
             <div className="col-lg-7">
               <div className="content-info">
                 <div className="section-head style-3 m-b40">
-                  <h2 className="title text-white m-b0 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+                  <h2 className="title text-white m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                     Need a comprehensive eye check-up
                   </h2>
                 </div>
@@ -497,7 +497,7 @@ export default function Home() {
                     <form id="appointmentForm" className="dzForm" onSubmit={handleAppointmentSubmit}>
                       <div className="row g-5 align-items-end">
                         {/* Name */}
-                        <div className="col-xl-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.8s">
+                        <div className="col-xl-4 col-sm-6 " data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
                           <div className="floating-underline underline-1 input-white input-icon-left">
                             <input
                               name="Name"
@@ -519,7 +519,7 @@ export default function Home() {
                         </div>
 
                         {/* Email */}
-                        <div className="col-xl-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
+                        <div className="col-xl-4 col-sm-6 " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
                           <div className="floating-underline underline-1 input-white input-icon-left">
                             <input
                               name="Email"
@@ -541,7 +541,7 @@ export default function Home() {
                         </div>
 
                         {/* Phone */}
-                        <div className="col-xl-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
+                        <div className="col-xl-4 col-sm-6 " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
                           <div className="floating-underline underline-1 input-white input-icon-left">
                             <input
                               type="tel"
@@ -569,7 +569,7 @@ export default function Home() {
                         </div>
 
                         {/* Date */}
-                        <div className="col-xl-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="0.8s">
+                        <div className="col-xl-4 col-sm-6 " data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
                           <div className="floating-underline underline-1 input-white input-icon-left">
                             <input
                               name="AppointmentDate"
@@ -591,7 +591,7 @@ export default function Home() {
                         </div>
 
                         {/* Doctor Select */}
-                        <div className="col-xl-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="0.8s">
+                        <div className="col-xl-4 col-sm-6 " data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
                           <div className="floating-underline underline-1 input-white input-icon-left">
                             <select
                               name="DoctorName"
@@ -620,7 +620,7 @@ export default function Home() {
                         </div>
 
                         {/* Submit Button */}
-                        <div className="col-xl-4 col-sm-6 wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s">
+                        <div className="col-xl-4 col-sm-6 " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
                           <button
                             type="submit"
                             id="btnSubmitAppointment"
@@ -639,7 +639,7 @@ export default function Home() {
             </div>
 
             <div className="col-lg-4 align-self-end">
-              <div className="content-media wow fadeInUp" data-wow-delay="1.0s" data-wow-duration="0.8s">
+              <div className="content-media " data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
                 <img src="/Assets/img/book.png" alt="Doctor Illustration" />
               </div>
             </div>
@@ -654,8 +654,8 @@ export default function Home() {
       <section className="content-inner bg-light">
         <div className="container">
           <div className="section-head style-14 m-b30 text-center">
-            <span className="sub-title m-b0 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.7s">Meet Our Specialists</span>
-            <h2 className="title m-b0 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.7s">Our Team of Eye Doctors</h2>
+            <span className="sub-title m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">Meet Our Specialists</span>
+            <h2 className="title m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">Our Team of Eye Doctors</h2>
             <p>Our specialists have more than a decade of experience. Patient comfort and well-being is our topmost priority.</p>
           </div>
 
@@ -663,9 +663,9 @@ export default function Home() {
             {DOCTORS_DATA.map((doc, i) => (
               <div
                 key={doc.slug}
-                className="col-xl-3 col-sm-6 m-b30 wow fadeInUp"
+                className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up"
                 data-wow-delay={`${0.2 * (i + 1)}s`}
-                data-wow-duration="0.8s"
+                data-aos-duration="800"
               >
                 <div className="dz-team style-1 box-hover active">
                   <div className="dz-media">
@@ -697,11 +697,11 @@ export default function Home() {
           <div className="row align-items-end">
             <div className="col-xxl-6 col-xl-6 m-b30 align-self-center order-1">
               <div className="content-info right">
-                <div className="section-head style-14 m-0 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+                <div className="section-head style-14 m-0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                   <h2 className="title">Frequently Asked Questions</h2>
                 </div>
 
-                <div className="accordion dz-accordion style-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s" id="accordionExample">
+                <div className="accordion dz-accordion style-1 " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" id="accordionExample">
                   {FAQS_DATA.map((faq) => {
                     const isOpen = activeFaq === faq.id;
                     return (
@@ -750,7 +750,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-6">
               <div className="section-head style-14 m-b30">
-                <h2 className="title m-b15 text-white wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.7s">
+                <h2 className="title m-b15 text-white " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
                   Don't Hesitate To Contact Us Any Time
                 </h2>
                 <p className="text-white m-b10">If you have any questions, we are here to help.</p>
@@ -813,7 +813,7 @@ export default function Home() {
             </div>
 
             <div className="col-lg-6 align-self-end">
-              <div className="content-media wow fadeInUp" data-wow-delay="1.0s" data-wow-duration="0.8s">
+              <div className="content-media " data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
                 <img src="/Assets/img/img3.png" alt="Medical Team" />
               </div>
             </div>
@@ -827,7 +827,7 @@ export default function Home() {
       <section className="TPA_section bg-light overflow-hidden" style={{ backgroundImage: "url(/Assets/images/background/bg7.webp)", backgroundSize: "cover" }}>
         <div className="container">
           <div className="section-head style-14 text-center m-b30">
-            <h2 className="title m-b0 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.7s">Cashless TPA list</h2>
+            <h2 className="title m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">Cashless TPA list</h2>
           </div>
           <div className="d-flex justify-content-center">
             <div className="col-md-9">
@@ -847,11 +847,11 @@ export default function Home() {
       <section className="content-inner testimonial-wrapper1 overflow-hidden">
         <div className="container">
           <div className="section-head style-14 text-center m-b30">
-            <span className="sub-title m-b0 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.7s">Testimonial</span>
-            <h2 className="title m-b0 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.7s">Patient Success Stories</h2>
+            <span className="sub-title m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">Testimonial</span>
+            <h2 className="title m-b0 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">Patient Success Stories</h2>
           </div>
 
-          <div className="swiper testimonial-swiper1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
+          <div className="swiper testimonial-swiper1 " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
             <div className="swiper-wrapper">
               <div className="swiper-slide" style={{ width: "100%" }}>
                 <div className="testimonial-1">

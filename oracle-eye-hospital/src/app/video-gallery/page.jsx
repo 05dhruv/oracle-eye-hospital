@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Video Gallery</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Video Gallery</h1>
 
 			</div>
 		</div>

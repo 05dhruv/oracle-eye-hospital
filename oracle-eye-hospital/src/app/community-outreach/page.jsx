@@ -7,7 +7,7 @@ export default function Page() {
       <div className="dz-bnr-inr style-1 dz-bnr-inr-sm" style={{ backgroundImage: "url(/Assets/img/inner-bg.jpg)" }}>
         <div className="container">
           <div className="dz-bnr-inr-entry d-table-cell">
-            <h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Community Outreach</h1>
+            <h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Community Outreach</h1>
           </div>
         </div>
       </div>
@@ -16,14 +16,14 @@ export default function Page() {
         <div className="container">
           <div className="row">
             <div className="col-xl-12 m-b10 ps-xl-5">
-              <div className="section-head style-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+              <div className="section-head style-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                 <p className="fw-normal">
                   At <b>Oracle Eye Hospital,</b> we believe that restoring vision is more than a medical service - it’s a gift of independence, dignity, and hope.
                   Through our outreach programs, we bring advanced eye care directly to the communities that need it most.
                 </p>
               </div>
 
-              <div className="clearfix m-b50 m-md-b20 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s">
+              <div className="clearfix m-b50 m-md-b20 " data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
                 <h3 className="text-primary title-dashed-separator">Touching Lives Every Day</h3>
                 <ul className="list-check text-secondary fw-medium m-b35">
                   <li>

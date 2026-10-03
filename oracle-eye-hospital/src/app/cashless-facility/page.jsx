@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Cashless Facility</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Cashless Facility</h1>
 
 			</div>
 		</div>
@@ -24,7 +24,7 @@ export default function Page() {
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-8 single-inner order-lg-1">
-					<div className="single-media dz-media single-media  radius-lg wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+					<div className="single-media dz-media single-media  radius-lg " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 						<div className="tpa_div">
 							<img src="/Assets/img/about/tpa.png" />
 						</div>
@@ -32,7 +32,7 @@ export default function Page() {
 
 					<h2 className="tpa_heading">List Of Documents Required for the cashless Facility</h2>
 
-					<div className="content-item wow fadeInUp " id="Ayushman-Bharat" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+					<div className="content-item  " data-aos="fade-up" id="Ayushman-Bharat" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 					
 						<h3>
 							Ayushman Bharat/Pandit Deen Dayal Card
@@ -62,7 +62,7 @@ export default function Page() {
 
 					<div className="d-flex ">
 
-						<div className="content-item wow fadeInUp facility_divv" id="TPA" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+						<div className="content-item  facility_divv" data-aos="fade-up" id="TPA" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
 						<h3>
 							TPA
@@ -89,7 +89,7 @@ export default function Page() {
 
 
 					</div>
-						<div className="content-item wow fadeInUp facility_divv" id="CGHS" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+						<div className="content-item  facility_divv" data-aos="fade-up" id="CGHS" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
 						<h3>
 							CGHS
@@ -126,7 +126,7 @@ export default function Page() {
 
 					<div className="d-flex">
 
-						<div className="content-item wow fadeInUp facility_divv" id="EGHS" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+						<div className="content-item  facility_divv" data-aos="fade-up" id="EGHS" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
 						<h3>
 							EGHS
@@ -157,7 +157,7 @@ export default function Page() {
 					</div>
 
 
-						<div className="content-item wow fadeInUp facility_divv" id="ESI" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+						<div className="content-item  facility_divv" data-aos="fade-up" id="ESI" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
 						<h3>
 							ESI
@@ -193,7 +193,7 @@ export default function Page() {
 					<div className="d-flex">
 
 
-						<div className="content-item wow fadeInUp facility_divv" id="CRPF-Card" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+						<div className="content-item  facility_divv" data-aos="fade-up" id="CRPF-Card" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
 						<h3>
 							CRPF Card/ Railway card
@@ -220,7 +220,7 @@ export default function Page() {
 
 
 					</div>
-						<div className="content-item wow fadeInUp facility_divv" id="UP-Police" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+						<div className="content-item  facility_divv" data-aos="fade-up" id="UP-Police" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
 						<h3>
 							UP Police
@@ -249,7 +249,7 @@ export default function Page() {
 					
 					
 					
-					<div className="content-item wow fadeInUp" id="BSNL" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" id="BSNL" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
 						<h3>
 							BSNL
@@ -278,7 +278,7 @@ export default function Page() {
 				</div>
 				<div className="col-lg-4 m-b30">
 					<aside className="side-bar sticky-top left">
-						<div className="widget service_menu_nav light wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
 								<h3 className="title">Cashless Services</h3>
 							</div>

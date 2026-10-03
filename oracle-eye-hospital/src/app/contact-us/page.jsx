@@ -43,7 +43,7 @@ export default function Page() {
       <div className="dz-bnr-inr style-1 dz-bnr-inr-sm" style={{ backgroundImage: "url(/Assets/img/inner-bg.jpg)" }}>
         <div className="container">
           <div className="dz-bnr-inr-entry d-table-cell">
-            <h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Contact Us</h1>
+            <h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Contact Us</h1>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function Page() {
       <section className="content-inner bg-light">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+            <div className="col-lg-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
               <div className="icon-bx-wraper style-5 bg-white box-hover">
                 <div className="contact_img">
                   <img src="/Assets/img/contact3.jpg" alt="Address" />
@@ -66,7 +66,7 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
+            <div className="col-lg-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
               <div className="icon-bx-wraper style-5 bg-white box-hover">
                 <div className="contact_img">
                   <img src="/Assets/img/contact1.jpg" alt="Call Us" />
@@ -80,7 +80,7 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s">
+            <div className="col-lg-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
               <div className="icon-bx-wraper style-5 bg-white box-hover active">
                 <div className="contact_img">
                   <img src="/Assets/img/contact2.jpg" alt="Email Us" />
@@ -100,14 +100,14 @@ export default function Page() {
       <section className="content-inner content-wrapper style-7 pb-0 bg-white overflow-hidden" style={{ backgroundImage: "url(/Assets/images/background/bg7.webp)" }}>
         <div className="container">
           <div className="row align-items-end justify-content-between">
-            <div className="col-xl-6 col-lg-6 pe-xl-5 wow fadeInUp order-lg-1 order-2" data-wow-delay="0.4s" data-wow-duration="0.8s">
+            <div className="col-xl-6 col-lg-6 pe-xl-5  order-lg-1 order-2" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
               <div className="content-media">
                 <div className="dz-media">
                   <img src="/Assets/img/contact.png" alt="Contact Illustration" />
                 </div>
               </div>
             </div>
-            <div className="col-xl-5 col-lg-6 m-b30 wow fadeInUp order-lg-2 order-1" data-wow-delay="0.2s" data-wow-duration="0.8s">
+            <div className="col-xl-5 col-lg-6 m-b30  order-lg-2 order-1" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
               <div className="content-info m-0">
                 <div className="form-wrapper style-1 bg-light">
                   <div className="form-body">
@@ -117,19 +117,19 @@ export default function Page() {
                     </div>
                     <form id="contactForm" onSubmit={handleSubmit}>
                       <div className="row">
-                        <div className="col-sm-6 m-b20">
+                        <div className="col-sm-6 m-b20 " data-aos="fade-up" data-aos-delay="100">
                           <div className="floating-underline underline-1 input-icon-left">
                             <span className="input-group-text text-primary"><i className="feather icon-user"></i></span>
                             <input name="Name" type="text" className="form-control" placeholder="Your Name" required value={formData.Name} onChange={handleChange} />
                           </div>
                         </div>
-                        <div className="col-sm-6 m-b20">
+                        <div className="col-sm-6 m-b20 " data-aos="fade-up" data-aos-delay="200">
                           <div className="floating-underline underline-1 input-icon-left">
                             <span className="input-group-text text-primary"><i className="feather icon-mail"></i></span>
                             <input name="Email" type="email" className="form-control" placeholder="Your Email" required value={formData.Email} onChange={handleChange} />
                           </div>
                         </div>
-                        <div className="col-sm-6 m-b20">
+                        <div className="col-sm-6 m-b20 " data-aos="fade-up" data-aos-delay="300">
                           <div className="floating-underline underline-1 input-icon-left">
                             <span className="input-group-text text-primary"><i className="feather icon-phone"></i></span>
                             <input
@@ -148,19 +148,19 @@ export default function Page() {
                             />
                           </div>
                         </div>
-                        <div className="col-sm-6 m-b20">
+                        <div className="col-sm-6 m-b20 " data-aos="fade-up" data-aos-delay="400">
                           <div className="floating-underline underline-1 input-icon-left">
                             <span className="input-group-text text-primary"><i className="feather icon-home"></i></span>
                             <input name="Address" required type="text" className="form-control dz-address" placeholder="Your Address" value={formData.Address} onChange={handleChange} />
                           </div>
                         </div>
-                        <div className="col-sm-12 m-b20">
+                        <div className="col-sm-12 m-b20 " data-aos="fade-up" data-aos-delay="500">
                           <div className="floating-underline underline-1">
                             <textarea name="Message" className="form-control" rows={2} placeholder="Write Message" required value={formData.Message} onChange={handleChange}></textarea>
                           </div>
                         </div>
 
-                        <div className="col-sm-12 m-t10">
+                        <div className="col-sm-12 m-t10 " data-aos="fade-up" data-aos-delay="600">
                           <button type="submit" id="btnSubmit" className="btn btn-lg btn-primary w-100" disabled={isSubmitting}>
                             {isSubmitting ? "Sending..." : "Send Message"}
                           </button>

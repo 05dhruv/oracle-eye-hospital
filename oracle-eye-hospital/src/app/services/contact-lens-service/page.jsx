@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Contact Lens Service</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Contact Lens Service</h1>
 
 			</div>
 		</div>
@@ -35,7 +35,7 @@ export default function Page() {
 
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 						<h3>
 							Oracle Eye Hospital Contact Lens Centre
 						</h3>
@@ -50,12 +50,12 @@ export default function Page() {
 						</p>
 					</div>
 
-					 <div className="single-media dz-media single-media height-sm radius-lg wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+					 <div className="single-media dz-media single-media height-sm radius-lg " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 						<img src="/Assets/img/services/lens2.png" alt="" className="object-fit-cover" />
 					</div> 
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Services Available</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
@@ -67,7 +67,7 @@ export default function Page() {
 						</div>
 					</div>
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Speciality Contact Lens Services</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
@@ -85,7 +85,7 @@ export default function Page() {
 					</div>
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Common conditions which need specialty lenses are:</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
@@ -106,7 +106,7 @@ export default function Page() {
 
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Scleral lenses also greatly helps in corneal and ocular conditions such as</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
@@ -137,7 +137,7 @@ export default function Page() {
 
 				<div className="col-lg-4 m-b30">
 					<aside className="side-bar sticky-top left">
-						<div className="widget service_menu_nav light wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
 								<h3 className="title">All Services</h3>
 							</div>

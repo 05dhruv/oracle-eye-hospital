@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Doctor’s Team</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Doctor’s Team</h1>
 
 			</div>
 		</div>
@@ -25,7 +25,7 @@ export default function Page() {
 
 
 			<div className="row">
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/3.png" />
@@ -40,7 +40,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/8.png" />
@@ -56,7 +56,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/1.png" />
@@ -71,7 +71,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/6.png" />

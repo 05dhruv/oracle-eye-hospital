@@ -11,7 +11,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm d-none" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Girjesh Kain</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Girjesh Kain</h1>
 
 			</div>
 		</div>
@@ -24,14 +24,14 @@ export default function Page() {
 			<div className="row">
 				<div className="col-xl-5 m-b30">
 					<aside className="side-bar sticky-top p-0">
-						<div className="widget wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+						<div className="widget " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 							<div className="dz-team">
 								<div className="dz-media rounded">
 									<img src="/Assets/img/team/3.png" />
 								</div>
 							</div>
 						</div>
-						<div className="form-wrapper style-1  wow fadeInUp doctor_form" data-wow-delay="0.4s" data-wow-duration="0.8s">
+						<div className="form-wrapper style-1   doctor_form" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
 							<div className="form-body">
 								<div className="title-head">
 									<h2 className="form-title m-b20">Book Your Appointment</h2>
@@ -44,8 +44,8 @@ export default function Page() {
 				</div>
 				<div className="col-xl-7 m-b10 ps-xl-5">
 					<h2 className="title">Dr. Girjesh Kain</h2>
-					<div className="section-head style-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
-						<div className="sub-title wow fadeInUp mb-3" data-wow-delay="0.2s" data-wow-duration="0.8s">
+					<div className="section-head style-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+						<div className="sub-title  mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 							MS (Ophthalmology), FICO
 							Founder & Managing Director
 						</div>
@@ -83,7 +83,7 @@ export default function Page() {
 
 					</div>
 
-					<div className="info-widget style-1 widget-sm  bg-light shadow-none m-b50 m-md-b20 wow fadeInUp doctor_form" data-wow-delay="0.8s" data-wow-duration="0.8s">
+					<div className="info-widget style-1 widget-sm  bg-light shadow-none m-b50 m-md-b20  doctor_form" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
 						<div className="widget-content">
 							<h2 className="title">My Time Schedule</h2>
 							<ul>
@@ -96,7 +96,7 @@ export default function Page() {
 							</ul>
 						</div>
 					</div>
-					<div className="info-widget style-2 shadow-none bg-light m-b50 m-md-b20 wow fadeInUp doctor_form" data-wow-delay="1.0s" data-wow-duration="0.8s">
+					<div className="info-widget style-2 shadow-none bg-light m-b50 m-md-b20  doctor_form" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
 						<div className="row g-xl-5 g-4">
 							<div className="col-md-6">
 								<div className="icon-bx-wraper style-3 align-items-center">

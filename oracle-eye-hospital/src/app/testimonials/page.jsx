@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Testimonials & Stories</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Testimonials & Stories</h1>
 
 			</div>
 		</div>
@@ -23,7 +23,7 @@ export default function Page() {
 <section className="content-inner  testimonial-wrapper1 overflow-hidden">
 		<div className="container">
 
-			<div className="swiper testimonial-swiper1 wow fadeInUp swiper-initialized swiper-horizontal swiper-backface-hidden" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+			<div className="swiper testimonial-swiper1  swiper-initialized swiper-horizontal swiper-backface-hidden" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 				<div className="swiper-wrapper" id="swiper-wrapper-1d57c0756c85506b" aria-live="polite" style={{"transitionDuration":"0ms","transform":"translate3d(-2280px, 0px, 0px)","transitionDelay":"0ms"}}>
 
 

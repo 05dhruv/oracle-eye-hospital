@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Optometrist Team</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Optometrist Team</h1>
 
 			</div>
 		</div>
@@ -21,7 +21,7 @@ export default function Page() {
 <section className="content-inner bg-light gradient-bottom-light">
 		<div className="container">
 			<div className="row">
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/5.png" />
@@ -40,7 +40,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Suraj-Chaurasiya.png" />
@@ -58,7 +58,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Saba-Siddique.png" />
@@ -76,7 +76,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Rohit-Saini.png" />
@@ -96,7 +96,7 @@ export default function Page() {
 				</div>
 
 
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Ayushi-Chaudhary.png" />
@@ -114,7 +114,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Bushra-Noor.png" />
@@ -132,7 +132,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Warisha-Khanam.png" />
@@ -151,7 +151,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Farheen.png" />
@@ -169,7 +169,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Amit.png" />
@@ -188,7 +188,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Ashish-Singh.png" />
@@ -206,7 +206,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Sahil-Abbas.png" />
@@ -224,7 +224,7 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-3 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+				<div className="col-xl-3 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/team/optometrist-team/Dushyant.png" />

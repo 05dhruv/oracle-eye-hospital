@@ -11,7 +11,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Overview</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Overview</h1>
 
 			</div>
 		</div>
@@ -49,7 +49,7 @@ export default function Page() {
 					</div>
 				</div>
 				<div className="col-xxl-6 col-xl-6 col-lg-6">
-					<div className="section-head style-14 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+					<div className="section-head style-14 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 						<span className="sub-title">Welcome to Ophthalmology</span>
 						<h2 className="title">We Preserve, Enhance And Protect Your Vision</h2>
 						<p>Trusted ophthalmic care with world-class expertise, advanced technology, and compassionate treatment for patients of all ages.</p>

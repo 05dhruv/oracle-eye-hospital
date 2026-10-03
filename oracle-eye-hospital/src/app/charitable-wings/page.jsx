@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Charitable Wings</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Charitable Wings</h1>
 
 			</div>
 		</div>
@@ -29,7 +29,7 @@ export default function Page() {
 
 
 
-					<div className="bg-white charitable_pg" data-wow-delay="0.2s" data-wow-duration="0.8s">
+					<div className="bg-white charitable_pg" data-aos-delay="200" data-aos-duration="800">
 
 
 
@@ -366,9 +366,9 @@ export default function Page() {
 
 				<div className="col-lg-4 order-lg-1 order-2">
 					<aside className="side-bar sticky-top left m-b30 ">
-						<div className="widget widget-bx bg-white wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+						<div className="widget widget-bx bg-white " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 
-							<div className="info-widget style-1 widget-sm  shadow-none m-md-b20 wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+							<div className="info-widget style-1 widget-sm  shadow-none m-md-b20 " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 								<div className="widget-content">
 									<h2 className="title">Office Hours</h2>
 									<ul>

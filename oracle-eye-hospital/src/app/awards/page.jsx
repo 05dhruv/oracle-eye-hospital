@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Awards</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Awards</h1>
 
 			</div>
 		</div>
@@ -20,7 +20,7 @@ export default function Page() {
 <section className="content-inner bg-light gradient-bottom-light">
 		<div className="container">
 			<div className="row">
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/14.png" alt />
@@ -30,7 +30,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/1.png" alt />
@@ -39,7 +39,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/2.png" alt />
@@ -48,7 +48,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/3.png" alt />
@@ -59,7 +59,7 @@ export default function Page() {
 
 
 
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/4.png" alt />
@@ -68,7 +68,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/5.png" alt />
@@ -77,7 +77,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/6.png" alt />
@@ -86,7 +86,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/7.png" alt />
@@ -95,7 +95,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/8.png" alt />
@@ -104,7 +104,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/15.png" alt />
@@ -112,7 +112,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/16.png" alt />
@@ -120,7 +120,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/17.png" alt />
@@ -128,7 +128,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/18.png" alt />
@@ -136,7 +136,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/19.png" alt />
@@ -144,7 +144,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/20.png" alt />
@@ -152,7 +152,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/21.png" alt />
@@ -160,7 +160,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/22.png" alt />
@@ -168,7 +168,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/23.png" alt />
@@ -176,7 +176,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/24.png" alt />
@@ -184,7 +184,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/25.png" alt />
@@ -192,7 +192,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/26.png" alt />
@@ -200,7 +200,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/27.png" alt />
@@ -208,7 +208,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/28.png" alt />
@@ -216,7 +216,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/29.png" alt />
@@ -224,7 +224,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/30.png" alt />
@@ -232,7 +232,7 @@ export default function Page() {
 
 					</div>
 				</div>
-				<div className="col-xl-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+				<div className="col-xl-4 col-sm-6 m-b30 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 					<div className="dz-team style-1 box-hover active">
 						<div className="dz-media">
 							<img src="/Assets/img/awards/31.png" alt />

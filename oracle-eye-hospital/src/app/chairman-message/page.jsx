@@ -11,7 +11,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Chairman's Message</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Chairman's Message</h1>
 
 			</div>
 		</div>
@@ -26,9 +26,9 @@ export default function Page() {
 				<div className="col-xl-6 col-lg-6 ">
 					<div className="content-info">
 						<div className="section-head style-14 m-b30">
-							<span className="sub-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Chairman & Managing Director</span>
-							<h2 className="title wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">Dr. Girjesh Kain</h2>
-							<p className="fw-normal wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s">
+							<span className="sub-title " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Chairman & Managing Director</span>
+							<h2 className="title " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">Dr. Girjesh Kain</h2>
+							<p className="fw-normal " data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
 								As you are aware, technologies change from time to time and even very advanced equipments become obsolete. The urge to be the best helps us evolve with the ever changing environment,
 								keep abreast with improved techniques and equip ourselves with relevant state of the art technology.
 							</p>

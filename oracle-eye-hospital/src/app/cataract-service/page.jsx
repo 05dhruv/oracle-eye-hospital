@@ -10,7 +10,7 @@ export default function Page() {
 <div className="dz-bnr-inr style-1  dz-bnr-inr-sm" style={{"backgroundImage":"url(/Assets/img/inner-bg.jpg)"}}>
 		<div className="container">
 			<div className="dz-bnr-inr-entry d-table-cell">
-				<h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Cataract Service</h1>
+				<h1 className="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Cataract Service</h1>
 
 			</div>
 		</div>
@@ -24,13 +24,13 @@ export default function Page() {
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-8 single-inner order-lg-1">
-					<div className="single-media dz-media single-media height-sm radius-lg wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+					<div className="single-media dz-media single-media height-sm radius-lg " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 						<img src="/Assets/img/services/Cataract-Service.png" alt="" className="object-fit-cover" />
 					</div>
 
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.4s","animationName":"fadeInUp"}}>
 
 						<p>
 							Cataract is the clouding of the natural crystalline lens and typically occurs because of ageing, although other reasons may be childhood eye infections,
@@ -53,7 +53,7 @@ export default function Page() {
 
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Surgical Advantage</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
@@ -77,7 +77,7 @@ export default function Page() {
 
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>
 							Micro Incision Cataract Surgery
 
@@ -115,7 +115,7 @@ export default function Page() {
 
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Phacoemulsification</h3>
 						<div className="pricingtable-list">
 							<ul className="list-check text-secondary fw-medium  m-b35">
@@ -131,7 +131,7 @@ export default function Page() {
 
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Oracle Advantage</h3>
 						<p>
 							Centre for Sight has always been adopting the latest technology in eye care that has resulted in improved visual outcome and comfort for the patient. From Ocujet technology Stellaris
@@ -148,7 +148,7 @@ export default function Page() {
 					</div>
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Aberration free/ Aspheric IOL5</h3>
 						<p>
 							These IOLs give good quality of vision post-operative due to the lens design. It also improves the contrast sensitivity of the patient and good night vision. These lenses also
@@ -157,7 +157,7 @@ export default function Page() {
 
 					</div>
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Toric IOL5</h3>
 						<p>
 							These IOLs correct the preexisting corneal astigmatism there
@@ -167,7 +167,7 @@ export default function Page() {
 					</div>
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Multifocal IOLs</h3>
 						<p>
 							These IOLs give good vision for all distances hence almost 90% of the day to day activities can be performed without the need for additional glasses. Rarely the patient may experience
@@ -177,7 +177,7 @@ export default function Page() {
 					</div>
 
 
-					<div className="content-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
+					<div className="content-item " data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.8s","animationName":"fadeInUp"}}>
 						<h3>Accommodating IOLs</h3>
 						<p>
 							These IOLs have flexible hinges that enables them to change focus for different distances hence providing clear distance, intermediate and near vision without glasses.
@@ -190,7 +190,7 @@ export default function Page() {
 				</div>
 				<div className="col-lg-4 m-b30">
 					<aside className="side-bar sticky-top left">
-						<div className="widget service_menu_nav light wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
+						<div className="widget service_menu_nav light " data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" style={{"visibility":"visible","animationDuration":"0.8s","animationDelay":"0.2s","animationName":"fadeInUp"}}>
 							<div className="widget-title">
 								<h3 className="title">All Services</h3>
 							</div>
