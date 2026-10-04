@@ -530,25 +530,37 @@ img {
   .w3menu-toggler.navicon {
     display: inline-flex !important;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 6px;
-    width: 44px !important;
-    height: 44px !important;
-    background: transparent !important;
-    border: none !important;
-    padding: 8px !important;
+    gap: 0;
+    width: 40px !important;
+    height: 40px !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    padding: 10px 9px !important;
     cursor: pointer;
     z-index: 1000;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   }
 
   .w3menu-toggler.navicon span {
     display: block;
-    width: 26px;
-    height: 3px;
+    width: 22px !important;
+    height: 2px !important;
     background-color: #610B38;
     border-radius: 2px;
     transition: all 0.3s ease;
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* Force all 3 lines to exact same 22x2 — overrides style.css nth-child rules */
+  .w3menu-toggler.navicon span:nth-child(1),
+  .w3menu-toggler.navicon span:nth-child(2),
+  .w3menu-toggler.navicon span:nth-child(3) {
+    width: 22px !important;
+    height: 2px !important;
   }
 
   .w3menu-toggler.navicon.open span:nth-child(1) {
