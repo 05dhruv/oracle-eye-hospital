@@ -585,7 +585,7 @@ img {
     background: #ffffff !important;
     z-index: 99999 !important;
     overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
+    
     transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.25) !important;
     display: block !important;
@@ -605,6 +605,7 @@ img {
     height: 100vh !important;
     background: rgba(0, 0, 0, 0.6) !important;
     z-index: 99998 !important;
+    -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
   }
 
