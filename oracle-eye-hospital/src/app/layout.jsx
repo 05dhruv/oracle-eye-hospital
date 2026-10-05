@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWidgets from "@/components/FloatingWidgets";
 import AosAnimationProvider from "@/components/AosAnimationProvider";
+import SiteChrome from "@/components/SiteChrome";
 
 export const metadata = {
   metadataBase: new URL("https://oracleeyehospital.com"),
@@ -49,10 +50,14 @@ export default function RootLayout({ children }) {
       <body id="bg" data-typography="typography_1">
         <AosAnimationProvider />
         <div className="page-wraper">
-          <Header />
+          <SiteChrome>
+            <Header />
+          </SiteChrome>
           <main className="page-content">{children}</main>
-          <Footer />
-          <FloatingWidgets />
+          <SiteChrome>
+            <Footer />
+            <FloatingWidgets />
+          </SiteChrome>
         </div>
       </body>
     </html>

@@ -27,11 +27,17 @@ export function verifyToken(token) {
   return Number(exp) > Date.now();
 }
 
-export function checkPassword(input) {
-  const real = process.env.ADMIN_PASSWORD || "";
-  if (!real || !input) return false;
+export function checkCredentials(email, password) {
+  const realEmail = process.env.ADMIN_EMAIL || "";
+  const realPassword = process.env.ADMIN_PASSWORD || "";
+  if (!realEmail || !realPassword || !email || !password) return false;
+  
+  // Timing safe comparison for both email and password
   const h = (s) => crypto.createHash("sha256").update(String(s)).digest();
-  return crypto.timingSafeEqual(h(input), h(real));
+  const emailMatch = crypto.timingSafeEqual(h(email.toLowerCase().trim()), h(realEmail.toLowerCase().trim()));
+  const passMatch = crypto.timingSafeEqual(h(password), h(realPassword));
+  
+  return emailMatch && passMatch;
 }
 
 export function isAdmin() {
