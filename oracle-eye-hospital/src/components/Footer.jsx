@@ -125,7 +125,7 @@ export default function Footer() {
                 <p className="copyright-text"> © Copyright 2026 By Oracle Eye Hospital. All Right Reserved </p>
               </div>
               <div className="col-lg-6 col-md-12 text-end">
-                <p>Designed By <a href="https://sdwebsolutions.in/" target="_blank" rel="noopener noreferrer">SD Web Solutions</a></p>
+                <p>Designed By <a href="https://www.zentrixinfotech.com/" target="_blank" rel="noopener noreferrer">Zentrix Infotech</a></p>
               </div>
             </div>
           </div>
