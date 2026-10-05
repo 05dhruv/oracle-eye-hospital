@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { checkPassword, createToken, COOKIE_NAME } from "@/lib/auth";
+import { checkCredentials, createToken, COOKIE_NAME } from "@/lib/auth";
 
 export async function POST(req) {
-  const { password } = await req.json().catch(() => ({}));
-  if (!checkPassword(password)) return NextResponse.json({ error: "Wrong password." }, { status: 401 });
+  const { email, password } = await req.json().catch(() => ({}));
+  if (!checkCredentials(email, password)) return NextResponse.json({ error: "Invalid email or password." }, { status: 401 });
 
   const res = NextResponse.json({ ok: true });
   res.cookies.set(COOKIE_NAME, createToken(), {

@@ -60,3 +60,13 @@ model Post {
 
   @@index([type, published, createdAt])
 }
+
+model Video {
+  id        String   @id @default(cuid())
+  title     String
+  url       String
+  active    Boolean  @default(true)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
