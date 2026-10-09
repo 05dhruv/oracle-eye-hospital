@@ -37,6 +37,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" data-theme-color="skin-8">
       <head>
+        <link rel="preload" as="image" href="/Assets/img/banner1.webp" type="image/webp" fetchPriority="high" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

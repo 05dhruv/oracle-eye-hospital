@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import StatsCounters from "@/components/StatsCounters";
 
@@ -358,14 +359,22 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-lg-7 align-self-end " data-aos="fade-right" data-aos-delay="800" data-aos-duration="800">
+              <div className="col-lg-7 align-self-end">
                 <div className="hero-thumbnail" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
                   <div className="row g-4">
                     <div className="col-5">
                       <div className="row justify-content-end">
                         <div className="col-10 m-b30">
                           <div className="dz-media video-bx4 h-auto">
-                            <img src="/Assets/img/banner2.png" alt="Video Thumbnail" className="thumbnail" />
+                            <Image
+                              src="/Assets/img/banner2.webp"
+                              alt="Video Thumbnail"
+                              className="thumbnail"
+                              width={335}
+                              height={275}
+                              priority
+                              unoptimized
+                            />
                             <a
                               href="#"
                               onClick={(e) => {
@@ -380,12 +389,30 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="col-12 m-b30">
-                          <img className="thumbnail" src="/Assets/img/banner3.png" alt="Hospital Care" />
+                          <Image
+                            className="thumbnail"
+                            src="/Assets/img/banner3.webp"
+                            alt="Hospital Care"
+                            width={429}
+                            height={470}
+                            priority
+                            unoptimized
+                          />
                         </div>
                       </div>
                     </div>
                     <div className="col-7 m-b30">
-                      <img className="thumbnail2" src="/Assets/img/banner1.png" alt="Main Surgeon" />
+                      <Image
+                        className="thumbnail2"
+                        src="/Assets/img/banner1.webp"
+                        alt="Main Surgeon"
+                        width={545}
+                        height={775}
+                        priority
+                        unoptimized
+                        fetchPriority="high"
+                        sizes="(max-width: 768px) 100vw, 545px"
+                      />
                     </div>
                   </div>
                 </div>
@@ -422,8 +449,8 @@ export default function Home() {
             <div className="col-xxl-6 col-xl-6 col-lg-6">
               <div className="content-media m-b30">
                 <div className="dz-media">
-                  <img src="/Assets/img/about/2.png" className="side-media" alt="Doctor Side" />
-                  <img src="/Assets/img/about/1.png" alt="Doctor Main" />
+                  <img src="/Assets/img/about/2.png" className="side-media" alt="Doctor Side" loading="lazy" decoding="async" />
+                  <img src="/Assets/img/about/1.png" alt="Doctor Main" loading="lazy" decoding="async" />
                 </div>
 
                 <div className="item1" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
@@ -923,16 +950,16 @@ export default function Home() {
         </div>
 
         {/* Floating Avatars in background */}
-        <div className="avatar1"><img src="/Assets/img/testimonial/clients-1.jpg" alt="Patient 1" /></div>
-        <div className="avatar2"><img src="/Assets/img/testimonial/clients-2.jpg" alt="Patient 2" /></div>
-        <div className="avatar3"><img src="/Assets/img/testimonial/clients-3.jpg" alt="Patient 3" /></div>
-        <div className="avatar4"><img src="/Assets/img/testimonial/clients-5.jpg" alt="Patient 4" /></div>
-        <div className="avatar5"><img src="/Assets/img/testimonial/clients-1.jpg" alt="Patient 5" /></div>
-        <div className="avatar6"><img src="/Assets/img/testimonial/clients-2.jpg" alt="Patient 6" /></div>
-        <div className="avatar7"><img src="/Assets/img/testimonial/clients-3.jpg" alt="Patient 7" /></div>
-        <div className="avatar8"><img src="/Assets/img/testimonial/clients-5.jpg" alt="Patient 8" /></div>
+        <div className="avatar1"><img src="/Assets/img/testimonial/clients-1.jpg" alt="Patient 1" loading="lazy" decoding="async" /></div>
+        <div className="avatar2"><img src="/Assets/img/testimonial/clients-2.jpg" alt="Patient 2" loading="lazy" decoding="async" /></div>
+        <div className="avatar3"><img src="/Assets/img/testimonial/clients-3.jpg" alt="Patient 3" loading="lazy" decoding="async" /></div>
+        <div className="avatar4"><img src="/Assets/img/testimonial/clients-5.jpg" alt="Patient 4" loading="lazy" decoding="async" /></div>
+        <div className="avatar5"><img src="/Assets/img/testimonial/clients-1.jpg" alt="Patient 5" loading="lazy" decoding="async" /></div>
+        <div className="avatar6"><img src="/Assets/img/testimonial/clients-2.jpg" alt="Patient 6" loading="lazy" decoding="async" /></div>
+        <div className="avatar7"><img src="/Assets/img/testimonial/clients-3.jpg" alt="Patient 7" loading="lazy" decoding="async" /></div>
+        <div className="avatar8"><img src="/Assets/img/testimonial/clients-5.jpg" alt="Patient 8" loading="lazy" decoding="async" /></div>
 
-        <div className="bg-shap"><img src="/Assets/images/background/bg5.webp" alt="Background Shape" /></div>
+        <div className="bg-shap"><img src="/Assets/images/background/bg5.webp" alt="Background Shape" loading="lazy" decoding="async" /></div>
       </section>
 
       {/* ========================================================

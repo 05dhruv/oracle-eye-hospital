@@ -6,6 +6,7 @@ export default function Header({ settings = {} }) {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeSubDropdown, setActiveSubDropdown] = useState(null);
 
   const phone = settings.phone || "+91 8006803111";
   const address = settings.address || "491, Hi-Street, Near TDI City, Parampara, MDA, Moradabad, Uttar Pradesh-244001, India";
@@ -22,8 +23,26 @@ export default function Header({ settings = {} }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add("fixed");
+    } else {
+      document.body.classList.remove("fixed");
+    }
+  }, [mobileMenuOpen]);
+
   const toggleDropdown = (name) => {
     setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
+  const toggleSubDropdown = (name) => {
+    setActiveSubDropdown(activeSubDropdown === name ? null : name);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+    setActiveSubDropdown(null);
   };
 
   return (
@@ -31,7 +50,7 @@ export default function Header({ settings = {} }) {
       {/* Top Header Bar */}
       <div className="bg-header">
         <div className="container header-middle">
-          <div className="row align-items-center">
+          <div className="row">
             {/* Main Hospital Logo */}
             <span className="col-xs-12 col-sm-5">
               <Link href="/">
@@ -39,7 +58,6 @@ export default function Header({ settings = {} }) {
                   src="/uploads/logos/232296ca-9c85-445b-b965-033a97fe7008.png"
                   className="img-responsive main-logo"
                   alt="Oracle Eye Hospital"
-                  style={{ maxHeight: "75px", width: "auto" }}
                 />
               </Link>
             </span>
@@ -76,7 +94,7 @@ export default function Header({ settings = {} }) {
             </div>
 
             {/* Certification / Accreditation Logos */}
-            <div className="col-xs-12 col-sm-2 d-flex align-items-center justify-content-end logos_prtt">
+            <div className="col-xs-12 col-sm-2 d-flex align-items-center logos_prtt">
               <Link href="/" className="me-2">
                 <img src="/Assets/img/logo2.png" className="img-responsive logo_div logo2" alt="Accreditation 1" />
               </Link>
@@ -105,21 +123,22 @@ export default function Header({ settings = {} }) {
             </button>
 
             {/* Backdrop overlay for mobile menu */}
-            {mobileMenuOpen && (
-              <div className="menu-close fade-overlay show" onClick={() => setMobileMenuOpen(false)}></div>
-            )}
+            <div
+              className={`menu-close fade-overlay ${mobileMenuOpen ? "show" : ""}`}
+              onClick={closeMobileMenu}
+            ></div>
 
             {/* Main Navigation Items */}
             <div className={`header-nav w3menu w3menu-start mo-left ${mobileMenuOpen ? "show" : ""}`} id="W3Menu">
               <div className="logo-header logo-dark">
-                <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/" onClick={closeMobileMenu}>
                   <img src="/Assets/img/logo.png" alt="Oracle Eye Hospital" />
                 </Link>
               </div>
 
               <ul className="nav navbar-nav">
                 <li>
-                  <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                  <Link href="/" onClick={closeMobileMenu}>
                     <span>Home</span>
                   </Link>
                 </li>
@@ -133,13 +152,13 @@ export default function Header({ settings = {} }) {
                       toggleDropdown("about");
                     }}
                   >
-                    <span>About Us</span> <i className="fas fa-chevron-down tabindex"></i>
+                    <span>About Us</span> <i className="fas fa-chevron-right tabindex"></i>
                   </a>
                   <ul className="sub-menu">
-                    <li><Link href="/overview" onClick={() => setMobileMenuOpen(false)}>Overview</Link></li>
-                    <li><Link href="/chairman-message" onClick={() => setMobileMenuOpen(false)}>Chairman's Message</Link></li>
-                    <li><Link href="/board-of-directors" onClick={() => setMobileMenuOpen(false)}>Board of Directors</Link></li>
-                    <li><Link href="/testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials &amp; Stories</Link></li>
+                    <li><Link href="/overview" onClick={closeMobileMenu}>Overview</Link></li>
+                    <li><Link href="/chairman-message" onClick={closeMobileMenu}>Chairman's Message</Link></li>
+                    <li><Link href="/board-of-directors" onClick={closeMobileMenu}>Board of Directors</Link></li>
+                    <li><Link href="/testimonials" onClick={closeMobileMenu}>Testimonials &amp; Stories</Link></li>
                   </ul>
                 </li>
 
@@ -152,11 +171,11 @@ export default function Header({ settings = {} }) {
                       toggleDropdown("team");
                     }}
                   >
-                    <span>Clinic Team</span> <i className="fas fa-chevron-down tabindex"></i>
+                    <span>Clinic Team</span> <i className="fas fa-chevron-right tabindex"></i>
                   </a>
                   <ul className="sub-menu">
-                    <li><Link href="/doctor-team" onClick={() => setMobileMenuOpen(false)}>Doctor’s Team</Link></li>
-                    <li><Link href="/optometrist-team" onClick={() => setMobileMenuOpen(false)}>Optometrist Team</Link></li>
+                    <li><Link href="/doctor-team" onClick={closeMobileMenu}>Doctor’s Team</Link></li>
+                    <li><Link href="/optometrist-team" onClick={closeMobileMenu}>Optometrist Team</Link></li>
                   </ul>
                 </li>
 
@@ -169,19 +188,19 @@ export default function Header({ settings = {} }) {
                       toggleDropdown("services");
                     }}
                   >
-                    <span>Services</span> <i className="fas fa-chevron-down tabindex"></i>
+                    <span>Services</span> <i className="fas fa-chevron-right tabindex"></i>
                   </a>
                   <ul className="sub-menu">
-                    <li><Link href="/cataract-service" onClick={() => setMobileMenuOpen(false)}>Cataract Service</Link></li>
-                    <li><Link href="/cornea-refractive-service" onClick={() => setMobileMenuOpen(false)}>Cornea And Refractive Services</Link></li>
-                    <li><Link href="/computer-vision-syndrome" onClick={() => setMobileMenuOpen(false)}>Computer Vision Syndrome</Link></li>
-                    <li><Link href="/dry-eyes-clinic" onClick={() => setMobileMenuOpen(false)}>Dry Eyes Clinic</Link></li>
-                    <li><Link href="/contact-lens-service" onClick={() => setMobileMenuOpen(false)}>Contact Lens Service</Link></li>
-                    <li><Link href="/myopia-clinic" onClick={() => setMobileMenuOpen(false)}>Myopia Clinic</Link></li>
-                    <li><Link href="/pediatric-eye-service" onClick={() => setMobileMenuOpen(false)}>Pediatric Eye Service</Link></li>
-                    <li><Link href="/orthoptics-service" onClick={() => setMobileMenuOpen(false)}>Orthoptics Service</Link></li>
-                    <li><Link href="/vitreoretinal-service" onClick={() => setMobileMenuOpen(false)}>Vitreoretinal Service</Link></li>
-                    <li><Link href="/glaucoma-service" onClick={() => setMobileMenuOpen(false)}>Glaucoma Service</Link></li>
+                    <li><Link href="/cataract-service" onClick={closeMobileMenu}>Cataract Service</Link></li>
+                    <li><Link href="/cornea-refractive-service" onClick={closeMobileMenu}>Cornea And Refractive Services</Link></li>
+                    <li><Link href="/computer-vision-syndrome" onClick={closeMobileMenu}>Computer Vision Syndrome</Link></li>
+                    <li><Link href="/dry-eyes-clinic" onClick={closeMobileMenu}>Dry Eyes Clinic</Link></li>
+                    <li><Link href="/contact-lens-service" onClick={closeMobileMenu}>Contact Lens Service</Link></li>
+                    <li><Link href="/myopia-clinic" onClick={closeMobileMenu}>Myopia Clinic</Link></li>
+                    <li><Link href="/pediatric-eye-service" onClick={closeMobileMenu}>Pediatric Eye Service</Link></li>
+                    <li><Link href="/orthoptics-service" onClick={closeMobileMenu}>Orthoptics Service</Link></li>
+                    <li><Link href="/vitreoretinal-service" onClick={closeMobileMenu}>Vitreoretinal Service</Link></li>
+                    <li><Link href="/glaucoma-service" onClick={closeMobileMenu}>Glaucoma Service</Link></li>
                   </ul>
                 </li>
 
@@ -194,18 +213,26 @@ export default function Header({ settings = {} }) {
                       toggleDropdown("updates");
                     }}
                   >
-                    <span>Latest Updates</span> <i className="fas fa-chevron-down tabindex"></i>
+                    <span>Latest Updates</span> <i className="fas fa-chevron-right tabindex"></i>
                   </a>
                   <ul className="sub-menu">
-                    <li className="sub-menu-down">
-                      <a href="#" onClick={(e) => e.preventDefault()}>Media Gallery</a>
+                    <li className={`sub-menu-down ${activeSubDropdown === "media" ? "open" : ""}`}>
+                      <a
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleSubDropdown("media");
+                        }}
+                      >
+                        Media Gallery <i className="fas fa-chevron-right tabindex"></i>
+                      </a>
                       <ul className="sub-menu">
-                        <li><Link href="/photo-gallery" onClick={() => setMobileMenuOpen(false)}>Photo Gallery</Link></li>
-                        <li><Link href="/video-gallery" onClick={() => setMobileMenuOpen(false)}>Video Gallery</Link></li>
-                        <li><Link href="/blog" onClick={() => setMobileMenuOpen(false)}>Blogs</Link></li>
+                        <li><Link href="/photo-gallery" onClick={closeMobileMenu}>Photo Gallery</Link></li>
+                        <li><Link href="/video-gallery" onClick={closeMobileMenu}>Video Gallery</Link></li>
+                        <li><Link href="/blog" onClick={closeMobileMenu}>Blogs</Link></li>
                       </ul>
                     </li>
-                    <li><Link href="/news" onClick={() => setMobileMenuOpen(false)}>News and Events</Link></li>
+                    <li><Link href="/news" onClick={closeMobileMenu}>News and Events</Link></li>
                   </ul>
                 </li>
 
@@ -218,34 +245,42 @@ export default function Header({ settings = {} }) {
                       toggleDropdown("academic");
                     }}
                   >
-                    <span>Academic</span> <i className="fas fa-chevron-down tabindex"></i>
+                    <span>Academic</span> <i className="fas fa-chevron-right tabindex"></i>
                   </a>
                   <ul className="sub-menu">
-                    <li className="sub-menu-down">
-                      <a href="#" onClick={(e) => e.preventDefault()}>Optometry Training Program</a>
+                    <li className={`sub-menu-down ${activeSubDropdown === "optometry" ? "open" : ""}`}>
+                      <a
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleSubDropdown("optometry");
+                        }}
+                      >
+                        Optometry Training Program <i className="fas fa-chevron-right tabindex"></i>
+                      </a>
                       <ul className="sub-menu">
-                        <li><Link href="/comprehensive-internship-in-optometry" onClick={() => setMobileMenuOpen(false)}>Comprehensive Clinical Optometry Internship</Link></li>
+                        <li><Link href="/comprehensive-internship-in-optometry" onClick={closeMobileMenu}>Comprehensive Clinical Optometry Internship</Link></li>
                       </ul>
                     </li>
-                    <li><Link href="/awards" onClick={() => setMobileMenuOpen(false)}>Awards</Link></li>
-                    <li><Link href="/publications" onClick={() => setMobileMenuOpen(false)}>Publications</Link></li>
+                    <li><Link href="/awards" onClick={closeMobileMenu}>Awards</Link></li>
+                    <li><Link href="/publications" onClick={closeMobileMenu}>Publications</Link></li>
                   </ul>
                 </li>
 
                 <li>
-                  <Link href="/CashlessFacility" onClick={() => setMobileMenuOpen(false)}>
+                  <Link href="/CashlessFacility" onClick={closeMobileMenu}>
                     <span>Cashless Facility</span>
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/charitable-wings" onClick={() => setMobileMenuOpen(false)}>
+                  <Link href="/charitable-wings" onClick={closeMobileMenu}>
                     <span>Charitable Wings</span>
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/contact-us" onClick={() => setMobileMenuOpen(false)}>
+                  <Link href="/contact-us" onClick={closeMobileMenu}>
                     <span>Contact Us</span>
                   </Link>
                 </li>
@@ -268,7 +303,7 @@ export default function Header({ settings = {} }) {
               </div>
             </div>
 
-            {/* Extra Nav Right: Phone call widget & Appointment CTA */}
+            {/* Extra Nav: Fixed Bottom bar on mobile / Right widget on desktop */}
             <div className="extra-nav active">
               <div className="extra-cell">
                 <ul className="header-right">
