@@ -915,13 +915,45 @@ img {
     .banner-shape4,
     .banner-shape5,
     .banner-shape6,
-    .item4,
-    .item5 {
+    .item4 {
         display: none !important;
+    }
+    /* Mobile decorative hero shape (img5.png) */
+    .hero-banner.style-1 .item5,
+    .hero-banner.style-1 .hero-shape-mobile {
+        display: block !important;
+        position: absolute !important;
+        top: 60px !important;
+        right: 15px !important;
+        left: auto !important;
+        bottom: auto !important;
+        z-index: 3 !important;
+        pointer-events: none !important;
+        animation: heroChashmaMove 4s ease-in-out infinite alternate !important;
+    }
+    .hero-banner.style-1 .item5 img,
+    .hero-banner.style-1 .hero-shape-mobile img {
+        width: 85px !important;
+        max-width: 85px !important;
+        height: auto !important;
+        opacity: 0.9 !important;
+        display: block !important;
     }
     /* rotating-text-svg max-width removed — centering handled by inset:0 + margin:auto */
     .center-arrow-icon {
         font-size: 18px !important;
+    }
+}
+
+@keyframes heroChashmaMove {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-16px) rotate(6deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
     }
 }
 

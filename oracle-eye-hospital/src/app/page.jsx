@@ -432,7 +432,7 @@ export default function Home() {
         <div className="item4" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
           <img src="/Assets/images/hero-banner/img4.png" alt="Shape" />
         </div>
-        <div className="item5" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
+        <div className="item5 hero-shape-mobile" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
           <img src="/Assets/images/hero-banner/img5.png" alt="Shape" />
         </div>
       </div>
