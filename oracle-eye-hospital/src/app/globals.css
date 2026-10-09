@@ -1187,6 +1187,7 @@ iframe.video_frame {
     height: 44px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.4);
     color: #fff;
@@ -1335,6 +1336,7 @@ iframe.video_frame {
     width: 100vw !important;
     height: 100vh !important;
     background: rgba(10, 15, 25, 0.95) !important;
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     z-index: 999999 !important;
     display: flex !important;
@@ -1427,6 +1429,7 @@ iframe.video_frame {
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     color: #fff;
     font-size: 1.25rem;
@@ -1483,6 +1486,7 @@ iframe.video_frame {
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    -webkit-user-select: none;
     user-select: none;
     animation: pbImagePop 0.25s ease-out;
 }
@@ -1511,8 +1515,6 @@ iframe.video_frame {
     justify-content: center;
     gap: 10px;
     overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
     padding-bottom: 4px;
 }
 
@@ -1574,5 +1576,204 @@ iframe.video_frame {
         flex: 0 0 50px;
         width: 50px;
         height: 38px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE HEADER (max-width: 575.98px)
+   - Ek hi row me:
+     * Left: Oracle Eye Hospital main logo (max-height: 64px)
+     * Beech/Right: NABH aur PM-JAY logos (40x40px)
+     * Sabse right: Maroon (#610B38) hamburger button (48x48px)
+   - Header height: 92px (.bg-header aur .site-header.style-3 .main-bar same height taaki hamburger vertically centered rahe)
+========================================================= */
+@media (max-width: 575.98px) {
+    .site-header.style-3 {
+        position: relative !important;
+    }
+
+    /* Header bar (92px height) */
+    .bg-header {
+        height: 92px !important;
+        min-height: 92px !important;
+        max-height: 92px !important;
+        padding: 0 62px 0 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        background-color: #ffffff !important;
+        box-sizing: border-box !important;
+    }
+
+    .bg-header .container,
+    .bg-header .container.header-middle {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .bg-header .row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Main Hospital Logo (Left, max-height 64px) */
+    .bg-header .row > span,
+    .bg-header .row > span:first-child {
+        display: flex !important;
+        align-items: center !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .bg-header .row > span a {
+        display: inline-flex !important;
+        align-items: center !important;
+        max-width: 100% !important;
+    }
+
+    .bg-header img.main-logo,
+    .bg-header .row > span img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: 64px !important;
+        object-fit: contain !important;
+    }
+
+    /* Hide location & appointment text on mobile header */
+    .bg-header .mobile_div {
+        display: none !important;
+    }
+
+    /* Accreditation Logos NABH & PM-JAY (Middle/Right, 40x40px) */
+    .bg-header .logos_prtt {
+        display: flex !important;
+        flex: 0 0 auto !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 8px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
+
+    .bg-header .logos_prtt a {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+
+    .bg-header .logos_prtt .logo_div.logo2 {
+        width: 40px !important;
+        height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+        object-fit: contain !important;
+    }
+
+    /* Sticky navigation bar wrapper overlay */
+    .site-header.style-3 .sticky-header.main-bar-wraper,
+    .site-header.style-3 .sticky-header.main-bar-wraper.is-fixed {
+        position: static !important;
+        box-shadow: none !important;
+    }
+
+    .site-header.style-3 .main-bar,
+    .site-header.style-3 .is-fixed .main-bar {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: auto !important;
+        width: 60px !important;
+        height: 92px !important;
+        min-height: 92px !important;
+        max-height: 92px !important;
+        background: transparent !important;
+        z-index: 1000 !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .site-header.style-3 .main-bar .inner-bar {
+        width: 100% !important;
+        height: 92px !important;
+        min-height: 92px !important;
+        max-height: 92px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Maroon (#610B38) Hamburger Button (Far right, 48x48px) */
+    .site-header .w3menu-toggler.navicon {
+        float: none !important;
+        margin: 0 !important;
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        min-height: 48px !important;
+        background: #610B38 !important;
+        background-color: #610B38 !important;
+        border-radius: 6px !important;
+        border: none !important;
+        display: inline-flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 13px 10px !important;
+        box-shadow: 0 2px 8px rgba(97, 11, 56, 0.25) !important;
+        cursor: pointer !important;
+        box-sizing: border-box !important;
+    }
+
+    .site-header .w3menu-toggler.navicon span {
+        display: block !important;
+        position: static !important;
+        width: 26px !important;
+        height: 2.5px !important;
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        border-radius: 2px !important;
+        transition: all 0.25s ease-in-out !important;
+    }
+
+    .site-header .w3menu-toggler.navicon span:nth-child(1),
+    .site-header .w3menu-toggler.navicon span:nth-child(2),
+    .site-header .w3menu-toggler.navicon span:nth-child(3) {
+        width: 26px !important;
+        height: 2.5px !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    .site-header .w3menu-toggler.navicon.open span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg) !important;
+    }
+
+    .site-header .w3menu-toggler.navicon.open span:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    .site-header .w3menu-toggler.navicon.open span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg) !important;
     }
 }

@@ -73,6 +73,7 @@
   font-size: 13px;
   text-align: left;
   white-space: nowrap;
+  -webkit-user-select: none;
   user-select: none;
 }
 .adt-th-sr { width: 60px; color: #6b7280; }
