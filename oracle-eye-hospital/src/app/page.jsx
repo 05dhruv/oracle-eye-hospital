@@ -290,22 +290,44 @@ export default function Home() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleAppointmentSubmit = (e) => {
+  const handleAppointmentSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setBookingMessage("Thank you! Your appointment request has been submitted successfully. Our team will contact you shortly.");
-      setShowBookingSuccess(true);
-      setFormData({
-        Name: "",
-        Email: "",
-        PhoneNumber: "",
-        AppointmentDate: "",
-        DoctorName: "",
+    try {
+      const res = await fetch("/api/appointments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.Name,
+          email: formData.Email,
+          phone: formData.PhoneNumber,
+          doctor: formData.DoctorName,
+          preferredDate: formData.AppointmentDate || undefined,
+        }),
       });
-    }, 1200);
+
+      if (res.ok) {
+        setBookingMessage("Thank you! Your appointment request has been submitted successfully. Our team will contact you shortly.");
+        setShowBookingSuccess(true);
+        setFormData({
+          Name: "",
+          Email: "",
+          PhoneNumber: "",
+          AppointmentDate: "",
+          DoctorName: "",
+        });
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setBookingMessage(data.error || "Failed to submit appointment request. Please call us.");
+        setShowBookingSuccess(true);
+      }
+    } catch {
+      setBookingMessage("Failed to submit request. Please call us directly.");
+      setShowBookingSuccess(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

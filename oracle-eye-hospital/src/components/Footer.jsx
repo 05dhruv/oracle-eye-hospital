@@ -1,6 +1,13 @@
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ settings = {} }) {
+  const phone = settings.phone || "+91 8006803111";
+  const email = settings.email || "oracleeyehospital@gmail.com";
+  const address = settings.address || "491, Hi-Street, Near TDI City, Parampara, MDA, Moradabad, Uttar Pradesh-244001, India";
+  const workingHours = settings.working_hours || "Mon – Sat, 10:00 AM – 8:00 PM";
+  const facebook = settings.facebook || "https://www.facebook.com/oracleeyehospital/";
+  const instagram = settings.instagram || "https://www.instagram.com/oracleeyehospital/";
+
   return (
     <footer className="site-footer style-1" style={{ backgroundImage: "url(/Assets/images/background/bg3.webp)" }}>
       {/* Footer Top */}
@@ -59,25 +66,23 @@ export default function Footer() {
                 <h2 className="footer-title">Contacts Us</h2>
                 <ul>
                   <li>
-                    <a href="mailto:oracleeyehospital@gmail.com">
-                      <i className="feather icon-mail"></i> <span>oracleeyehospital@gmail.com</span>
+                    <a href={`mailto:${email}`}>
+                      <i className="feather icon-mail"></i> <span>{email}</span>
                     </a>
                   </li>
                   <li>
-                    <a href="tel:+91 8006803111">
-                      <i className="feather icon-phone-call"></i>+91 8006803111
+                    <a href={`tel:${phone}`}>
+                      <i className="feather icon-phone-call"></i>{phone}
                     </a>
-                    ,{" "}
-                    <a href="tel:+91 7500503111">+91 7500503111</a>
                   </li>
                   <li>
                     <a
-                      href="https://www.google.com/maps/search/?api=1&query=Oracle+Eye+Hospital+491+Hi+Street+Near+TDI+City+Parampara+MDA+Moradabad+Uttar+Pradesh+244001"
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <i className="feather icon-map-pin"></i>
-                      491, Hi-Street, Near TDI City, Parampara, MDA, Moradabad, Uttar Pradesh-244001, India
+                      {address}
                     </a>
                   </li>
                 </ul>
@@ -88,8 +93,7 @@ export default function Footer() {
             <div className="col-xl-3 col-lg-6 col-sm-12 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s">
               <div className="widget me-2">
                 <h2 className="footer-title">Working Hours</h2>
-                <p className="text-white">Mon - Sat</p>
-                <p className="text-white">10:00AM - 8:00PM</p>
+                <p className="text-white">{workingHours}</p>
 
                 <Link className="btn btn-icon btn-white hover-secondary text-primary shadow-sm" href="/contact-us">
                   Get Appointment <i className="feather icon-arrow-right"></i>
@@ -98,12 +102,12 @@ export default function Footer() {
                 <div className="dz-social-icon mt-4">
                   <ul>
                     <li>
-                      <a href="https://www.instagram.com/oracleeyehospital/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                      <a href={instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i className="fa-brands fa-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.facebook.com/oracleeyehospital/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                      <a href={facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                         <i className="fa-brands fa-facebook-f"></i>
                       </a>
                     </li>

@@ -7,6 +7,7 @@ import {
   ChevronDown, ChevronRight, Menu, LogOut
 } from "lucide-react";
 import "./admin.css";
+import { ToastContainer } from "./components/Toast";
 
 export default function AdminLayoutClient({ children }) {
   const pathname = usePathname();
@@ -122,6 +123,7 @@ export default function AdminLayoutClient({ children }) {
           {children}
         </main>
       </div>
+      <ToastContainer />
     </div>
   );
 }

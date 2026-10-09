@@ -2,13 +2,16 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
-export default function FloatingWidgets() {
+export default function FloatingWidgets({ settings = {} }) {
   const [chatVisible, setChatVisible] = useState(false);
   const [chatAnimated, setChatAnimated] = useState(false);
   const [showTyping, setShowTyping] = useState(false);
   const [showIncoming, setShowIncoming] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const hasBeenOpenedRef = useRef(false);
+
+  const whatsappRaw = settings?.whatsapp || "918006803111";
+  const whatsappNum = String(whatsappRaw).replace(/\D/g, "") || "918006803111";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +58,7 @@ export default function FloatingWidgets() {
 
   const handleWhatsAppRedirect = () => {
     window.open(
-      "https://api.whatsapp.com/send/?phone=918006803111&text&type=phone_number&app_absent=0",
+      `https://api.whatsapp.com/send/?phone=${whatsappNum}&text&type=phone_number&app_absent=0`,
       "_blank"
     );
   };
