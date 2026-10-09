@@ -1,187 +1,188 @@
 "use client";
-import { useState, useMemo } from "react";
-import { ChevronUp, ChevronDown, Edit, Trash2 } from "lucide-react";
+import { useState, useMemo, useEffect } from "react";
+import { ChevronUp, ChevronDown, Edit2, Trash2 } from "lucide-react";
+import "./datatable.css";
 
-export default function DataTable({ 
-  columns, 
-  data, 
-  onEdit, 
-  onDelete, 
-  customStatusBadge,
-  actionsCustom
-}) {
+export default function DataTable({ columns, rows, searchKeys, onEdit, onDelete }) {
   const [search, setSearch] = useState("");
   const [entries, setEntries] = useState(10);
   const [page, setPage] = useState(1);
-  const [sortCol, setSortCol] = useState(null);
+  const [sortKey, setSortKey] = useState(null);
   const [sortAsc, setSortAsc] = useState(true);
+
+  // Reset page on search or entries change
+  useEffect(() => { setPage(1); }, [search, entries]);
 
   // Filter
   const filtered = useMemo(() => {
-    if (!search) return data;
-    const lower = search.toLowerCase();
-    return data.filter(item => 
-      columns.some(col => {
-        const val = item[col.key];
-        return val && String(val).toLowerCase().includes(lower);
+    if (!search.trim()) return rows;
+    const q = search.toLowerCase();
+    return rows.filter(row =>
+      (searchKeys || columns.map(c => c.key)).some(k => {
+        const v = row[k];
+        return v != null && String(v).toLowerCase().includes(q);
       })
     );
-  }, [data, search, columns]);
+  }, [rows, search, columns, searchKeys]);
 
   // Sort
   const sorted = useMemo(() => {
-    if (!sortCol) return filtered;
+    if (!sortKey) return filtered;
     return [...filtered].sort((a, b) => {
-      const av = a[sortCol];
-      const bv = b[sortCol];
+      const av = a[sortKey] ?? "";
+      const bv = b[sortKey] ?? "";
       if (av < bv) return sortAsc ? -1 : 1;
       if (av > bv) return sortAsc ? 1 : -1;
       return 0;
     });
-  }, [filtered, sortCol, sortAsc]);
+  }, [filtered, sortKey, sortAsc]);
 
   // Paginate
   const total = sorted.length;
-  const pages = Math.ceil(total / entries);
-  const paginated = sorted.slice((page - 1) * entries, page * entries);
+  const totalPages = Math.max(1, Math.ceil(total / entries));
+  const safePage = Math.min(page, totalPages);
+  const sliced = sorted.slice((safePage - 1) * entries, safePage * entries);
 
-  const handleSort = (key) => {
-    if (sortCol === key) {
-      setSortAsc(!sortAsc);
-    } else {
-      setSortCol(key);
-      setSortAsc(true);
-    }
-  };
+  function handleSort(key) {
+    if (sortKey === key) setSortAsc(a => !a);
+    else { setSortKey(key); setSortAsc(true); }
+  }
+
+  // Build page number array (max 5 around current)
+  const pageNums = useMemo(() => {
+    const pages = [];
+    const start = Math.max(1, safePage - 2);
+    const end = Math.min(totalPages, start + 4);
+    for (let i = start; i <= end; i++) pages.push(i);
+    return pages;
+  }, [safePage, totalPages]);
+
+  const from = total === 0 ? 0 : (safePage - 1) * entries + 1;
+  const to = Math.min(safePage * entries, total);
 
   return (
-    <div>
-      <div className="ad-dt-top">
-        <div className="ad-dt-length">
+    <div className="adt-root">
+      {/* Top controls */}
+      <div className="adt-controls">
+        <div className="adt-entries">
           <label>
             Show{" "}
-            <select value={entries} onChange={(e) => { setEntries(Number(e.target.value)); setPage(1); }}>
-              <option value={10}>10</option>
-              <option value={25}>25</option>
-              <option value={50}>50</option>
-              <option value={100}>100</option>
+            <select value={entries} onChange={e => setEntries(Number(e.target.value))}>
+              {[10, 25, 50, 100].map(n => <option key={n}>{n}</option>)}
             </select>
             {" "}entries
           </label>
         </div>
-        <div className="ad-dt-search">
+        <div className="adt-search">
           <label>
             Search:{" "}
-            <input 
-              type="text" 
-              value={search} 
-              onChange={(e) => { setSearch(e.target.value); setPage(1); }} 
+            <input
+              type="text"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
               placeholder="Search..."
+              className="adt-search-input"
             />
           </label>
         </div>
       </div>
 
-      <div className="ad-dt-wrapper">
-        <table className="ad-table">
+      {/* Table */}
+      <div className="adt-table-wrap">
+        <table className="adt-table">
           <thead>
             <tr>
-              {columns.map((col) => (
-                <th key={col.key} onClick={() => col.sortable !== false && handleSort(col.key)}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+              <th className="adt-th adt-th-sr">Sr. No.</th>
+              {columns.map(col => (
+                <th
+                  key={col.key}
+                  className={`adt-th ${col.sortable !== false ? "adt-sortable" : ""}`}
+                  onClick={() => col.sortable !== false && handleSort(col.key)}
+                >
+                  <span className="adt-th-inner">
                     {col.label}
                     {col.sortable !== false && (
-                      <span style={{ display: "inline-flex", flexDirection: "column", opacity: sortCol === col.key ? 1 : 0.3 }}>
-                        <ChevronUp size={12} color={sortCol === col.key && sortAsc ? "#4e7cff" : "currentColor"} style={{ marginBottom: "-4px" }} />
-                        <ChevronDown size={12} color={sortCol === col.key && !sortAsc ? "#4e7cff" : "currentColor"} />
+                      <span className="adt-sort-icons">
+                        <ChevronUp
+                          size={11}
+                          className={sortKey === col.key && sortAsc ? "adt-sort-active" : ""}
+                        />
+                        <ChevronDown
+                          size={11}
+                          className={sortKey === col.key && !sortAsc ? "adt-sort-active" : ""}
+                        />
                       </span>
                     )}
-                  </div>
+                  </span>
                 </th>
               ))}
-              {(onEdit || onDelete || actionsCustom) && <th>Action</th>}
+              {(onEdit || onDelete) && <th className="adt-th">Action</th>}
             </tr>
           </thead>
           <tbody>
-            {paginated.length === 0 ? (
+            {sliced.length === 0 ? (
               <tr>
-                <td colSpan={columns.length + 1} className="ad-empty">No matching records found</td>
+                <td
+                  className="adt-empty"
+                  colSpan={columns.length + 1 + (onEdit || onDelete ? 1 : 0)}
+                >
+                  No matching records found
+                </td>
               </tr>
-            ) : (
-              paginated.map((row, idx) => (
-                <tr key={row.id || idx}>
-                  {columns.map((col) => {
-                    if (col.key === 'status') {
-                      return (
-                        <td key={col.key}>
-                          {customStatusBadge ? customStatusBadge(row) : (
-                            <span className={`ad-badge ${row.status || row.active ? 'ad-badge-active' : 'ad-badge-inactive'}`}>
-                              {row.status || (row.active ? 'Active' : 'Inactive')}
-                            </span>
-                          )}
-                        </td>
-                      );
-                    }
-                    if (col.render) {
-                      return <td key={col.key}>{col.render(row)}</td>;
-                    }
-                    return <td key={col.key}>{row[col.key]}</td>;
-                  })}
-                  
-                  {(onEdit || onDelete || actionsCustom) && (
-                    <td>
-                      <div className="ad-actions">
-                        {actionsCustom && actionsCustom(row)}
-                        {onEdit && (
-                          <button className="ad-btn-edit" onClick={() => onEdit(row)}>
-                            <Edit size={14} /> Edit
-                          </button>
-                        )}
-                        {onDelete && (
-                          <button className="ad-btn-delete" onClick={() => {
-                            if(confirm("Are you sure you want to delete this?")) onDelete(row);
-                          }}>
-                            <Trash2 size={14} /> Delete
-                          </button>
-                        )}
-                      </div>
-                    </td>
-                  )}
-                </tr>
-              ))
-            )}
+            ) : sliced.map((row, idx) => (
+              <tr key={row.id ?? idx} className="adt-tr">
+                <td className="adt-td adt-td-sr">{from + idx}</td>
+                {columns.map(col => (
+                  <td key={col.key} className="adt-td">
+                    {col.render ? col.render(row) : (row[col.key] ?? "—")}
+                  </td>
+                ))}
+                {(onEdit || onDelete) && (
+                  <td className="adt-td adt-actions">
+                    {onEdit && (
+                      <button className="adt-btn-edit" onClick={() => onEdit(row)}>
+                        <Edit2 size={13} /> Edit
+                      </button>
+                    )}
+                    {onDelete && (
+                      <button className="adt-btn-delete" onClick={() => onDelete(row)}>
+                        <Trash2 size={13} /> Delete
+                      </button>
+                    )}
+                  </td>
+                )}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
 
-      <div className="ad-dt-bottom">
-        <div>
-          Showing {total === 0 ? 0 : (page - 1) * entries + 1} to {Math.min(page * entries, total)} of {total} entries
+      {/* Bottom info + pagination */}
+      <div className="adt-bottom">
+        <div className="adt-info">
+          Showing {from} to {to} of {total} entries
         </div>
-        <div className="ad-pagination">
-          <button 
-            className="ad-page-btn" 
-            disabled={page === 1} 
-            onClick={() => setPage(page - 1)}
+        <div className="adt-pagination">
+          <button
+            className="adt-page-btn"
+            disabled={safePage === 1}
+            onClick={() => setPage(p => p - 1)}
           >
             Previous
           </button>
-          
-          {/* Simple pagination numbers */}
-          {Array.from({ length: pages }).map((_, i) => (
-            <button 
-              key={i+1} 
-              className={`ad-page-btn ${page === i + 1 ? 'active' : ''}`}
-              onClick={() => setPage(i + 1)}
+          {pageNums.map(n => (
+            <button
+              key={n}
+              className={`adt-page-btn ${n === safePage ? "adt-page-active" : ""}`}
+              onClick={() => setPage(n)}
             >
-              {i + 1}
+              {n}
             </button>
           ))}
-
-          <button 
-            className="ad-page-btn" 
-            disabled={page === pages || pages === 0} 
-            onClick={() => setPage(page + 1)}
+          <button
+            className="adt-page-btn"
+            disabled={safePage === totalPages}
+            onClick={() => setPage(p => p + 1)}
           >
             Next
           </button>

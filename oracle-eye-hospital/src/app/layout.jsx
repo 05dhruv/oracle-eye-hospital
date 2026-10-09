@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import FloatingWidgets from "@/components/FloatingWidgets";
 import AosAnimationProvider from "@/components/AosAnimationProvider";
 import SiteChrome from "@/components/SiteChrome";
+import { getSettings } from "@/lib/settings";
 
 export const metadata = {
   metadataBase: new URL("https://oracleeyehospital.com"),
@@ -30,7 +31,9 @@ export const viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const settings = await getSettings();
+
   return (
     <html lang="en" data-theme-color="skin-8">
       <head>
@@ -51,12 +54,12 @@ export default function RootLayout({ children }) {
         <AosAnimationProvider />
         <div className="page-wraper">
           <SiteChrome>
-            <Header />
+            <Header settings={settings} />
           </SiteChrome>
           <main className="page-content">{children}</main>
           <SiteChrome>
-            <Footer />
-            <FloatingWidgets />
+            <Footer settings={settings} />
+            <FloatingWidgets settings={settings} />
           </SiteChrome>
         </div>
       </body>

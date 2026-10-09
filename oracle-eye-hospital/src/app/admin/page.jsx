@@ -8,14 +8,27 @@ export const dynamic = "force-dynamic";
 export default async function AdminPage() {
   if (!isAdmin()) redirect("/admin/login");
 
-  const [appointments, enquiries, posts] = await Promise.all([
-    prisma.appointment.findMany({ orderBy: { createdAt: "desc" }, take: 200 }),
-    prisma.enquiry.findMany({ orderBy: { createdAt: "desc" }, take: 200 }),
-    prisma.post.findMany({ orderBy: { createdAt: "desc" }, take: 100 }),
+  const [
+    appointmentsCount, 
+    enquiriesCount, 
+    newsCount, 
+    photosCount, 
+    videosCount
+  ] = await Promise.all([
+    prisma.appointment.count(),
+    prisma.enquiry.count(),
+    prisma.post.count({ where: { type: "NEWS" } }),
+    prisma.photo.count(),
+    prisma.video.count(),
   ]);
 
-  // Dates must be plain strings to pass from server to client component
-  const ser = (rows) => rows.map((r) => ({ ...r, createdAt: r.createdAt.toISOString(), preferredDate: r.preferredDate ? r.preferredDate.toISOString() : null }));
+  const counts = {
+    appointments: appointmentsCount,
+    enquiries: enquiriesCount,
+    news: newsCount,
+    photos: photosCount,
+    videos: videosCount,
+  };
 
-  return <AdminPanel appointments={ser(appointments)} enquiries={ser(enquiries)} posts={ser(posts)} />;
+  return <AdminPanel counts={counts} />;
 }

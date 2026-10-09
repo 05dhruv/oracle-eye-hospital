@@ -2,10 +2,13 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function Header() {
+export default function Header({ settings = {} }) {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const phone = settings.phone || "+91 8006803111";
+  const address = settings.address || "491, Hi-Street, Near TDI City, Parampara, MDA, Moradabad, Uttar Pradesh-244001, India";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,11 +52,11 @@ export default function Header() {
                     <h4>Location:</h4>
                     <p>
                       <a
-                        href="https://www.google.com/maps/search/?api=1&query=Oracle+Eye+Hospital+491+Hi+Street+Near+TDI+City+Parampara+MDA+Moradabad+Uttar+Pradesh+244001"
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        491, Hi-Street, Near TDI City, Parampara, MDA, Moradabad, Uttar Pradesh-244001, India
+                        {address}
                       </a>
                     </p>
                   </div>
@@ -63,8 +66,8 @@ export default function Header() {
                   <div className="header_one">
                     <h4>Call Us For Appointment:</h4>
                     <p className="appointment_number">
-                      <a href="tel:+91 8006803111" className="blink">
-                        +91 8006803111
+                      <a href={`tel:${phone}`} className="blink">
+                        {phone}
                       </a>
                     </p>
                   </div>

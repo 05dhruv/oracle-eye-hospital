@@ -18,24 +18,43 @@ export default function Page() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!/^[6-9]\d{9}$/.test(formData.PhoneNumber)) {
       alert("Please enter a valid 10-digit mobile number.");
       return;
     }
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setShowSuccess(true);
-      setFormData({
-        Name: "",
-        Email: "",
-        PhoneNumber: "",
-        Address: "",
-        Message: "",
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.Name,
+          email: formData.Email,
+          phone: formData.PhoneNumber,
+          subject: formData.Address ? `Address: ${formData.Address}` : "Website Enquiry",
+          message: formData.Message,
+        }),
       });
-    }, 1000);
+      if (res.ok) {
+        setShowSuccess(true);
+        setFormData({
+          Name: "",
+          Email: "",
+          PhoneNumber: "",
+          Address: "",
+          Message: "",
+        });
+      } else {
+        const data = await res.json().catch(() => ({}));
+        alert(data.error || "Failed to send message. Please call us.");
+      }
+    } catch {
+      alert("Failed to send message. Please call us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
