@@ -222,16 +222,6 @@ export default function Page() {
 
 								<p data-aos="fade-up">Patients identified during outreach screening camps who require advanced
 									treatment are transported to Oracle Eye Hospital, where they receive comprehensive care, including surgery, medications, and postoperative follow-up.</p>
-								
-									
-									
-									
-									
-									
-									
-									
-									
-									
 									
 									<h3 className="text-primary title-dashed-separator" data-aos="fade-up">
 									Major Areas of Support
@@ -298,12 +288,12 @@ export default function Page() {
 									<tr>
 										
 										<td>Cataract Surgery (SICS)</td>
-										<td>₹2,500</td>
+										<td>₹4,500</td>
 									</tr>
 									<tr>
 										
 										<td>Phaco Cataract Surgery with IOL</td>
-										<td>₹5,000</td>
+										<td>₹6,000</td>
 									</tr>
 									<tr>
 										
@@ -311,8 +301,8 @@ export default function Page() {
 										<td>₹25,000</td>
 									</tr>
 									<tr>
-										<td>Glaucoma Treatment</td>
-										<td>₹5,000</td>
+										<td>Glaucoma Surgery</td>
+										<td>₹18,000</td>
 									</tr>
 									
 									<tr>
