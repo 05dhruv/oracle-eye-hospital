@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { Eye, Trash2, X, ChevronUp, ChevronDown, Mail, Phone, Calendar, User, MessageSquare } from "lucide-react";
+import { Eye, Trash2, X, ChevronUp, ChevronDown, Download, Mail, Phone, Calendar, User, MessageSquare } from "lucide-react";
 import ConfirmModal from "../components/ConfirmModal";
 import { toast } from "../components/Toast";
 import "../admin.css";
@@ -38,6 +38,9 @@ export default function EnquiriesClient({ initialRows }) {
   const [page, setPage] = useState(1);
   const [sortKey, setSortKey] = useState("createdAt");
   const [sortAsc, setSortAsc] = useState(false);
+
+  // Status updating state
+  const [updatingStatus, setUpdatingStatus] = useState({});
 
   // View modal state
   const [viewTarget, setViewTarget] = useState(null);
@@ -80,6 +83,28 @@ export default function EnquiriesClient({ initialRows }) {
     }
   }
 
+  // ── Update Read Status ──────────────────────────────────────────
+  async function handleStatusChange(id, isRead) {
+    setUpdatingStatus((prev) => ({ ...prev, [id]: true }));
+    setRows((prev) => prev.map((r) => (r.id === id ? { ...r, isRead } : r)));
+
+    try {
+      const res = await fetch(`/api/admin/enquiries/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ isRead }),
+      });
+      if (!res.ok) throw new Error("Failed to update status");
+      toast(`Message marked as ${isRead ? "Read" : "Unread"}`, "success");
+      router.refresh();
+    } catch (err) {
+      toast(err.message || "Failed to update status", "error");
+      setRows((prev) => prev.map((r) => (r.id === id ? { ...r, isRead: !isRead } : r)));
+    } finally {
+      setUpdatingStatus((prev) => ({ ...prev, [id]: false }));
+    }
+  }
+
   // ── Delete Enquiry ────────────────────────────────────────────────
   async function handleDelete() {
     if (!deleteTarget) return;
@@ -103,6 +128,60 @@ export default function EnquiriesClient({ initialRows }) {
     } finally {
       setDeleting(false);
     }
+  }
+
+  // ── Export CSV ──────────────────────────────────────────────────
+  function exportCSV() {
+    if (!rows.length) {
+      toast("No messages to export", "error");
+      return;
+    }
+
+    const headers = [
+      "ID",
+      "Received",
+      "Name",
+      "Phone",
+      "Email",
+      "Subject",
+      "Message",
+      "Status",
+    ];
+
+    const csvRows = [headers.join(",")];
+
+    rows.forEach((row) => {
+      const escape = (val) => {
+        if (val == null) return '""';
+        const str = String(val).replace(/"/g, '""');
+        return `"${str}"`;
+      };
+
+      const rowValues = [
+        escape(row.id),
+        escape(row.createdAt ? formatDate(row.createdAt) : ""),
+        escape(row.name),
+        escape(row.phone || ""),
+        escape(row.email || ""),
+        escape(row.subject || ""),
+        escape(row.message || ""),
+        escape(row.isRead ? "Read" : "Unread"),
+      ];
+
+      csvRows.push(rowValues.join(","));
+    });
+
+    const csvContent = csvRows.join("\r\n");
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `contact_messages_${new Date().toISOString().slice(0, 10)}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    toast("Contact messages CSV downloaded", "success");
   }
 
   // ── Filter & Search ───────────────────────────────────────────────
@@ -168,38 +247,38 @@ export default function EnquiriesClient({ initialRows }) {
   return (
     <>
       {/* ── Top Header Card ── */}
-      <div className="adt-header-card">
-        <div>
+      <div className="adt-header-card adt-enquiries-header">
+        <div className="adt-enquiries-header-left">
           <h2 className="adt-header-title">Contact Messages (Enquiries)</h2>
-          {unreadCount > 0 && (
-            <span style={{ fontSize: "12px", color: "#b45309", fontWeight: 500 }}>
+          {unreadCount > 0 ? (
+            <span className="adt-enquiries-unread-badge">
               {unreadCount} unread {unreadCount === 1 ? "message" : "messages"}
             </span>
+          ) : (
+            <span className="adt-enquiries-subtext">All messages caught up</span>
           )}
         </div>
-        <div>
+        <div className="adt-enquiries-header-actions">
           {/* Read / Unread Filter */}
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            style={{
-              padding: "7px 12px",
-              borderRadius: "4px",
-              border: "1px solid #d1d5db",
-              fontSize: "13px",
-              background: "#fff",
-              cursor: "pointer",
-            }}
+            className="adt-enquiries-filter"
           >
             <option value="ALL">All Messages ({rows.length})</option>
             <option value="UNREAD">Unread Only ({unreadCount})</option>
             <option value="READ">Read Only ({rows.length - unreadCount})</option>
           </select>
+
+          {/* Export CSV Button */}
+          <button className="adt-btn-export" onClick={exportCSV}>
+            <Download size={14} /> Export CSV
+          </button>
         </div>
       </div>
 
       {/* ── Table Card ── */}
-      <div className="adt-content-card">
+      <div className="adt-content-card adt-enquiries-content">
         {/* Controls */}
         <div className="adt-controls">
           <div className="adt-entries">
@@ -231,11 +310,20 @@ export default function EnquiriesClient({ initialRows }) {
 
         {/* Table */}
         <div className="adt-table-wrap">
-          <table className="adt-table">
+          <table className="adt-table adt-enquiries-table">
             <thead>
               <tr>
-                <th className="adt-th adt-th-sr">Sr. No.</th>
-                <th className="adt-th adt-sortable" onClick={() => handleSort("name")}>
+                <th className="adt-th adt-th-sr adt-enquiry-col-sr">Sr. No.</th>
+                <th className="adt-th adt-sortable adt-enquiry-col-received" onClick={() => handleSort("createdAt")}>
+                  <span className="adt-th-inner">
+                    Received
+                    <span className="adt-sort-icons">
+                      <ChevronUp size={11} className={sortKey === "createdAt" && sortAsc ? "adt-sort-active" : ""} />
+                      <ChevronDown size={11} className={sortKey === "createdAt" && !sortAsc ? "adt-sort-active" : ""} />
+                    </span>
+                  </span>
+                </th>
+                <th className="adt-th adt-sortable adt-enquiry-col-person" onClick={() => handleSort("name")}>
                   <span className="adt-th-inner">
                     Name
                     <span className="adt-sort-icons">
@@ -244,27 +332,25 @@ export default function EnquiriesClient({ initialRows }) {
                     </span>
                   </span>
                 </th>
-                <th className="adt-th">Phone</th>
-                <th className="adt-th">Email</th>
-                <th className="adt-th">Subject</th>
-                <th className="adt-th">Message</th>
-                <th className="adt-th adt-sortable" onClick={() => handleSort("createdAt")}>
+                <th className="adt-th adt-enquiry-col-phone">Phone</th>
+                <th className="adt-th adt-sortable adt-enquiry-col-subject" onClick={() => handleSort("subject")}>
                   <span className="adt-th-inner">
-                    Date
+                    Subject
                     <span className="adt-sort-icons">
-                      <ChevronUp size={11} className={sortKey === "createdAt" && sortAsc ? "adt-sort-active" : ""} />
-                      <ChevronDown size={11} className={sortKey === "createdAt" && !sortAsc ? "adt-sort-active" : ""} />
+                      <ChevronUp size={11} className={sortKey === "subject" && sortAsc ? "adt-sort-active" : ""} />
+                      <ChevronDown size={11} className={sortKey === "subject" && !sortAsc ? "adt-sort-active" : ""} />
                     </span>
                   </span>
                 </th>
-                <th className="adt-th">Status</th>
-                <th className="adt-th">Action</th>
+                <th className="adt-th adt-enquiry-col-message">Message</th>
+                <th className="adt-th adt-enquiry-col-status">Status</th>
+                <th className="adt-th adt-enquiry-col-action">Action</th>
               </tr>
             </thead>
             <tbody>
               {sliced.length === 0 ? (
                 <tr>
-                  <td className="adt-empty" colSpan={9}>
+                  <td className="adt-empty" colSpan={8}>
                     No messages found
                   </td>
                 </tr>
@@ -274,41 +360,47 @@ export default function EnquiriesClient({ initialRows }) {
                     key={row.id}
                     className={`adt-tr ${!row.isRead ? "adt-tr-unread" : ""}`}
                   >
-                    <td className="adt-td adt-td-sr">{from + idx}</td>
-                    <td className="adt-td">
-                      <strong>{row.name}</strong>
+                    <td className="adt-td adt-td-sr adt-enquiry-col-sr">{from + idx}</td>
+                    <td className="adt-td adt-enquiry-received">
+                      {formatDate(row.createdAt)}
                     </td>
-                    <td className="adt-td">
+                    <td className="adt-td adt-enquiry-person">
+                      <strong className="adt-enquiry-name">{row.name}</strong>
+                      {row.email && (
+                        <div className="adt-enquiry-email">
+                          <a href={`mailto:${row.email}`} className="adt-enquiry-email-link">
+                            {row.email}
+                          </a>
+                        </div>
+                      )}
+                    </td>
+                    <td className="adt-td adt-enquiry-phone">
                       {row.phone ? (
-                        <a href={`tel:${row.phone}`} style={{ color: "#2563eb", textDecoration: "none" }}>
+                        <a href={`tel:${row.phone}`} className="adt-enquiry-phone-link">
                           {row.phone}
                         </a>
                       ) : (
                         "—"
                       )}
                     </td>
-                    <td className="adt-td">
-                      {row.email ? (
-                        <a href={`mailto:${row.email}`} style={{ color: "#2563eb", textDecoration: "none" }}>
-                          {row.email}
-                        </a>
-                      ) : (
-                        "—"
-                      )}
+                    <td className="adt-td adt-enquiry-subject" title={row.subject}>
+                      {row.subject || "—"}
                     </td>
-                    <td className="adt-td">{row.subject || "—"}</td>
-                    <td className="adt-td" title={row.message} style={{ maxWidth: "220px" }}>
+                    <td className="adt-td adt-enquiry-message" title={row.message}>
                       {truncate(row.message, 55)}
                     </td>
-                    <td className="adt-td" style={{ whiteSpace: "nowrap" }}>
-                      {formatDate(row.createdAt)}
+                    <td className="adt-td adt-enquiry-status">
+                      <select
+                        value={row.isRead ? "READ" : "UNREAD"}
+                        disabled={updatingStatus[row.id]}
+                        onChange={(e) => handleStatusChange(row.id, e.target.value === "READ")}
+                        className={`adt-select-status ${row.isRead ? "adt-select-status-COMPLETED" : "adt-select-status-PENDING"}`}
+                      >
+                        <option value="UNREAD">Unread</option>
+                        <option value="READ">Read</option>
+                      </select>
                     </td>
-                    <td className="adt-td">
-                      <span className={`adt-badge ${row.isRead ? "adt-badge-active" : "adt-badge-pending"}`}>
-                        {row.isRead ? "Read" : "Unread"}
-                      </span>
-                    </td>
-                    <td className="adt-td adt-actions">
+                    <td className="adt-td adt-actions adt-enquiry-actions">
                       <button className="adt-btn-view" onClick={() => handleView(row)} title="View message">
                         <Eye size={13} /> View
                       </button>

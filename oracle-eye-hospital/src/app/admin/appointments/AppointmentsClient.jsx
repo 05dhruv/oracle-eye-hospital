@@ -241,21 +241,14 @@ export default function AppointmentsClient({ initialRows }) {
   return (
     <>
       {/* ── Top Header Card ── */}
-      <div className="adt-header-card">
+      <div className="adt-header-card adt-appointments-header">
         <h2 className="adt-header-title">Manage Appointments</h2>
-        <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+        <div className="adt-appointments-header-actions">
           {/* Status Filter */}
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            style={{
-              padding: "7px 12px",
-              borderRadius: "4px",
-              border: "1px solid #d1d5db",
-              fontSize: "13px",
-              background: "#fff",
-              cursor: "pointer",
-            }}
+            className="adt-appointments-filter"
           >
             <option value="ALL">All Statuses ({rows.length})</option>
             {STATUS_OPTIONS.map((st) => (
@@ -273,7 +266,7 @@ export default function AppointmentsClient({ initialRows }) {
       </div>
 
       {/* ── Table Card ── */}
-      <div className="adt-content-card">
+      <div className="adt-content-card adt-appointments-content">
         {/* Controls */}
         <div className="adt-controls">
           <div className="adt-entries">
@@ -305,11 +298,11 @@ export default function AppointmentsClient({ initialRows }) {
 
         {/* Table */}
         <div className="adt-table-wrap">
-          <table className="adt-table">
+          <table className="adt-table adt-appointments-table">
             <thead>
               <tr>
-                <th className="adt-th adt-th-sr">Sr. No.</th>
-                <th className="adt-th adt-sortable" onClick={() => handleSort("createdAt")}>
+                <th className="adt-th adt-th-sr adt-appointment-col-sr">Sr. No.</th>
+                <th className="adt-th adt-sortable adt-appointment-col-received" onClick={() => handleSort("createdAt")}>
                   <span className="adt-th-inner">
                     Received
                     <span className="adt-sort-icons">
@@ -318,7 +311,7 @@ export default function AppointmentsClient({ initialRows }) {
                     </span>
                   </span>
                 </th>
-                <th className="adt-th adt-sortable" onClick={() => handleSort("name")}>
+                <th className="adt-th adt-sortable adt-appointment-col-person" onClick={() => handleSort("name")}>
                   <span className="adt-th-inner">
                     Name
                     <span className="adt-sort-icons">
@@ -327,9 +320,9 @@ export default function AppointmentsClient({ initialRows }) {
                     </span>
                   </span>
                 </th>
-                <th className="adt-th">Phone</th>
-                <th className="adt-th">Doctor / Service</th>
-                <th className="adt-th adt-sortable" onClick={() => handleSort("preferredDate")}>
+                <th className="adt-th adt-appointment-col-phone">Phone</th>
+                <th className="adt-th adt-appointment-col-care">Doctor / Service</th>
+                <th className="adt-th adt-sortable adt-appointment-col-date" onClick={() => handleSort("preferredDate")}>
                   <span className="adt-th-inner">
                     Preferred Date
                     <span className="adt-sort-icons">
@@ -338,8 +331,8 @@ export default function AppointmentsClient({ initialRows }) {
                     </span>
                   </span>
                 </th>
-                <th className="adt-th">Status</th>
-                <th className="adt-th">Action</th>
+                <th className="adt-th adt-appointment-col-status">Status</th>
+                <th className="adt-th adt-appointment-col-action">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -352,22 +345,22 @@ export default function AppointmentsClient({ initialRows }) {
               ) : (
                 sliced.map((row, idx) => (
                   <tr key={row.id} className="adt-tr">
-                    <td className="adt-td adt-td-sr">{from + idx}</td>
-                    <td className="adt-td" style={{ whiteSpace: "nowrap" }}>
+                    <td className="adt-td adt-td-sr adt-appointment-col-sr">{from + idx}</td>
+                    <td className="adt-td adt-appointment-received">
                       {formatDate(row.createdAt)}
                     </td>
-                    <td className="adt-td">
-                      <strong>{row.name}</strong>
+                    <td className="adt-td adt-appointment-person">
+                      <strong className="adt-appointment-name">{row.name}</strong>
                       {row.email && (
-                        <div style={{ fontSize: "11px", color: "#6b7280" }}>{row.email}</div>
+                        <div className="adt-appointment-email">{row.email}</div>
                       )}
                     </td>
-                    <td className="adt-td">
-                      <a href={`tel:${row.phone}`} style={{ color: "#2563eb", textDecoration: "none" }}>
+                    <td className="adt-td adt-appointment-phone">
+                      <a href={`tel:${row.phone}`} className="adt-appointment-phone-link">
                         {row.phone}
                       </a>
                     </td>
-                    <td className="adt-td">
+                    <td className="adt-td adt-appointment-care">
                       {row.doctor ? (
                         <div>
                           <strong>{row.doctor}</strong>
@@ -377,10 +370,10 @@ export default function AppointmentsClient({ initialRows }) {
                         row.service || "—"
                       )}
                     </td>
-                    <td className="adt-td" style={{ whiteSpace: "nowrap" }}>
+                    <td className="adt-td adt-appointment-date">
                       {formatDateOnly(row.preferredDate)}
                     </td>
-                    <td className="adt-td">
+                    <td className="adt-td adt-appointment-status">
                       <select
                         value={row.status}
                         disabled={updatingStatus[row.id]}
@@ -394,7 +387,7 @@ export default function AppointmentsClient({ initialRows }) {
                         ))}
                       </select>
                     </td>
-                    <td className="adt-td adt-actions">
+                    <td className="adt-td adt-actions adt-appointment-actions">
                       <button className="adt-btn-view" onClick={() => setViewTarget(row)} title="View full details">
                         <Eye size={13} /> View
                       </button>

@@ -3,6 +3,10 @@ import { useState, useMemo, useEffect } from "react";
 import { ChevronUp, ChevronDown, Edit2, Trash2 } from "lucide-react";
 import "./datatable.css";
 
+function columnClassName(key) {
+  return `adt-col-${String(key).toLowerCase().replace(/[^a-z0-9_-]+/g, "-")}`;
+}
+
 export default function DataTable({ columns, rows, searchKeys, onEdit, onDelete }) {
   const [search, setSearch] = useState("");
   const [entries, setEntries] = useState(10);
@@ -89,14 +93,14 @@ export default function DataTable({ columns, rows, searchKeys, onEdit, onDelete 
 
       {/* Table */}
       <div className="adt-table-wrap">
-        <table className="adt-table">
+        <table className="adt-table adt-data-table">
           <thead>
             <tr>
               <th className="adt-th adt-th-sr">Sr. No.</th>
               {columns.map(col => (
                 <th
                   key={col.key}
-                  className={`adt-th ${col.sortable !== false ? "adt-sortable" : ""}`}
+                  className={`adt-th ${columnClassName(col.key)} ${col.sortable !== false ? "adt-sortable" : ""}`}
                   onClick={() => col.sortable !== false && handleSort(col.key)}
                 >
                   <span className="adt-th-inner">
@@ -116,7 +120,7 @@ export default function DataTable({ columns, rows, searchKeys, onEdit, onDelete 
                   </span>
                 </th>
               ))}
-              {(onEdit || onDelete) && <th className="adt-th">Action</th>}
+              {(onEdit || onDelete) && <th className="adt-th adt-col-action">Action</th>}
             </tr>
           </thead>
           <tbody>
@@ -133,12 +137,12 @@ export default function DataTable({ columns, rows, searchKeys, onEdit, onDelete 
               <tr key={row.id ?? idx} className="adt-tr">
                 <td className="adt-td adt-td-sr">{from + idx}</td>
                 {columns.map(col => (
-                  <td key={col.key} className="adt-td">
+                  <td key={col.key} className={`adt-td ${columnClassName(col.key)}`}>
                     {col.render ? col.render(row) : (row[col.key] ?? "—")}
                   </td>
                 ))}
                 {(onEdit || onDelete) && (
-                  <td className="adt-td adt-actions">
+                  <td className="adt-td adt-actions adt-col-action">
                     {onEdit && (
                       <button className="adt-btn-edit" onClick={() => onEdit(row)}>
                         <Edit2 size={13} /> Edit
