@@ -348,7 +348,7 @@ export default function Home() {
                     LASER Eye Correction Treatment, Retinal Surgery Services, Microincision Cataract Surgery
                   </p>
                   <div className="contant-box style-1 " data-aos="fade-up" data-aos-delay="800">
-                    <Link className="btn btn-primary btn-hover2 btn-shadow mb-3" href="/contact-us">
+                    <Link className="btn btn-primary btn-hover2 btn-shadow mb-3" href="/appointment">
                       Appointment
                       <i className="feather icon-arrow-right"></i>
                     </Link>

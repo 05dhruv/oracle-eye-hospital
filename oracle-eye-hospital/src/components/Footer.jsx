@@ -95,7 +95,7 @@ export default function Footer({ settings = {} }) {
                 <h2 className="footer-title">Working Hours</h2>
                 <p className="text-white">{workingHours}</p>
 
-                <Link className="btn btn-icon btn-white hover-secondary text-primary shadow-sm" href="/contact-us">
+                <Link className="btn btn-icon btn-white hover-secondary text-primary shadow-sm" href="/appointment">
                   Get Appointment <i className="feather icon-arrow-right"></i>
                 </Link>
 

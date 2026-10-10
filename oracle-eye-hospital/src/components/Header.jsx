@@ -322,7 +322,7 @@ export default function Header({ settings = {} }) {
                     Don't Hesitate To Contact Us Any Time
                   </li>
                   <li className="nav-item item-btn">
-                    <Link className="btn btn-primary btn-hover2" href="/contact-us">
+                    <Link className="btn btn-primary btn-hover2" href="/appointment">
                       Appointment
                       <i className="feather icon-arrow-right"></i>
                     </Link>

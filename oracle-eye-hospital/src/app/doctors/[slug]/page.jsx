@@ -22,7 +22,7 @@ export default function DoctorPage({ params }) {
         <Avatar name={d.name} photo={d.photo} className="aspect-[4/5] w-full max-w-xs rounded-2xl" />
         <div className="md:col-span-2">
           <p className="max-w-2xl text-lg leading-8 text-ink/85" data-aos="fade-up">{d.bio}</p>
-          <Link href="/contact-us#appointment" className="btn btn-primary mt-8">Book with {d.name}</Link>
+          <Link href={`/appointment?doctor=${encodeURIComponent(d.name)}`} className="btn btn-primary mt-8">Book with {d.name}</Link>
         </div>
       </div>
     </>

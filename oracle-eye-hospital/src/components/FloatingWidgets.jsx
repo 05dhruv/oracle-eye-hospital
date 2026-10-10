@@ -146,7 +146,7 @@ export default function FloatingWidgets({ settings = {} }) {
 
       {/* Side Get Appointment Tab */}
       <div className="SideOption">
-        <Link className="ApplicationWidget_btn" href="/contact-us">
+        <Link className="ApplicationWidget_btn" href="/appointment">
           Get Appointment
         </Link>
       </div>

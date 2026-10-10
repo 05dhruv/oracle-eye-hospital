@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
 
-const STATIC = ["", "/overview", "/chairman-message", "/board-of-directors", "/testimonials", "/doctor-team", "/optometrist-team", "/services", "/photo-gallery", "/video-gallery", "/blog", "/news", "/comprehensive-internship-in-optometry", "/awards", "/publications", "/cashless-facility", "/charitable-wings", "/community-outreach", "/career", "/contact-us"];
+const STATIC = ["", "/overview", "/chairman-message", "/board-of-directors", "/testimonials", "/doctor-team", "/optometrist-team", "/services", "/photo-gallery", "/video-gallery", "/blog", "/news", "/comprehensive-internship-in-optometry", "/awards", "/publications", "/cashless-facility", "/charitable-wings", "/community-outreach", "/career", "/contact-us", "/appointment"];
 
 export default async function sitemap() {
   const entries = [
