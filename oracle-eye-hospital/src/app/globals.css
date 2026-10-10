@@ -748,8 +748,9 @@ img {
         align-items: center;
         justify-content: space-between;
         padding: 14px 20px !important;
+        font-family: 'Poppins', sans-serif !important;
         font-size: 15px !important;
-        font-weight: 600 !important;
+        font-weight: 500 !important;
         color: #222222 !important;
         text-decoration: none;
     }
@@ -779,6 +780,7 @@ img {
     }
     .header-nav.w3menu .sub-menu li a {
         padding: 10px 20px 10px 35px !important;
+        font-family: 'Poppins', sans-serif !important;
         font-size: 14px !important;
         color: #555555 !important;
         display: block !important;
@@ -833,6 +835,37 @@ img {
         justify-content: flex-start !important;
     }
 }
+
+/* =========================================================
+   NAVBAR TYPOGRAPHY - POPPINS (DESKTOP & MOBILE)
+   ========================================================= */
+.site-header .header-nav,
+.site-header .header-nav .nav.navbar-nav,
+.site-header .header-nav .nav.navbar-nav > li > a,
+.site-header .header-nav .nav.navbar-nav > li > a span,
+.site-header .header-nav .sub-menu li a,
+.site-header .header-nav .sub-menu li a span,
+.site-header .header-nav .mega-menu li a,
+.site-header .header-nav .mega-menu li a span {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+@media (min-width: 992px) {
+    .site-header.style-3 .header-nav .nav.navbar-nav > li > a {
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.2px;
+    }
+    .site-header.style-3 .header-nav .nav.navbar-nav > li > a span {
+        font-family: 'Poppins', sans-serif !important;
+    }
+    .site-header.style-3 .header-nav .sub-menu li a,
+    .site-header.style-3 .header-nav .sub-menu li a span {
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 400 !important;
+    }
+}
+
 
 
 /* --------------------------------------------------------
